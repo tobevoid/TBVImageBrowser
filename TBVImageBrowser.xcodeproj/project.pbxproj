@@ -1,0 +1,804 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8415B20685FB64313A42DDB4 /* libPods-TBVImageBrowser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7DAA40C384FD910CBF20E45 /* libPods-TBVImageBrowser.a */; };
+		D641C5B51D87D0E800F85C78 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D641C5B41D87D0E800F85C78 /* main.m */; };
+		D641C5B81D87D0E800F85C78 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D641C5B71D87D0E800F85C78 /* AppDelegate.m */; };
+		D641C5BB1D87D0E800F85C78 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D641C5BA1D87D0E800F85C78 /* ViewController.m */; };
+		D641C5BE1D87D0E800F85C78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D641C5BC1D87D0E800F85C78 /* Main.storyboard */; };
+		D641C5C01D87D0E800F85C78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D641C5BF1D87D0E800F85C78 /* Assets.xcassets */; };
+		D641C5C31D87D0E800F85C78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D641C5C11D87D0E800F85C78 /* LaunchScreen.storyboard */; };
+		D641C5CE1D87D0E800F85C78 /* TBVImageBrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D641C5CD1D87D0E800F85C78 /* TBVImageBrowserTests.m */; };
+		D641C5E11D87D22F00F85C78 /* TBVImageProviderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D641C5E01D87D22F00F85C78 /* TBVImageProviderManager.m */; };
+		D641C5E21D87D22F00F85C78 /* TBVImageProviderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D641C5E01D87D22F00F85C78 /* TBVImageProviderManager.m */; };
+		D641C5E81D87D26800F85C78 /* TBVImageBrowserView.m in Sources */ = {isa = PBXBuildFile; fileRef = D641C5E71D87D26800F85C78 /* TBVImageBrowserView.m */; };
+		D641C5E91D87D26800F85C78 /* TBVImageBrowserView.m in Sources */ = {isa = PBXBuildFile; fileRef = D641C5E71D87D26800F85C78 /* TBVImageBrowserView.m */; };
+		D641C5EC1D87D27E00F85C78 /* TBVWebImageProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = D641C5EB1D87D27E00F85C78 /* TBVWebImageProvider.m */; };
+		D641C5ED1D87D27E00F85C78 /* TBVWebImageProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = D641C5EB1D87D27E00F85C78 /* TBVWebImageProvider.m */; };
+		D641C5F01D87D28A00F85C78 /* TBVLocalImageProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = D641C5EF1D87D28A00F85C78 /* TBVLocalImageProvider.m */; };
+		D641C5F11D87D28A00F85C78 /* TBVLocalImageProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = D641C5EF1D87D28A00F85C78 /* TBVLocalImageProvider.m */; };
+		D641C5F41D87D29700F85C78 /* TBVAssetImageProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = D641C5F31D87D29700F85C78 /* TBVAssetImageProvider.m */; };
+		D641C5F51D87D29700F85C78 /* TBVAssetImageProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = D641C5F31D87D29700F85C78 /* TBVAssetImageProvider.m */; };
+		D65A7E251D87DA7500276B55 /* TBVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E241D87DA7500276B55 /* TBVLogger.m */; };
+		D65A7E261D87DA7500276B55 /* TBVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E241D87DA7500276B55 /* TBVLogger.m */; };
+		D65A7E291D87DB4D00276B55 /* TBVImageBrowserViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E281D87DB4D00276B55 /* TBVImageBrowserViewCell.m */; };
+		D65A7E2A1D87DB4D00276B55 /* TBVImageBrowserViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E281D87DB4D00276B55 /* TBVImageBrowserViewCell.m */; };
+		D65A7E2D1D87DC2F00276B55 /* TBVImageBrowserItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E2C1D87DC2700276B55 /* TBVImageBrowserItemViewModel.m */; };
+		D65A7E2E1D87DC3000276B55 /* TBVImageBrowserItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E2C1D87DC2700276B55 /* TBVImageBrowserItemViewModel.m */; };
+		D65A7E311D87DCE400276B55 /* TBVImageBrowserViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E301D87DCE100276B55 /* TBVImageBrowserViewFlowLayout.m */; };
+		D65A7E321D87DCE400276B55 /* TBVImageBrowserViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E301D87DCE100276B55 /* TBVImageBrowserViewFlowLayout.m */; };
+		D65A7E361D87DE5900276B55 /* UIView+HandleFrameLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E351D87DE5900276B55 /* UIView+HandleFrameLayout.m */; };
+		D65A7E371D87DE5900276B55 /* UIView+HandleFrameLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E351D87DE5900276B55 /* UIView+HandleFrameLayout.m */; };
+		D65A7E3E1D87F2EE00276B55 /* TBVImageBrowserViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E3D1D87F2EE00276B55 /* TBVImageBrowserViewModel.m */; };
+		D65A7E3F1D87F2EE00276B55 /* TBVImageBrowserViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E3D1D87F2EE00276B55 /* TBVImageBrowserViewModel.m */; };
+		D65A7E481D87F89900276B55 /* TBVImageBrowserConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E471D87F89900276B55 /* TBVImageBrowserConfiguration.m */; };
+		D65A7E491D87F89900276B55 /* TBVImageBrowserConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E471D87F89900276B55 /* TBVImageBrowserConfiguration.m */; };
+		D65A7E4C1D87FF7900276B55 /* NSError+TBVImageProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E4B1D87FF7900276B55 /* NSError+TBVImageProvider.m */; };
+		D65A7E4D1D87FF7900276B55 /* NSError+TBVImageProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E4B1D87FF7900276B55 /* NSError+TBVImageProvider.m */; };
+		D65A7E6C1D880B0D00276B55 /* ALAssetsFilter+TBVAssetsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E511D880B0D00276B55 /* ALAssetsFilter+TBVAssetsManager.m */; };
+		D65A7E6D1D880B0D00276B55 /* ALAssetsFilter+TBVAssetsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E511D880B0D00276B55 /* ALAssetsFilter+TBVAssetsManager.m */; };
+		D65A7E6E1D880B0D00276B55 /* ALAssetsLibrary+TBVAssetsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E531D880B0D00276B55 /* ALAssetsLibrary+TBVAssetsManager.m */; };
+		D65A7E6F1D880B0D00276B55 /* ALAssetsLibrary+TBVAssetsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E531D880B0D00276B55 /* ALAssetsLibrary+TBVAssetsManager.m */; };
+		D65A7E701D880B0D00276B55 /* PHAssetCollection+TBVAssetsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E551D880B0D00276B55 /* PHAssetCollection+TBVAssetsManager.m */; };
+		D65A7E711D880B0D00276B55 /* PHAssetCollection+TBVAssetsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E551D880B0D00276B55 /* PHAssetCollection+TBVAssetsManager.m */; };
+		D65A7E721D880B0D00276B55 /* PHFetchOptions+TBVAssetsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E571D880B0D00276B55 /* PHFetchOptions+TBVAssetsManager.m */; };
+		D65A7E731D880B0D00276B55 /* PHFetchOptions+TBVAssetsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E571D880B0D00276B55 /* PHFetchOptions+TBVAssetsManager.m */; };
+		D65A7E741D880B0D00276B55 /* PHPhotoLibrary+TBVAssetsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E591D880B0D00276B55 /* PHPhotoLibrary+TBVAssetsManager.m */; };
+		D65A7E751D880B0D00276B55 /* PHPhotoLibrary+TBVAssetsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E591D880B0D00276B55 /* PHPhotoLibrary+TBVAssetsManager.m */; };
+		D65A7E761D880B0D00276B55 /* TBVAssetsPickerManager+Authorization.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E5B1D880B0D00276B55 /* TBVAssetsPickerManager+Authorization.m */; };
+		D65A7E771D880B0D00276B55 /* TBVAssetsPickerManager+Authorization.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E5B1D880B0D00276B55 /* TBVAssetsPickerManager+Authorization.m */; };
+		D65A7E781D880B0D00276B55 /* TBVAssetsLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E5E1D880B0D00276B55 /* TBVAssetsLibrary.m */; };
+		D65A7E791D880B0D00276B55 /* TBVAssetsLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E5E1D880B0D00276B55 /* TBVAssetsLibrary.m */; };
+		D65A7E7A1D880B0D00276B55 /* TBVAssetsPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E611D880B0D00276B55 /* TBVAssetsPickerManager.m */; };
+		D65A7E7B1D880B0D00276B55 /* TBVAssetsPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E611D880B0D00276B55 /* TBVAssetsPickerManager.m */; };
+		D65A7E7C1D880B0D00276B55 /* TBVCachingImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E631D880B0D00276B55 /* TBVCachingImageManager.m */; };
+		D65A7E7D1D880B0D00276B55 /* TBVCachingImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E631D880B0D00276B55 /* TBVCachingImageManager.m */; };
+		D65A7E7E1D880B0D00276B55 /* TBVAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E661D880B0D00276B55 /* TBVAsset.m */; };
+		D65A7E7F1D880B0D00276B55 /* TBVAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E661D880B0D00276B55 /* TBVAsset.m */; };
+		D65A7E801D880B0D00276B55 /* TBVCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E681D880B0D00276B55 /* TBVCollection.m */; };
+		D65A7E811D880B0D00276B55 /* TBVCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E681D880B0D00276B55 /* TBVCollection.m */; };
+		D65A7E821D880B0D00276B55 /* TBVAssetsReformer.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E6B1D880B0D00276B55 /* TBVAssetsReformer.m */; };
+		D65A7E831D880B0D00276B55 /* TBVAssetsReformer.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E6B1D880B0D00276B55 /* TBVAssetsReformer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D641C5CA1D87D0E800F85C78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D641C5A81D87D0E800F85C78 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D641C5AF1D87D0E800F85C78;
+			remoteInfo = TBVImageBrowser;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2F5B872DC244070CC0135583 /* Pods-TBVImageBrowser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBVImageBrowser.release.xcconfig"; path = "Pods/Target Support Files/Pods-TBVImageBrowser/Pods-TBVImageBrowser.release.xcconfig"; sourceTree = "<group>"; };
+		A29D57E9ACA94EDFDD32CAAC /* Pods-TBVImageBrowser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBVImageBrowser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TBVImageBrowser/Pods-TBVImageBrowser.debug.xcconfig"; sourceTree = "<group>"; };
+		D641C5B01D87D0E800F85C78 /* TBVImageBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBVImageBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D641C5B41D87D0E800F85C78 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D641C5B61D87D0E800F85C78 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D641C5B71D87D0E800F85C78 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D641C5B91D87D0E800F85C78 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D641C5BA1D87D0E800F85C78 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D641C5BD1D87D0E800F85C78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D641C5BF1D87D0E800F85C78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D641C5C21D87D0E800F85C78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D641C5C41D87D0E800F85C78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D641C5C91D87D0E800F85C78 /* TBVImageBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TBVImageBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D641C5CD1D87D0E800F85C78 /* TBVImageBrowserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBVImageBrowserTests.m; sourceTree = "<group>"; };
+		D641C5CF1D87D0E800F85C78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D641C5DF1D87D22F00F85C78 /* TBVImageProviderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVImageProviderManager.h; sourceTree = "<group>"; };
+		D641C5E01D87D22F00F85C78 /* TBVImageProviderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVImageProviderManager.m; sourceTree = "<group>"; };
+		D641C5E31D87D24A00F85C78 /* TBVImageElementProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVImageElementProtocol.h; sourceTree = "<group>"; };
+		D641C5E41D87D24A00F85C78 /* TBVImageProviderIdentifierProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVImageProviderIdentifierProtocol.h; sourceTree = "<group>"; };
+		D641C5E51D87D25300F85C78 /* TBVImageProviderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVImageProviderProtocol.h; sourceTree = "<group>"; };
+		D641C5E61D87D26800F85C78 /* TBVImageBrowserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVImageBrowserView.h; sourceTree = "<group>"; };
+		D641C5E71D87D26800F85C78 /* TBVImageBrowserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVImageBrowserView.m; sourceTree = "<group>"; };
+		D641C5EA1D87D27E00F85C78 /* TBVWebImageProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVWebImageProvider.h; sourceTree = "<group>"; };
+		D641C5EB1D87D27E00F85C78 /* TBVWebImageProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVWebImageProvider.m; sourceTree = "<group>"; };
+		D641C5EE1D87D28A00F85C78 /* TBVLocalImageProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVLocalImageProvider.h; sourceTree = "<group>"; };
+		D641C5EF1D87D28A00F85C78 /* TBVLocalImageProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVLocalImageProvider.m; sourceTree = "<group>"; };
+		D641C5F21D87D29700F85C78 /* TBVAssetImageProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVAssetImageProvider.h; sourceTree = "<group>"; };
+		D641C5F31D87D29700F85C78 /* TBVAssetImageProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVAssetImageProvider.m; sourceTree = "<group>"; };
+		D641C5F61D87D32900F85C78 /* TBVImageProviderManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVImageProviderManagerProtocol.h; sourceTree = "<group>"; };
+		D65A7E231D87DA7500276B55 /* TBVLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVLogger.h; sourceTree = "<group>"; };
+		D65A7E241D87DA7500276B55 /* TBVLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVLogger.m; sourceTree = "<group>"; };
+		D65A7E271D87DB4D00276B55 /* TBVImageBrowserViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVImageBrowserViewCell.h; sourceTree = "<group>"; };
+		D65A7E281D87DB4D00276B55 /* TBVImageBrowserViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVImageBrowserViewCell.m; sourceTree = "<group>"; };
+		D65A7E2B1D87DC2700276B55 /* TBVImageBrowserItemViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBVImageBrowserItemViewModel.h; sourceTree = "<group>"; };
+		D65A7E2C1D87DC2700276B55 /* TBVImageBrowserItemViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBVImageBrowserItemViewModel.m; sourceTree = "<group>"; };
+		D65A7E2F1D87DCE100276B55 /* TBVImageBrowserViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBVImageBrowserViewFlowLayout.h; sourceTree = "<group>"; };
+		D65A7E301D87DCE100276B55 /* TBVImageBrowserViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBVImageBrowserViewFlowLayout.m; sourceTree = "<group>"; };
+		D65A7E341D87DE5900276B55 /* UIView+HandleFrameLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HandleFrameLayout.h"; sourceTree = "<group>"; };
+		D65A7E351D87DE5900276B55 /* UIView+HandleFrameLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HandleFrameLayout.m"; sourceTree = "<group>"; };
+		D65A7E3C1D87F2EE00276B55 /* TBVImageBrowserViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVImageBrowserViewModel.h; sourceTree = "<group>"; };
+		D65A7E3D1D87F2EE00276B55 /* TBVImageBrowserViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVImageBrowserViewModel.m; sourceTree = "<group>"; };
+		D65A7E461D87F89900276B55 /* TBVImageBrowserConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVImageBrowserConfiguration.h; sourceTree = "<group>"; };
+		D65A7E471D87F89900276B55 /* TBVImageBrowserConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVImageBrowserConfiguration.m; sourceTree = "<group>"; };
+		D65A7E4A1D87FF7900276B55 /* NSError+TBVImageProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+TBVImageProvider.h"; sourceTree = "<group>"; };
+		D65A7E4B1D87FF7900276B55 /* NSError+TBVImageProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+TBVImageProvider.m"; sourceTree = "<group>"; };
+		D65A7E501D880B0D00276B55 /* ALAssetsFilter+TBVAssetsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsFilter+TBVAssetsManager.h"; sourceTree = "<group>"; };
+		D65A7E511D880B0D00276B55 /* ALAssetsFilter+TBVAssetsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsFilter+TBVAssetsManager.m"; sourceTree = "<group>"; };
+		D65A7E521D880B0D00276B55 /* ALAssetsLibrary+TBVAssetsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsLibrary+TBVAssetsManager.h"; sourceTree = "<group>"; };
+		D65A7E531D880B0D00276B55 /* ALAssetsLibrary+TBVAssetsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsLibrary+TBVAssetsManager.m"; sourceTree = "<group>"; };
+		D65A7E541D880B0D00276B55 /* PHAssetCollection+TBVAssetsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHAssetCollection+TBVAssetsManager.h"; sourceTree = "<group>"; };
+		D65A7E551D880B0D00276B55 /* PHAssetCollection+TBVAssetsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHAssetCollection+TBVAssetsManager.m"; sourceTree = "<group>"; };
+		D65A7E561D880B0D00276B55 /* PHFetchOptions+TBVAssetsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHFetchOptions+TBVAssetsManager.h"; sourceTree = "<group>"; };
+		D65A7E571D880B0D00276B55 /* PHFetchOptions+TBVAssetsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHFetchOptions+TBVAssetsManager.m"; sourceTree = "<group>"; };
+		D65A7E581D880B0D00276B55 /* PHPhotoLibrary+TBVAssetsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHPhotoLibrary+TBVAssetsManager.h"; sourceTree = "<group>"; };
+		D65A7E591D880B0D00276B55 /* PHPhotoLibrary+TBVAssetsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHPhotoLibrary+TBVAssetsManager.m"; sourceTree = "<group>"; };
+		D65A7E5A1D880B0D00276B55 /* TBVAssetsPickerManager+Authorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TBVAssetsPickerManager+Authorization.h"; sourceTree = "<group>"; };
+		D65A7E5B1D880B0D00276B55 /* TBVAssetsPickerManager+Authorization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TBVAssetsPickerManager+Authorization.m"; sourceTree = "<group>"; };
+		D65A7E5D1D880B0D00276B55 /* TBVAssetsLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVAssetsLibrary.h; sourceTree = "<group>"; };
+		D65A7E5E1D880B0D00276B55 /* TBVAssetsLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVAssetsLibrary.m; sourceTree = "<group>"; };
+		D65A7E5F1D880B0D00276B55 /* TBVAssetsManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVAssetsManagerProtocol.h; sourceTree = "<group>"; };
+		D65A7E601D880B0D00276B55 /* TBVAssetsPickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVAssetsPickerManager.h; sourceTree = "<group>"; };
+		D65A7E611D880B0D00276B55 /* TBVAssetsPickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVAssetsPickerManager.m; sourceTree = "<group>"; };
+		D65A7E621D880B0D00276B55 /* TBVCachingImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVCachingImageManager.h; sourceTree = "<group>"; };
+		D65A7E631D880B0D00276B55 /* TBVCachingImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVCachingImageManager.m; sourceTree = "<group>"; };
+		D65A7E651D880B0D00276B55 /* TBVAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVAsset.h; sourceTree = "<group>"; };
+		D65A7E661D880B0D00276B55 /* TBVAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVAsset.m; sourceTree = "<group>"; };
+		D65A7E671D880B0D00276B55 /* TBVCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVCollection.h; sourceTree = "<group>"; };
+		D65A7E681D880B0D00276B55 /* TBVCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVCollection.m; sourceTree = "<group>"; };
+		D65A7E6A1D880B0D00276B55 /* TBVAssetsReformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVAssetsReformer.h; sourceTree = "<group>"; };
+		D65A7E6B1D880B0D00276B55 /* TBVAssetsReformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVAssetsReformer.m; sourceTree = "<group>"; };
+		E7DAA40C384FD910CBF20E45 /* libPods-TBVImageBrowser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TBVImageBrowser.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D641C5AD1D87D0E800F85C78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8415B20685FB64313A42DDB4 /* libPods-TBVImageBrowser.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D641C5C61D87D0E800F85C78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A45D236669D61B289A24C166 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A29D57E9ACA94EDFDD32CAAC /* Pods-TBVImageBrowser.debug.xcconfig */,
+				2F5B872DC244070CC0135583 /* Pods-TBVImageBrowser.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D641C5A71D87D0E800F85C78 = {
+			isa = PBXGroup;
+			children = (
+				D641C5B21D87D0E800F85C78 /* TBVImageBrowser */,
+				D641C5CC1D87D0E800F85C78 /* TBVImageBrowserTests */,
+				D641C5B11D87D0E800F85C78 /* Products */,
+				A45D236669D61B289A24C166 /* Pods */,
+				F88AA50D2EDC710B39BD7DC1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D641C5B11D87D0E800F85C78 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D641C5B01D87D0E800F85C78 /* TBVImageBrowser.app */,
+				D641C5C91D87D0E800F85C78 /* TBVImageBrowserTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D641C5B21D87D0E800F85C78 /* TBVImageBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				D65A7E4E1D880B0D00276B55 /* TBVAssetsManager */,
+				D65A7E691D880B0D00276B55 /* TBVAssetsReformer */,
+				D65A7E331D87DE5900276B55 /* TBVLayoutHelper */,
+				D65A7E221D87DA7500276B55 /* TBVLogger */,
+				D641C5D81D87D1AA00F85C78 /* TBVImageBrowser */,
+				D641C5DB1D87D1AA00F85C78 /* TBVImageProviders */,
+				D641C5B61D87D0E800F85C78 /* AppDelegate.h */,
+				D641C5B71D87D0E800F85C78 /* AppDelegate.m */,
+				D641C5B91D87D0E800F85C78 /* ViewController.h */,
+				D641C5BA1D87D0E800F85C78 /* ViewController.m */,
+				D641C5BC1D87D0E800F85C78 /* Main.storyboard */,
+				D641C5BF1D87D0E800F85C78 /* Assets.xcassets */,
+				D641C5C11D87D0E800F85C78 /* LaunchScreen.storyboard */,
+				D641C5C41D87D0E800F85C78 /* Info.plist */,
+				D641C5B31D87D0E800F85C78 /* Supporting Files */,
+			);
+			path = TBVImageBrowser;
+			sourceTree = "<group>";
+		};
+		D641C5B31D87D0E800F85C78 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D641C5B41D87D0E800F85C78 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D641C5CC1D87D0E800F85C78 /* TBVImageBrowserTests */ = {
+			isa = PBXGroup;
+			children = (
+				D641C5CD1D87D0E800F85C78 /* TBVImageBrowserTests.m */,
+				D641C5CF1D87D0E800F85C78 /* Info.plist */,
+			);
+			path = TBVImageBrowserTests;
+			sourceTree = "<group>";
+		};
+		D641C5D81D87D1AA00F85C78 /* TBVImageBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				D65A7E451D87F89900276B55 /* Configuration */,
+				D641C5D91D87D1AA00F85C78 /* Browser */,
+				D641C5DA1D87D1AA00F85C78 /* ProviderManager */,
+			);
+			path = TBVImageBrowser;
+			sourceTree = "<group>";
+		};
+		D641C5D91D87D1AA00F85C78 /* Browser */ = {
+			isa = PBXGroup;
+			children = (
+				D65A7E3C1D87F2EE00276B55 /* TBVImageBrowserViewModel.h */,
+				D65A7E3D1D87F2EE00276B55 /* TBVImageBrowserViewModel.m */,
+				D641C5E61D87D26800F85C78 /* TBVImageBrowserView.h */,
+				D641C5E71D87D26800F85C78 /* TBVImageBrowserView.m */,
+				D65A7E2B1D87DC2700276B55 /* TBVImageBrowserItemViewModel.h */,
+				D65A7E2C1D87DC2700276B55 /* TBVImageBrowserItemViewModel.m */,
+				D65A7E271D87DB4D00276B55 /* TBVImageBrowserViewCell.h */,
+				D65A7E281D87DB4D00276B55 /* TBVImageBrowserViewCell.m */,
+				D65A7E2F1D87DCE100276B55 /* TBVImageBrowserViewFlowLayout.h */,
+				D65A7E301D87DCE100276B55 /* TBVImageBrowserViewFlowLayout.m */,
+			);
+			path = Browser;
+			sourceTree = "<group>";
+		};
+		D641C5DA1D87D1AA00F85C78 /* ProviderManager */ = {
+			isa = PBXGroup;
+			children = (
+				D641C5E41D87D24A00F85C78 /* TBVImageProviderIdentifierProtocol.h */,
+				D641C5E51D87D25300F85C78 /* TBVImageProviderProtocol.h */,
+				D641C5E31D87D24A00F85C78 /* TBVImageElementProtocol.h */,
+				D641C5F61D87D32900F85C78 /* TBVImageProviderManagerProtocol.h */,
+				D641C5DF1D87D22F00F85C78 /* TBVImageProviderManager.h */,
+				D641C5E01D87D22F00F85C78 /* TBVImageProviderManager.m */,
+			);
+			path = ProviderManager;
+			sourceTree = "<group>";
+		};
+		D641C5DB1D87D1AA00F85C78 /* TBVImageProviders */ = {
+			isa = PBXGroup;
+			children = (
+				D641C5EA1D87D27E00F85C78 /* TBVWebImageProvider.h */,
+				D641C5EB1D87D27E00F85C78 /* TBVWebImageProvider.m */,
+				D641C5EE1D87D28A00F85C78 /* TBVLocalImageProvider.h */,
+				D641C5EF1D87D28A00F85C78 /* TBVLocalImageProvider.m */,
+				D641C5F21D87D29700F85C78 /* TBVAssetImageProvider.h */,
+				D641C5F31D87D29700F85C78 /* TBVAssetImageProvider.m */,
+				D65A7E4A1D87FF7900276B55 /* NSError+TBVImageProvider.h */,
+				D65A7E4B1D87FF7900276B55 /* NSError+TBVImageProvider.m */,
+			);
+			path = TBVImageProviders;
+			sourceTree = "<group>";
+		};
+		D65A7E221D87DA7500276B55 /* TBVLogger */ = {
+			isa = PBXGroup;
+			children = (
+				D65A7E231D87DA7500276B55 /* TBVLogger.h */,
+				D65A7E241D87DA7500276B55 /* TBVLogger.m */,
+			);
+			path = TBVLogger;
+			sourceTree = "<group>";
+		};
+		D65A7E331D87DE5900276B55 /* TBVLayoutHelper */ = {
+			isa = PBXGroup;
+			children = (
+				D65A7E341D87DE5900276B55 /* UIView+HandleFrameLayout.h */,
+				D65A7E351D87DE5900276B55 /* UIView+HandleFrameLayout.m */,
+			);
+			path = TBVLayoutHelper;
+			sourceTree = "<group>";
+		};
+		D65A7E451D87F89900276B55 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				D65A7E461D87F89900276B55 /* TBVImageBrowserConfiguration.h */,
+				D65A7E471D87F89900276B55 /* TBVImageBrowserConfiguration.m */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		D65A7E4E1D880B0D00276B55 /* TBVAssetsManager */ = {
+			isa = PBXGroup;
+			children = (
+				D65A7E4F1D880B0D00276B55 /* Categories */,
+				D65A7E5C1D880B0D00276B55 /* Managers */,
+				D65A7E641D880B0D00276B55 /* Models */,
+			);
+			path = TBVAssetsManager;
+			sourceTree = "<group>";
+		};
+		D65A7E4F1D880B0D00276B55 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				D65A7E501D880B0D00276B55 /* ALAssetsFilter+TBVAssetsManager.h */,
+				D65A7E511D880B0D00276B55 /* ALAssetsFilter+TBVAssetsManager.m */,
+				D65A7E521D880B0D00276B55 /* ALAssetsLibrary+TBVAssetsManager.h */,
+				D65A7E531D880B0D00276B55 /* ALAssetsLibrary+TBVAssetsManager.m */,
+				D65A7E541D880B0D00276B55 /* PHAssetCollection+TBVAssetsManager.h */,
+				D65A7E551D880B0D00276B55 /* PHAssetCollection+TBVAssetsManager.m */,
+				D65A7E561D880B0D00276B55 /* PHFetchOptions+TBVAssetsManager.h */,
+				D65A7E571D880B0D00276B55 /* PHFetchOptions+TBVAssetsManager.m */,
+				D65A7E581D880B0D00276B55 /* PHPhotoLibrary+TBVAssetsManager.h */,
+				D65A7E591D880B0D00276B55 /* PHPhotoLibrary+TBVAssetsManager.m */,
+				D65A7E5A1D880B0D00276B55 /* TBVAssetsPickerManager+Authorization.h */,
+				D65A7E5B1D880B0D00276B55 /* TBVAssetsPickerManager+Authorization.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		D65A7E5C1D880B0D00276B55 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D65A7E5D1D880B0D00276B55 /* TBVAssetsLibrary.h */,
+				D65A7E5E1D880B0D00276B55 /* TBVAssetsLibrary.m */,
+				D65A7E5F1D880B0D00276B55 /* TBVAssetsManagerProtocol.h */,
+				D65A7E601D880B0D00276B55 /* TBVAssetsPickerManager.h */,
+				D65A7E611D880B0D00276B55 /* TBVAssetsPickerManager.m */,
+				D65A7E621D880B0D00276B55 /* TBVCachingImageManager.h */,
+				D65A7E631D880B0D00276B55 /* TBVCachingImageManager.m */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D65A7E641D880B0D00276B55 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D65A7E651D880B0D00276B55 /* TBVAsset.h */,
+				D65A7E661D880B0D00276B55 /* TBVAsset.m */,
+				D65A7E671D880B0D00276B55 /* TBVCollection.h */,
+				D65A7E681D880B0D00276B55 /* TBVCollection.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D65A7E691D880B0D00276B55 /* TBVAssetsReformer */ = {
+			isa = PBXGroup;
+			children = (
+				D65A7E6A1D880B0D00276B55 /* TBVAssetsReformer.h */,
+				D65A7E6B1D880B0D00276B55 /* TBVAssetsReformer.m */,
+			);
+			path = TBVAssetsReformer;
+			sourceTree = "<group>";
+		};
+		F88AA50D2EDC710B39BD7DC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7DAA40C384FD910CBF20E45 /* libPods-TBVImageBrowser.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D641C5AF1D87D0E800F85C78 /* TBVImageBrowser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D641C5D21D87D0E800F85C78 /* Build configuration list for PBXNativeTarget "TBVImageBrowser" */;
+			buildPhases = (
+				49A2AE2CC7DDC5D17A03B065 /* 📦 Check Pods Manifest.lock */,
+				D641C5AC1D87D0E800F85C78 /* Sources */,
+				D641C5AD1D87D0E800F85C78 /* Frameworks */,
+				D641C5AE1D87D0E800F85C78 /* Resources */,
+				681DAD269C34FA4F42C3E3BD /* 📦 Embed Pods Frameworks */,
+				ADAA4E5573F781A72D9E58F0 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TBVImageBrowser;
+			productName = TBVImageBrowser;
+			productReference = D641C5B01D87D0E800F85C78 /* TBVImageBrowser.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D641C5C81D87D0E800F85C78 /* TBVImageBrowserTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D641C5D51D87D0E800F85C78 /* Build configuration list for PBXNativeTarget "TBVImageBrowserTests" */;
+			buildPhases = (
+				D641C5C51D87D0E800F85C78 /* Sources */,
+				D641C5C61D87D0E800F85C78 /* Frameworks */,
+				D641C5C71D87D0E800F85C78 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D641C5CB1D87D0E800F85C78 /* PBXTargetDependency */,
+			);
+			name = TBVImageBrowserTests;
+			productName = TBVImageBrowserTests;
+			productReference = D641C5C91D87D0E800F85C78 /* TBVImageBrowserTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D641C5A81D87D0E800F85C78 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = tripleCC;
+				TargetAttributes = {
+					D641C5AF1D87D0E800F85C78 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					D641C5C81D87D0E800F85C78 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = D641C5AF1D87D0E800F85C78;
+					};
+				};
+			};
+			buildConfigurationList = D641C5AB1D87D0E800F85C78 /* Build configuration list for PBXProject "TBVImageBrowser" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D641C5A71D87D0E800F85C78;
+			productRefGroup = D641C5B11D87D0E800F85C78 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D641C5AF1D87D0E800F85C78 /* TBVImageBrowser */,
+				D641C5C81D87D0E800F85C78 /* TBVImageBrowserTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D641C5AE1D87D0E800F85C78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D641C5C31D87D0E800F85C78 /* LaunchScreen.storyboard in Resources */,
+				D641C5C01D87D0E800F85C78 /* Assets.xcassets in Resources */,
+				D641C5BE1D87D0E800F85C78 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D641C5C71D87D0E800F85C78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		49A2AE2CC7DDC5D17A03B065 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		681DAD269C34FA4F42C3E3BD /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TBVImageBrowser/Pods-TBVImageBrowser-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADAA4E5573F781A72D9E58F0 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TBVImageBrowser/Pods-TBVImageBrowser-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D641C5AC1D87D0E800F85C78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D65A7E781D880B0D00276B55 /* TBVAssetsLibrary.m in Sources */,
+				D65A7E361D87DE5900276B55 /* UIView+HandleFrameLayout.m in Sources */,
+				D65A7E721D880B0D00276B55 /* PHFetchOptions+TBVAssetsManager.m in Sources */,
+				D65A7E6E1D880B0D00276B55 /* ALAssetsLibrary+TBVAssetsManager.m in Sources */,
+				D65A7E3E1D87F2EE00276B55 /* TBVImageBrowserViewModel.m in Sources */,
+				D65A7E6C1D880B0D00276B55 /* ALAssetsFilter+TBVAssetsManager.m in Sources */,
+				D65A7E2D1D87DC2F00276B55 /* TBVImageBrowserItemViewModel.m in Sources */,
+				D65A7E821D880B0D00276B55 /* TBVAssetsReformer.m in Sources */,
+				D641C5EC1D87D27E00F85C78 /* TBVWebImageProvider.m in Sources */,
+				D65A7E481D87F89900276B55 /* TBVImageBrowserConfiguration.m in Sources */,
+				D65A7E701D880B0D00276B55 /* PHAssetCollection+TBVAssetsManager.m in Sources */,
+				D65A7E4C1D87FF7900276B55 /* NSError+TBVImageProvider.m in Sources */,
+				D65A7E7E1D880B0D00276B55 /* TBVAsset.m in Sources */,
+				D641C5BB1D87D0E800F85C78 /* ViewController.m in Sources */,
+				D641C5E11D87D22F00F85C78 /* TBVImageProviderManager.m in Sources */,
+				D65A7E801D880B0D00276B55 /* TBVCollection.m in Sources */,
+				D641C5F01D87D28A00F85C78 /* TBVLocalImageProvider.m in Sources */,
+				D65A7E291D87DB4D00276B55 /* TBVImageBrowserViewCell.m in Sources */,
+				D641C5F41D87D29700F85C78 /* TBVAssetImageProvider.m in Sources */,
+				D641C5B81D87D0E800F85C78 /* AppDelegate.m in Sources */,
+				D641C5E81D87D26800F85C78 /* TBVImageBrowserView.m in Sources */,
+				D65A7E761D880B0D00276B55 /* TBVAssetsPickerManager+Authorization.m in Sources */,
+				D65A7E7A1D880B0D00276B55 /* TBVAssetsPickerManager.m in Sources */,
+				D65A7E251D87DA7500276B55 /* TBVLogger.m in Sources */,
+				D65A7E741D880B0D00276B55 /* PHPhotoLibrary+TBVAssetsManager.m in Sources */,
+				D65A7E311D87DCE400276B55 /* TBVImageBrowserViewFlowLayout.m in Sources */,
+				D641C5B51D87D0E800F85C78 /* main.m in Sources */,
+				D65A7E7C1D880B0D00276B55 /* TBVCachingImageManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D641C5C51D87D0E800F85C78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D65A7E321D87DCE400276B55 /* TBVImageBrowserViewFlowLayout.m in Sources */,
+				D641C5F51D87D29700F85C78 /* TBVAssetImageProvider.m in Sources */,
+				D65A7E751D880B0D00276B55 /* PHPhotoLibrary+TBVAssetsManager.m in Sources */,
+				D65A7E831D880B0D00276B55 /* TBVAssetsReformer.m in Sources */,
+				D65A7E7B1D880B0D00276B55 /* TBVAssetsPickerManager.m in Sources */,
+				D65A7E6D1D880B0D00276B55 /* ALAssetsFilter+TBVAssetsManager.m in Sources */,
+				D65A7E6F1D880B0D00276B55 /* ALAssetsLibrary+TBVAssetsManager.m in Sources */,
+				D65A7E771D880B0D00276B55 /* TBVAssetsPickerManager+Authorization.m in Sources */,
+				D65A7E711D880B0D00276B55 /* PHAssetCollection+TBVAssetsManager.m in Sources */,
+				D641C5ED1D87D27E00F85C78 /* TBVWebImageProvider.m in Sources */,
+				D65A7E7F1D880B0D00276B55 /* TBVAsset.m in Sources */,
+				D65A7E371D87DE5900276B55 /* UIView+HandleFrameLayout.m in Sources */,
+				D65A7E811D880B0D00276B55 /* TBVCollection.m in Sources */,
+				D65A7E2A1D87DB4D00276B55 /* TBVImageBrowserViewCell.m in Sources */,
+				D65A7E7D1D880B0D00276B55 /* TBVCachingImageManager.m in Sources */,
+				D65A7E261D87DA7500276B55 /* TBVLogger.m in Sources */,
+				D65A7E491D87F89900276B55 /* TBVImageBrowserConfiguration.m in Sources */,
+				D65A7E3F1D87F2EE00276B55 /* TBVImageBrowserViewModel.m in Sources */,
+				D65A7E2E1D87DC3000276B55 /* TBVImageBrowserItemViewModel.m in Sources */,
+				D641C5CE1D87D0E800F85C78 /* TBVImageBrowserTests.m in Sources */,
+				D65A7E791D880B0D00276B55 /* TBVAssetsLibrary.m in Sources */,
+				D641C5E91D87D26800F85C78 /* TBVImageBrowserView.m in Sources */,
+				D65A7E4D1D87FF7900276B55 /* NSError+TBVImageProvider.m in Sources */,
+				D65A7E731D880B0D00276B55 /* PHFetchOptions+TBVAssetsManager.m in Sources */,
+				D641C5F11D87D28A00F85C78 /* TBVLocalImageProvider.m in Sources */,
+				D641C5E21D87D22F00F85C78 /* TBVImageProviderManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D641C5CB1D87D0E800F85C78 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D641C5AF1D87D0E800F85C78 /* TBVImageBrowser */;
+			targetProxy = D641C5CA1D87D0E800F85C78 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D641C5BC1D87D0E800F85C78 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D641C5BD1D87D0E800F85C78 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D641C5C11D87D0E800F85C78 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D641C5C21D87D0E800F85C78 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D641C5D01D87D0E800F85C78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D641C5D11D87D0E800F85C78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D641C5D31D87D0E800F85C78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A29D57E9ACA94EDFDD32CAAC /* Pods-TBVImageBrowser.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TBVImageBrowser/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.triplec.TBVImageBrowser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D641C5D41D87D0E800F85C78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F5B872DC244070CC0135583 /* Pods-TBVImageBrowser.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TBVImageBrowser/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.triplec.TBVImageBrowser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D641C5D61D87D0E800F85C78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TBVImageBrowserTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.triplec.TBVImageBrowserTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TBVImageBrowser.app/TBVImageBrowser";
+			};
+			name = Debug;
+		};
+		D641C5D71D87D0E800F85C78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TBVImageBrowserTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.triplec.TBVImageBrowserTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TBVImageBrowser.app/TBVImageBrowser";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D641C5AB1D87D0E800F85C78 /* Build configuration list for PBXProject "TBVImageBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D641C5D01D87D0E800F85C78 /* Debug */,
+				D641C5D11D87D0E800F85C78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D641C5D21D87D0E800F85C78 /* Build configuration list for PBXNativeTarget "TBVImageBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D641C5D31D87D0E800F85C78 /* Debug */,
+				D641C5D41D87D0E800F85C78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D641C5D51D87D0E800F85C78 /* Build configuration list for PBXNativeTarget "TBVImageBrowserTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D641C5D61D87D0E800F85C78 /* Debug */,
+				D641C5D71D87D0E800F85C78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D641C5A81D87D0E800F85C78 /* Project object */;
+}
