@@ -22,7 +22,7 @@
 @end
 
 @implementation ViewController
-
+#pragma mark life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -31,8 +31,6 @@
                              configuration:self.configuration];
     [self.view addSubview:self.imageBrowserView];
     [self layoutPageSubviews];
-//    [self.view setNeedsLayout];
-//    [self.view layoutIfNeeded];
     
     @weakify(self)
     [[[[self.pickerManager requestCameraRollCollection] map:^id(id value) {
@@ -75,11 +73,7 @@
     }];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
+#pragma mark getter setter
 - (TBVImageBrowserView *)imageBrowserView {
     if (_imageBrowserView == nil) {
         _imageBrowserView = [[TBVImageBrowserView alloc] init];
