@@ -16,11 +16,11 @@ NSString *const kTBVLocalImageProviderIdentifier = @"kTBVLocalImageProviderIdent
 
 - (RACSignal *)imageSignalForElement:(id<TBVImageElementProtocol>)element progress:(TBVImageProviderProgressBlock)progress {
     return [[[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        if ([element.resource isKindOfClass:[NSURL class]] && [(NSURL *)element.resource isFileReferenceURL]) {
-            [subscriber sendNext:element.resource];
+        if ([element.resource isKindOfClass:[NSURL class]] && [(NSURL *)element.resource isFileURL]) {
+            [subscriber sendNext:[(NSURL *)element.resource path]];
             [subscriber sendCompleted];
         } else {
-            NSString *message = [NSString stringWithFormat:@"the resource of elememt(%@) is not a file url.", element];
+            NSString *message = [NSString stringWithFormat:@"the resource of elememt(%@) is not a file url.", element.resource];
             [subscriber sendError:[NSError errorWithDomain:@"TBVLocalImageProvider" message:message]];
         }
         return nil;

@@ -40,16 +40,15 @@
         return [self.pickerManager requestAssetsForCollection:value mediaType:TBVAssetsMediaTypeImage];
     }] switchToLatest] subscribeNext:^(NSArray *assets) {
         [assets enumerateObjectsUsingBlock:^(id  _Nonnull asset, NSUInteger idx, BOOL * _Nonnull stop) {
-            TBVImageElement *element = [TBVImageElement elementWithIdentifier:kTBVWebImageProviderIdentifier resource:[asset asset]];
+            TBVImageElement *element = [TBVImageElement elementWithIdentifier:kTBVAssetImageProviderIdentifier resource:asset];
             [self.elements addObject:element];
             if (idx > 5) *stop = YES;
         }];
         
         for (NSInteger i = 0; i < 5; i++) {
             NSString *fileName = [NSString stringWithFormat:@"%@", @(i)];
-            NSString *path = [[NSBundle mainBundle] pathForResource:fileName ofType:@"png"];
-            NSURL *URL = [NSURL URLWithString:path];
-            TBVImageElement *element = [TBVImageElement elementWithIdentifier:kTBVWebImageProviderIdentifier resource:URL];
+            NSURL *URL = [[NSBundle mainBundle] URLForResource:fileName withExtension:@"png"];
+            TBVImageElement *element = [TBVImageElement elementWithIdentifier:kTBVLocalImageProviderIdentifier resource:URL];
             [self.elements addObject:element];
         }
         NSArray *URLStrings = @[

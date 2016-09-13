@@ -11,5 +11,5 @@
 @interface TBVImageBrowserItemViewModel : NSObject
 @property (strong, nonatomic) RACSignal *contentImageSignal;
 @property (strong, nonatomic) RACCommand *clickImageCommand;
-@property (assign, nonatomic) RACSignal *progressSignal;
+@property (strong, nonatomic) RACSignal *progressSignal;
 @end

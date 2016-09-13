@@ -25,9 +25,9 @@ NSString *const kTBVImageProviderManagerNotFoundKey = @"kTBVImageProviderManager
     NSAssert(element.identifier, @"identifier of %@ can not be nil.", element);
     
     @weakify(self)
-    return [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+    return [[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         @strongify(self)
-        TBVLogInfo(@"provide image by resource %@, identifier %@", element.resource, element.identifier);
+        TBVLogInfo(@"\nimage resource:\n\t%@;\nidentifier:\n\t%@;\n", element.resource, element.identifier);
         self.progress = 0;
         if ([self.providerMap.allKeys containsObject:element.identifier]) {
             [subscriber sendNext:[self.providerMap[element.identifier]
@@ -45,7 +45,12 @@ NSString *const kTBVImageProviderManagerNotFoundKey = @"kTBVImageProviderManager
                                                     userInfo:userInfo]];
         }
         return nil;
-    }] switchToLatest];
+    }]
+        switchToLatest]
+        catch:^RACSignal *(NSError *error) {
+            TBVLogError(@"\nerror domain: \n\t%@; \nerror code: \n\t%ld; \nerror info: \n\t%@;\n", error.domain, error.code, error.userInfo);
+            return [RACSignal empty];
+    }];
     
 }
 

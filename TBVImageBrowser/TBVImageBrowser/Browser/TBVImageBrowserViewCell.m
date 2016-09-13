@@ -22,7 +22,6 @@
 #pragma mark life cycle
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        self.backgroundColor = [UIColor redColor];
         [self.contentScrollView addSubview:self.contentImageView];
         [self.contentView addSubview:self.contentScrollView];
         [self layoutPageSubviews];
@@ -33,10 +32,12 @@
 }
 
 - (void)layoutPageSubviews {
-    [self.contentImageView handleFrame:^(CGRect *frame) {
+    [self.contentScrollView handleFrame:^(CGRect *frame) {
         frame->size.width = self.bounds.size.width - 2 * kTBVImageBrowserViewFlowLayoutMargin;
         frame->size.height = self.bounds.size.height;
     }];
+    
+    self.contentImageView.frame = self.contentScrollView.bounds;
 }
 
 - (void)prepareForReuse {
@@ -45,6 +46,7 @@
     [self.contentScrollView setZoomScale:1.0 animated:NO];
     self.contentImageView.image = nil;
 }
+
 #pragma mark event response
 - (void)singalTapTriggered:(UITapGestureRecognizer *)tap {
     [self.viewModel.clickImageCommand execute:nil];
@@ -69,10 +71,8 @@
 - (void)bindViewModel:(TBVImageBrowserItemViewModel *)viewModel {
     self.viewModel = viewModel;
     
-    TBVLogDebug(@"vm : %@", viewModel);
-    
     [self bindContentImageSignal:viewModel.contentImageSignal];
-    [self bingProgressSignal:[viewModel.progressSignal takeUntil:self.rac_prepareForReuseSignal]];
+    [self bingProgressSignal:viewModel.progressSignal];
 }
 
 - (void)bingProgressSignal:(RACSignal *)progressSignal {

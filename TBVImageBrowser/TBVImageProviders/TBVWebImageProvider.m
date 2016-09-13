@@ -41,7 +41,7 @@ NSString *const kTBVWebImageProviderIdentifier = @"kTBVWebImageProviderIdentifie
                 }
             }];
         } else {
-            NSString *message = [NSString stringWithFormat:@"the resource of elememt(%@) is not a web url.", element];
+            NSString *message = [NSString stringWithFormat:@"the resource of elememt(%@) is not a web url.", element.resource];
             [subscriber sendError:[NSError errorWithDomain:@"TBVWebImageProvider" message:message]];
         }
         return [RACDisposable disposableWithBlock:^{

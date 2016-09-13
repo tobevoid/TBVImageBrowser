@@ -6,7 +6,7 @@
 //  Copyright © 2016 tripleCC. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "TBVImageElementProtocol.h"
 @interface TBVImageElement : NSObject <TBVImageElementProtocol>
 @property (strong, nonatomic) NSString *identifier;
