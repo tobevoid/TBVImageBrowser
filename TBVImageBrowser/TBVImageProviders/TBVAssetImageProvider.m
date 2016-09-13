@@ -11,13 +11,13 @@
 #import "TBVAssetsReformer.h"
 #import "TBVAsset.h"
 
+NSString *const kTBVAssetImageProviderIdentifier = @"kTBVAssetImageProviderIdentifier";
 @interface TBVAssetImageProvider()
 @property (strong, nonatomic) TBVAssetsReformer *assetsReformer;
 @end
-
 @implementation TBVAssetImageProvider
 - (NSString *)identifier {
-    return @"TBVAssetImageProvider";
+    return kTBVAssetImageProviderIdentifier;
 }
 
 - (RACSignal *)imageSignalForElement:(id<TBVImageElementProtocol>)element progress:(TBVImageProviderProgressBlock)progress {

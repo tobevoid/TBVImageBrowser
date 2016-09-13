@@ -9,5 +9,6 @@
 #ifndef TBVImageBrowser_h
 #define TBVImageBrowser_h
 #import "TBVImageBrowserView.h"
+#import "TBVImageElement.h"
 #import "TBVImageProviderManager.h"
 #endif /* TBVImageBrowser_h */

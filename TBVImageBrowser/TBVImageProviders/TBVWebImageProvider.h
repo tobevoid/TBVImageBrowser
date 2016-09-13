@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "TBVImageProviderProtocol.h"
-
+CF_EXPORT NSString *const kTBVWebImageProviderIdentifier;
 @interface TBVWebImageProvider : NSObject <TBVImageProviderProtocol>
 
 @end

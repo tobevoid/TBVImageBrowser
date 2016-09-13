@@ -7,6 +7,7 @@
 //
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "UIView+HandleFrameLayout.h"
+#import "TBVLogger.h"
 #import "TBVImageBrowserViewCell.h"
 #import "TBVImageBrowserItemViewModel.h"
 #import "TBVImageBrowserViewFlowLayout.h"
@@ -21,7 +22,7 @@
 #pragma mark life cycle
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        self.backgroundColor = [UIColor clearColor];
+        self.backgroundColor = [UIColor redColor];
         [self.contentScrollView addSubview:self.contentImageView];
         [self.contentView addSubview:self.contentScrollView];
         [self layoutPageSubviews];
@@ -67,8 +68,11 @@
 #pragma mark public method
 - (void)bindViewModel:(TBVImageBrowserItemViewModel *)viewModel {
     self.viewModel = viewModel;
+    
+    TBVLogDebug(@"vm : %@", viewModel);
+    
     [self bindContentImageSignal:viewModel.contentImageSignal];
-    [self bingProgressSignal:viewModel.progressSignal];
+    [self bingProgressSignal:[viewModel.progressSignal takeUntil:self.rac_prepareForReuseSignal]];
 }
 
 - (void)bingProgressSignal:(RACSignal *)progressSignal {

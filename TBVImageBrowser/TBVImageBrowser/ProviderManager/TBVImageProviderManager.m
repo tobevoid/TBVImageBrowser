@@ -7,6 +7,7 @@
 //
 
 #import "TBVImageProviderManager.h"
+#import "TBVLogger.h"
 
 NSString *const kTBVImageProviderManagerNotFoundKey = @"kTBVImageProviderManagerNotFound";
 
@@ -17,42 +18,48 @@ NSString *const kTBVImageProviderManagerNotFoundKey = @"kTBVImageProviderManager
 
 @implementation TBVImageProviderManager
 - (RACSignal *)progressSignal {
-    return [[RACObserve(self, progress)
-        distinctUntilChanged]
-        deliverOnMainThread];
+    return [RACObserve(self, progress) distinctUntilChanged];
 }
 
 - (RACSignal *)imageSignalForElement:(id<TBVImageElementProtocol>)element {
     NSAssert(element.identifier, @"identifier of %@ can not be nil.", element);
     
-    self.progress = 0;
-    if ([self.providerMap.allKeys containsObject:element.identifier]) {
-        @weakify(self)
-        return [self.providerMap[element.identifier]
-                imageSignalForElement:element
-                progress:^(CGFloat progress) {
-            @strongify(self)
-            self.progress = progress;
-        }];
-    } else {
-        NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
-        userInfo[kTBVImageProviderManagerNotFoundKey] =
+    @weakify(self)
+    return [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        @strongify(self)
+        TBVLogInfo(@"provide image by resource %@, identifier %@", element.resource, element.identifier);
+        self.progress = 0;
+        if ([self.providerMap.allKeys containsObject:element.identifier]) {
+            [subscriber sendNext:[self.providerMap[element.identifier]
+                    imageSignalForElement:element
+                    progress:^(CGFloat progress) {
+                        self.progress = progress;
+                    }]];
+            [subscriber sendCompleted];
+        } else {
+            NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
+            userInfo[kTBVImageProviderManagerNotFoundKey] =
             [NSString stringWithFormat:@"image provider with identifier %@ was not found", element.identifier];
-        return [RACSignal error:[NSError errorWithDomain:@"TBVImageProviderManager"
-                                                    code:-1
-                                                userInfo:userInfo]];
-    }
+            [subscriber sendError:[NSError errorWithDomain:@"TBVImageProviderManager"
+                                                        code:-1
+                                                    userInfo:userInfo]];
+        }
+        return nil;
+    }] switchToLatest];
+    
 }
 
 - (void)addImageProvider:(id<TBVImageProviderProtocol>)provider {
     NSCParameterAssert(provider);
     NSAssert(provider.identifier, @"identifier of %@ can not be nil.", provider);
+    TBVLogInfo(@"add provider %@", provider);
     
     self.providerMap[provider.identifier] = provider;
 }
 
 - (BOOL)removeImageProvider:(id<TBVImageProviderProtocol>)provider {
     NSAssert(provider.identifier, @"identifier of %@ can not be nil.", provider);
+    TBVLogInfo(@"remove provider %@", provider);
     
     [self.providerMap removeObjectForKey:provider.identifier];
     return [self.providerMap.allKeys containsObject:provider.identifier];

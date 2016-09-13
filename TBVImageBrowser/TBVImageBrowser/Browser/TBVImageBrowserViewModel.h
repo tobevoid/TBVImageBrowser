@@ -8,13 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
-@class TBVImageBrowserConfiguration;
-@class TBVImageBrowserItemViewModel;
-@protocol TBVImageElementProtocol;
-@protocol TBVImageProviderManagerProtocol;
 @interface TBVImageBrowserViewModel : NSObject
-@property (strong, nonatomic) NSArray <TBVImageBrowserItemViewModel *> *dataSource;
-- (instancetype)initWithElements:(NSArray<id<TBVImageElementProtocol>> *)elements
-                   imageProvider:(id <TBVImageProviderManagerProtocol>)imageProvider
-                   configuration:(TBVImageBrowserConfiguration *)configuration;
+@property (strong, nonatomic) NSArray *dataSource;
 @end

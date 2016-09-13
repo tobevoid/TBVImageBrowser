@@ -10,10 +10,8 @@
 #import "TBVImageProviderManagerProtocol.h"
 @class TBVImageBrowserConfiguration;
 @interface TBVImageBrowserView : UIView
-- (instancetype)initWithElements:(NSArray<id<TBVImageElementProtocol>> *)elements
-                   imageProvider:(id <TBVImageProviderManagerProtocol>)imageProvider;
-
-- (instancetype)initWithElements:(NSArray<id<TBVImageElementProtocol>> *)elements
-                   imageProvider:(id <TBVImageProviderManagerProtocol>)imageProvider
-                   configuration:(TBVImageBrowserConfiguration *)configuration;
+@property (strong, nonatomic) NSArray<id<TBVImageElementProtocol>> *elements;
+- (instancetype)initWithImageProvider:(id <TBVImageProviderManagerProtocol>)imageProvider;
+- (instancetype)initWithImageProvider:(id <TBVImageProviderManagerProtocol>)imageProvider
+                        configuration:(TBVImageBrowserConfiguration *)configuration;
 @end

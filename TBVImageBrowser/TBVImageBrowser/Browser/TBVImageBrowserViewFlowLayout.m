@@ -12,7 +12,9 @@ const CGFloat kTBVImageBrowserViewFlowLayoutMargin = 10;
 
 @implementation TBVImageBrowserViewFlowLayout
 - (instancetype)initWithItemSize:(CGSize)itemSize {
-    if (self = [self init]) {
+    if (self = [super init]) {
+        NSAssert(itemSize.height, @"layout height can't be 0.");
+        
         self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         self.itemSize = CGSizeMake(itemSize.width + kTBVImageBrowserViewFlowLayoutMargin * 2,
                                    itemSize.height);

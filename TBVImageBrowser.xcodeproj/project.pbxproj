@@ -8,6 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		8415B20685FB64313A42DDB4 /* libPods-TBVImageBrowser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7DAA40C384FD910CBF20E45 /* libPods-TBVImageBrowser.a */; };
+		D62EDED01D881A520070F673 /* TBVImageProviderManager+Register.m in Sources */ = {isa = PBXBuildFile; fileRef = D62EDECF1D881A520070F673 /* TBVImageProviderManager+Register.m */; };
+		D62EDED11D881A520070F673 /* TBVImageProviderManager+Register.m in Sources */ = {isa = PBXBuildFile; fileRef = D62EDECF1D881A520070F673 /* TBVImageProviderManager+Register.m */; };
+		D62EDEDB1D881B990070F673 /* TBVImageElement.m in Sources */ = {isa = PBXBuildFile; fileRef = D62EDEDA1D881B990070F673 /* TBVImageElement.m */; };
+		D62EDEDC1D881B990070F673 /* TBVImageElement.m in Sources */ = {isa = PBXBuildFile; fileRef = D62EDEDA1D881B990070F673 /* TBVImageElement.m */; };
+		D62EDEE81D88215D0070F673 /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = D62EDEDE1D88215D0070F673 /* 0.png */; };
+		D62EDEE91D88215D0070F673 /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = D62EDEDE1D88215D0070F673 /* 0.png */; };
+		D62EDEEA1D88215D0070F673 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = D62EDEDF1D88215D0070F673 /* 1.png */; };
+		D62EDEEB1D88215D0070F673 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = D62EDEDF1D88215D0070F673 /* 1.png */; };
+		D62EDEEC1D88215D0070F673 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = D62EDEE01D88215D0070F673 /* 2.png */; };
+		D62EDEED1D88215D0070F673 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = D62EDEE01D88215D0070F673 /* 2.png */; };
+		D62EDEEE1D88215D0070F673 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = D62EDEE11D88215D0070F673 /* 3.png */; };
+		D62EDEEF1D88215D0070F673 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = D62EDEE11D88215D0070F673 /* 3.png */; };
+		D62EDEF01D88215D0070F673 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = D62EDEE21D88215D0070F673 /* 4.png */; };
+		D62EDEF11D88215D0070F673 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = D62EDEE21D88215D0070F673 /* 4.png */; };
+		D62EDEF21D88215D0070F673 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = D62EDEE31D88215D0070F673 /* 5.png */; };
+		D62EDEF31D88215D0070F673 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = D62EDEE31D88215D0070F673 /* 5.png */; };
+		D62EDEF41D88215D0070F673 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = D62EDEE41D88215D0070F673 /* 6.png */; };
+		D62EDEF51D88215D0070F673 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = D62EDEE41D88215D0070F673 /* 6.png */; };
+		D62EDEF61D88215D0070F673 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = D62EDEE51D88215D0070F673 /* 7.png */; };
+		D62EDEF71D88215D0070F673 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = D62EDEE51D88215D0070F673 /* 7.png */; };
+		D62EDEF81D88215D0070F673 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = D62EDEE61D88215D0070F673 /* 8.png */; };
+		D62EDEF91D88215D0070F673 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = D62EDEE61D88215D0070F673 /* 8.png */; };
+		D62EDEFA1D88215D0070F673 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = D62EDEE71D88215D0070F673 /* 9.png */; };
+		D62EDEFB1D88215D0070F673 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = D62EDEE71D88215D0070F673 /* 9.png */; };
 		D641C5B51D87D0E800F85C78 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D641C5B41D87D0E800F85C78 /* main.m */; };
 		D641C5B81D87D0E800F85C78 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D641C5B71D87D0E800F85C78 /* AppDelegate.m */; };
 		D641C5BB1D87D0E800F85C78 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D641C5BA1D87D0E800F85C78 /* ViewController.m */; };
@@ -82,6 +106,24 @@
 /* Begin PBXFileReference section */
 		2F5B872DC244070CC0135583 /* Pods-TBVImageBrowser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBVImageBrowser.release.xcconfig"; path = "Pods/Target Support Files/Pods-TBVImageBrowser/Pods-TBVImageBrowser.release.xcconfig"; sourceTree = "<group>"; };
 		A29D57E9ACA94EDFDD32CAAC /* Pods-TBVImageBrowser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBVImageBrowser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TBVImageBrowser/Pods-TBVImageBrowser.debug.xcconfig"; sourceTree = "<group>"; };
+		D62EDECE1D881A520070F673 /* TBVImageProviderManager+Register.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TBVImageProviderManager+Register.h"; sourceTree = "<group>"; };
+		D62EDECF1D881A520070F673 /* TBVImageProviderManager+Register.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TBVImageProviderManager+Register.m"; sourceTree = "<group>"; };
+		D62EDED51D881B4D0070F673 /* TBVImageElementProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVImageElementProtocol.h; sourceTree = "<group>"; };
+		D62EDED61D881B4D0070F673 /* TBVImageProviderIdentifierProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVImageProviderIdentifierProtocol.h; sourceTree = "<group>"; };
+		D62EDED71D881B4D0070F673 /* TBVImageProviderManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVImageProviderManagerProtocol.h; sourceTree = "<group>"; };
+		D62EDED81D881B4D0070F673 /* TBVImageProviderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVImageProviderProtocol.h; sourceTree = "<group>"; };
+		D62EDED91D881B990070F673 /* TBVImageElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVImageElement.h; sourceTree = "<group>"; };
+		D62EDEDA1D881B990070F673 /* TBVImageElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVImageElement.m; sourceTree = "<group>"; };
+		D62EDEDE1D88215D0070F673 /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
+		D62EDEDF1D88215D0070F673 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		D62EDEE01D88215D0070F673 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		D62EDEE11D88215D0070F673 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		D62EDEE21D88215D0070F673 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		D62EDEE31D88215D0070F673 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		D62EDEE41D88215D0070F673 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
+		D62EDEE51D88215D0070F673 /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
+		D62EDEE61D88215D0070F673 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
+		D62EDEE71D88215D0070F673 /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = "<group>"; };
 		D641C5B01D87D0E800F85C78 /* TBVImageBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBVImageBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D641C5B41D87D0E800F85C78 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D641C5B61D87D0E800F85C78 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -97,9 +139,6 @@
 		D641C5CF1D87D0E800F85C78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D641C5DF1D87D22F00F85C78 /* TBVImageProviderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVImageProviderManager.h; sourceTree = "<group>"; };
 		D641C5E01D87D22F00F85C78 /* TBVImageProviderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVImageProviderManager.m; sourceTree = "<group>"; };
-		D641C5E31D87D24A00F85C78 /* TBVImageElementProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVImageElementProtocol.h; sourceTree = "<group>"; };
-		D641C5E41D87D24A00F85C78 /* TBVImageProviderIdentifierProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVImageProviderIdentifierProtocol.h; sourceTree = "<group>"; };
-		D641C5E51D87D25300F85C78 /* TBVImageProviderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVImageProviderProtocol.h; sourceTree = "<group>"; };
 		D641C5E61D87D26800F85C78 /* TBVImageBrowserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVImageBrowserView.h; sourceTree = "<group>"; };
 		D641C5E71D87D26800F85C78 /* TBVImageBrowserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVImageBrowserView.m; sourceTree = "<group>"; };
 		D641C5EA1D87D27E00F85C78 /* TBVWebImageProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVWebImageProvider.h; sourceTree = "<group>"; };
@@ -108,7 +147,6 @@
 		D641C5EF1D87D28A00F85C78 /* TBVLocalImageProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVLocalImageProvider.m; sourceTree = "<group>"; };
 		D641C5F21D87D29700F85C78 /* TBVAssetImageProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVAssetImageProvider.h; sourceTree = "<group>"; };
 		D641C5F31D87D29700F85C78 /* TBVAssetImageProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVAssetImageProvider.m; sourceTree = "<group>"; };
-		D641C5F61D87D32900F85C78 /* TBVImageProviderManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVImageProviderManagerProtocol.h; sourceTree = "<group>"; };
 		D65A7E231D87DA7500276B55 /* TBVLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVLogger.h; sourceTree = "<group>"; };
 		D65A7E241D87DA7500276B55 /* TBVLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVLogger.m; sourceTree = "<group>"; };
 		D65A7E271D87DB4D00276B55 /* TBVImageBrowserViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVImageBrowserViewCell.h; sourceTree = "<group>"; };
@@ -184,6 +222,43 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D62EDED21D881B0B0070F673 /* Element */ = {
+			isa = PBXGroup;
+			children = (
+				D62EDED91D881B990070F673 /* TBVImageElement.h */,
+				D62EDEDA1D881B990070F673 /* TBVImageElement.m */,
+			);
+			path = Element;
+			sourceTree = "<group>";
+		};
+		D62EDED41D881B4D0070F673 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				D62EDED51D881B4D0070F673 /* TBVImageElementProtocol.h */,
+				D62EDED61D881B4D0070F673 /* TBVImageProviderIdentifierProtocol.h */,
+				D62EDED71D881B4D0070F673 /* TBVImageProviderManagerProtocol.h */,
+				D62EDED81D881B4D0070F673 /* TBVImageProviderProtocol.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		D62EDEDD1D88215D0070F673 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D62EDEDE1D88215D0070F673 /* 0.png */,
+				D62EDEDF1D88215D0070F673 /* 1.png */,
+				D62EDEE01D88215D0070F673 /* 2.png */,
+				D62EDEE11D88215D0070F673 /* 3.png */,
+				D62EDEE21D88215D0070F673 /* 4.png */,
+				D62EDEE31D88215D0070F673 /* 5.png */,
+				D62EDEE41D88215D0070F673 /* 6.png */,
+				D62EDEE51D88215D0070F673 /* 7.png */,
+				D62EDEE61D88215D0070F673 /* 8.png */,
+				D62EDEE71D88215D0070F673 /* 9.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		D641C5A71D87D0E800F85C78 = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +296,7 @@
 				D641C5BF1D87D0E800F85C78 /* Assets.xcassets */,
 				D641C5C11D87D0E800F85C78 /* LaunchScreen.storyboard */,
 				D641C5C41D87D0E800F85C78 /* Info.plist */,
+				D62EDEDD1D88215D0070F673 /* Images */,
 				D641C5B31D87D0E800F85C78 /* Supporting Files */,
 			);
 			path = TBVImageBrowser;
@@ -247,6 +323,8 @@
 			isa = PBXGroup;
 			children = (
 				D65A7E841D880D2E00276B55 /* TBVImageBrowser.h */,
+				D62EDED41D881B4D0070F673 /* Protocol */,
+				D62EDED21D881B0B0070F673 /* Element */,
 				D65A7E451D87F89900276B55 /* Configuration */,
 				D641C5D91D87D1AA00F85C78 /* Browser */,
 				D641C5DA1D87D1AA00F85C78 /* ProviderManager */,
@@ -274,10 +352,6 @@
 		D641C5DA1D87D1AA00F85C78 /* ProviderManager */ = {
 			isa = PBXGroup;
 			children = (
-				D641C5E41D87D24A00F85C78 /* TBVImageProviderIdentifierProtocol.h */,
-				D641C5E51D87D25300F85C78 /* TBVImageProviderProtocol.h */,
-				D641C5E31D87D24A00F85C78 /* TBVImageElementProtocol.h */,
-				D641C5F61D87D32900F85C78 /* TBVImageProviderManagerProtocol.h */,
 				D641C5DF1D87D22F00F85C78 /* TBVImageProviderManager.h */,
 				D641C5E01D87D22F00F85C78 /* TBVImageProviderManager.m */,
 			);
@@ -295,6 +369,8 @@
 				D641C5F31D87D29700F85C78 /* TBVAssetImageProvider.m */,
 				D65A7E4A1D87FF7900276B55 /* NSError+TBVImageProvider.h */,
 				D65A7E4B1D87FF7900276B55 /* NSError+TBVImageProvider.m */,
+				D62EDECE1D881A520070F673 /* TBVImageProviderManager+Register.h */,
+				D62EDECF1D881A520070F673 /* TBVImageProviderManager+Register.m */,
 			);
 			path = TBVImageProviders;
 			sourceTree = "<group>";
@@ -482,9 +558,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D62EDEF81D88215D0070F673 /* 8.png in Resources */,
+				D62EDEF61D88215D0070F673 /* 7.png in Resources */,
+				D62EDEEC1D88215D0070F673 /* 2.png in Resources */,
+				D62EDEE81D88215D0070F673 /* 0.png in Resources */,
+				D62EDEFA1D88215D0070F673 /* 9.png in Resources */,
 				D641C5C31D87D0E800F85C78 /* LaunchScreen.storyboard in Resources */,
 				D641C5C01D87D0E800F85C78 /* Assets.xcassets in Resources */,
+				D62EDEF41D88215D0070F673 /* 6.png in Resources */,
+				D62EDEF01D88215D0070F673 /* 4.png in Resources */,
 				D641C5BE1D87D0E800F85C78 /* Main.storyboard in Resources */,
+				D62EDEF21D88215D0070F673 /* 5.png in Resources */,
+				D62EDEEE1D88215D0070F673 /* 3.png in Resources */,
+				D62EDEEA1D88215D0070F673 /* 1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +578,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D62EDEF51D88215D0070F673 /* 6.png in Resources */,
+				D62EDEED1D88215D0070F673 /* 2.png in Resources */,
+				D62EDEE91D88215D0070F673 /* 0.png in Resources */,
+				D62EDEFB1D88215D0070F673 /* 9.png in Resources */,
+				D62EDEEB1D88215D0070F673 /* 1.png in Resources */,
+				D62EDEF31D88215D0070F673 /* 5.png in Resources */,
+				D62EDEF11D88215D0070F673 /* 4.png in Resources */,
+				D62EDEF91D88215D0070F673 /* 8.png in Resources */,
+				D62EDEEF1D88215D0070F673 /* 3.png in Resources */,
+				D62EDEF71D88215D0070F673 /* 7.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,6 +654,7 @@
 				D65A7EAB1D88122E00276B55 /* ALAssetsFilter+TBVAssetsManager.m in Sources */,
 				D65A7E2D1D87DC2F00276B55 /* TBVImageBrowserItemViewModel.m in Sources */,
 				D641C5EC1D87D27E00F85C78 /* TBVWebImageProvider.m in Sources */,
+				D62EDED01D881A520070F673 /* TBVImageProviderManager+Register.m in Sources */,
 				D65A7E481D87F89900276B55 /* TBVImageBrowserConfiguration.m in Sources */,
 				D65A7EAF1D88122E00276B55 /* PHAssetCollection+TBVAssetsManager.m in Sources */,
 				D65A7E4C1D87FF7900276B55 /* NSError+TBVImageProvider.m in Sources */,
@@ -573,6 +670,7 @@
 				D641C5B81D87D0E800F85C78 /* AppDelegate.m in Sources */,
 				D641C5E81D87D26800F85C78 /* TBVImageBrowserView.m in Sources */,
 				D65A7EB51D88122E00276B55 /* TBVAssetsPickerManager+Authorization.m in Sources */,
+				D62EDEDB1D881B990070F673 /* TBVImageElement.m in Sources */,
 				D65A7EB91D88122E00276B55 /* TBVAssetsPickerManager.m in Sources */,
 				D65A7E251D87DA7500276B55 /* TBVLogger.m in Sources */,
 				D65A7EB31D88122E00276B55 /* PHPhotoLibrary+TBVAssetsManager.m in Sources */,
@@ -588,6 +686,8 @@
 			files = (
 				D65A7E321D87DCE400276B55 /* TBVImageBrowserViewFlowLayout.m in Sources */,
 				D641C5F51D87D29700F85C78 /* TBVAssetImageProvider.m in Sources */,
+				D62EDEDC1D881B990070F673 /* TBVImageElement.m in Sources */,
+				D62EDED11D881A520070F673 /* TBVImageProviderManager+Register.m in Sources */,
 				D65A7EB41D88122E00276B55 /* PHPhotoLibrary+TBVAssetsManager.m in Sources */,
 				D65A7EBA1D88122E00276B55 /* TBVAssetsPickerManager.m in Sources */,
 				D65A7EAC1D88122E00276B55 /* ALAssetsFilter+TBVAssetsManager.m in Sources */,

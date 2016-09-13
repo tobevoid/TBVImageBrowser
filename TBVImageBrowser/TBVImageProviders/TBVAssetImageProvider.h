@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "TBVImageProviderProtocol.h"
-
+CF_EXPORT NSString *const kTBVAssetImageProviderIdentifier;
 @interface TBVAssetImageProvider : NSObject <TBVImageProviderProtocol>
 
 @end

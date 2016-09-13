@@ -12,6 +12,7 @@
 #import "TBVImageBrowserView.h"
 #import "TBVImageBrowserViewCell.h"
 #import "TBVImageBrowserViewModel.h"
+#import "TBVImageBrowserItemViewModel.h"
 
 static NSString *const kTBVImageBrowserViewCellReuseIdentifier = @"kTBVImageBrowserViewCell";
 @interface TBVImageBrowserView() <UICollectionViewDelegate, UICollectionViewDataSource>
@@ -19,19 +20,17 @@ static NSString *const kTBVImageBrowserViewCellReuseIdentifier = @"kTBVImageBrow
 @property (strong, nonatomic) TBVImageBrowserConfiguration *configuration;
 @property (strong, nonatomic) TBVImageBrowserViewFlowLayout *flowLayout;
 @property (strong, nonatomic) TBVImageBrowserViewModel *viewModel;
-@property (strong, nonatomic) id <TBVImageProviderManagerProtocol> imageProvider;
+@property (strong, nonatomic) NSArray *dataSource;
 @end
 
 @implementation TBVImageBrowserView
 #pragma mark life cycle
-- (instancetype)initWithElements:(NSArray<id<TBVImageElementProtocol>> *)elements
-                   imageProvider:(id <TBVImageProviderManagerProtocol>)imageProvider {
-    return [self initWithElements:elements imageProvider:imageProvider
+- (instancetype)initWithImageProvider:(id <TBVImageProviderManagerProtocol>)imageProvider {
+    return [self initWithImageProvider:imageProvider
                     configuration:[TBVImageBrowserConfiguration defaultConfiguration]];
 }
 
-- (instancetype)initWithElements:(NSArray<id<TBVImageElementProtocol>> *)elements
-                   imageProvider:(id <TBVImageProviderManagerProtocol>)imageProvider
+- (instancetype)initWithImageProvider:(id <TBVImageProviderManagerProtocol>)imageProvider
                    configuration:(TBVImageBrowserConfiguration *)configuration {
     self = [self init];
     if (self) {
@@ -39,13 +38,23 @@ static NSString *const kTBVImageBrowserViewCellReuseIdentifier = @"kTBVImageBrow
         self.configuration = configuration;
         self.flowLayout = [[TBVImageBrowserViewFlowLayout alloc]
                            initWithItemSize:configuration.itemSize];
-        self.viewModel = [[TBVImageBrowserViewModel alloc]
-                          initWithElements:elements
-                          imageProvider:imageProvider
-                          configuration:configuration];
-        self.imageProvider = imageProvider;
         [self addSubview:self.collectionView];
         [self layoutPageSubviews];
+        @weakify(self)
+        [[[RACObserve(self, elements) ignore:nil] map:^id(NSArray *elements) {
+            return [elements.rac_sequence map:^id(id <TBVImageElementProtocol> element) {
+                TBVImageBrowserItemViewModel *viewModel = [[TBVImageBrowserItemViewModel alloc] init];
+                viewModel.clickImageCommand = configuration.clickedImageCommand;
+                viewModel.progressSignal = [imageProvider progressSignal];
+                viewModel.contentImageSignal = [imageProvider imageSignalForElement:element];
+                return viewModel;
+            }].array;
+        }] subscribeNext:^(id value) {
+            @strongify(self)
+            self.viewModel.dataSource = value;
+            [self.collectionView reloadData];
+            
+        }];
     }
     return self;
 }
@@ -67,7 +76,7 @@ static NSString *const kTBVImageBrowserViewCellReuseIdentifier = @"kTBVImageBrow
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
                   cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     TBVImageBrowserViewCell *cell = [collectionView
-                                     dequeueReusableCellWithReuseIdentifier:UIApplicationKeyboardExtensionPointIdentifier
+                                     dequeueReusableCellWithReuseIdentifier:kTBVImageBrowserViewCellReuseIdentifier
                                      forIndexPath:indexPath];
     [cell bindViewModel:self.viewModel.dataSource[indexPath.item]];
     return cell;
@@ -84,7 +93,7 @@ static NSString *const kTBVImageBrowserViewCellReuseIdentifier = @"kTBVImageBrow
 - (UICollectionView *)collectionView {
     if (_collectionView == nil) {
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero
-                                             collectionViewLayout:self.flowLayout];
+                                             collectionViewLayout:_flowLayout];
         _collectionView.pagingEnabled = YES;
         _collectionView.scrollsToTop = YES;
         _collectionView.showsHorizontalScrollIndicator = NO;
@@ -96,5 +105,13 @@ static NSString *const kTBVImageBrowserViewCellReuseIdentifier = @"kTBVImageBrow
     }
     
     return _collectionView;
+}
+
+- (TBVImageBrowserViewModel *)viewModel {
+    if (_viewModel == nil) {
+        _viewModel = [[TBVImageBrowserViewModel alloc] init];
+    }
+    
+    return _viewModel;
 }
 @end

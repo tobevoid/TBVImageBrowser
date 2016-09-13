@@ -8,10 +8,10 @@
 
 #import "TBVLocalImageProvider.h"
 #import "NSError+TBVImageProvider.h"
-
+NSString *const kTBVLocalImageProviderIdentifier = @"kTBVLocalImageProviderIdentifier";
 @implementation TBVLocalImageProvider
 - (NSString *)identifier {
-    return @"TBVLocalImageProvider";
+    return kTBVLocalImageProviderIdentifier;
 }
 
 - (RACSignal *)imageSignalForElement:(id<TBVImageElementProtocol>)element progress:(TBVImageProviderProgressBlock)progress {

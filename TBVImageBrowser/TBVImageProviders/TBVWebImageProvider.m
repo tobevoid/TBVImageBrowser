@@ -9,13 +9,15 @@
 #import "TBVWebImageProvider.h"
 #import "NSError+TBVImageProvider.h"
 
+NSString *const kTBVWebImageProviderIdentifier = @"kTBVWebImageProviderIdentifier";
+
 @interface TBVWebImageProvider()
 @property (strong, nonatomic) SDWebImageManager *downloadManager;
 @end
 
 @implementation TBVWebImageProvider
 - (NSString *)identifier {
-    return @"TBVWebImageProvider";
+    return kTBVWebImageProviderIdentifier;
 }
 
 - (RACSignal *)imageSignalForElement:(id<TBVImageElementProtocol>)element progress:(TBVImageProviderProgressBlock)progress {
