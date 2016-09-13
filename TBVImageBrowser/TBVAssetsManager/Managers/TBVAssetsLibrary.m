@@ -10,7 +10,7 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "ALAssetsFilter+TBVAssetsManager.h"
 #import "TBVAssetsLibrary.h"
-#import "TBVAssetsPickerTypes.h"
+#import "TBVAssetsManagerTypes.h"
 #import "TBVAsset.h"
 #import "TBVCollection.h"
 
@@ -29,7 +29,7 @@
                 /*  这里可以对notification进行一些处理，让iOS8 + - 两个版本输出一致 */
                 
                 [[NSNotificationCenter defaultCenter]
-                 postNotificationName:TBVAssetsPickerAssetsDidChangeNotification
+                 postNotificationName:TBVAssetsAssetsDidChangeNotification
                  object:nil];
             }];
     }
@@ -38,7 +38,7 @@
 
 - (RACSignal *)requestImageForAsset:(TBVAsset *)aAsset
                          targetSize:(CGSize)targetSize
-                        contentMode:(TBVAssetsPickerContentMode)contentMode {
+                        contentMode:(TBVAssetsContentMode)contentMode {
     return [[[RACSignal return:aAsset.asset]
                 deliverOn:[RACScheduler scheduler]]
                 map:^id(ALAsset * asset) {
@@ -48,14 +48,14 @@
         CGImageRef thumbnail = asset.thumbnail;
         if (targetSize.width < CGImageGetWidth(thumbnail) &&
             targetSize.height < CGImageGetHeight(thumbnail)) {
-            // TBVAssetsPickerContentModeFill
+            // TBVAssetsContentModeFill
             resultImageRef = thumbnail;
         }
         if (!resultImageRef) {
             CGImageRef aspectRatioThumbnail = asset.aspectRatioThumbnail;
             if (targetSize.width < CGImageGetWidth(aspectRatioThumbnail) &&
                 targetSize.height < CGImageGetHeight(aspectRatioThumbnail)) {
-                // TBVAssetsPickerContentModeFit
+                // TBVAssetsContentModeFit
                 resultImageRef = aspectRatioThumbnail;
             }
             if (!resultImageRef) {
@@ -79,7 +79,7 @@
                                        kBQPosterImageHeight * BQAP_SCREEN_SCALE);
         [subscriber sendNext:[self requestImageForAsset:asset
                                              targetSize:posterSize
-                                            contentMode:TBVAssetsPickerContentModeFill]];
+                                            contentMode:TBVAssetsContentModeFill]];
         [subscriber sendCompleted];
         return nil;
     }] switchToLatest];
@@ -137,7 +137,7 @@
 }
 
 - (RACSignal *)requestPosterImageForCollection:(TBVCollection *)collection
-                            mediaType:(TBVAssetsPickerMediaType)mediaType {
+                            mediaType:(TBVAssetsMediaType)mediaType {
     return [[[[RACSignal
         return:collection.collection]
         deliverOn:[RACScheduler scheduler]]
@@ -151,7 +151,7 @@
 }
 
 - (RACSignal *)requestAssetsForCollection:(TBVCollection *)collection
-                                mediaType:(TBVAssetsPickerMediaType)mediaType {
+                                mediaType:(TBVAssetsMediaType)mediaType {
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         NSMutableArray *assets = [NSMutableArray array];
         ALAssetsGroup *group = (ALAssetsGroup *)collection.collection;

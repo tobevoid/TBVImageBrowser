@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-NSString *const kTBVImageProviderErrorKey;
+CF_EXPORT NSString *const kTBVImageProviderErrorKey;
 @interface NSError (TBVImageProvider)
 + (instancetype)errorWithDomain:(NSString *)domain message:(NSString *)message;
 @end

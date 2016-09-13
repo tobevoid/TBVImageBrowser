@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TBVAssetsPickerTypes.h"
 
 @class TBVAsset;
 @interface TBVCollection : NSObject
@@ -20,6 +19,6 @@
 - (NSString *)collectionTitle;
 - (NSInteger)collectionEstimatedAssetCount;
 - (NSInteger)collectionAccurateAssetCountWithFetchOptions:(id)filterOptions;
-- (NSInteger)collectionAccurateAssetCountWithMediaType:(TBVAssetsPickerMediaType)mediaType;
+- (NSInteger)collectionAccurateAssetCountWithMediaType:(TBVAssetsMediaType)mediaType;
 @end
 

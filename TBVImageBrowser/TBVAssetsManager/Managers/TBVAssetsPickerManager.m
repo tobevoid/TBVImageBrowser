@@ -47,7 +47,7 @@
 #pragma mark TBVAssetsManagerProtocol
 - (RACSignal *)requestImageForAsset:(TBVAsset *)asset
                          targetSize:(CGSize)targetSize
-                        contentMode:(TBVAssetsPickerContentMode)contentMode {
+                        contentMode:(TBVAssetsContentMode)contentMode {
     /* 这里不能用replayLazily等一系列方法，否则内存会居高不下，这系列方法会存储图片 */
     return [[self.realManager requestImageForAsset:asset
                                        targetSize:targetSize
@@ -80,14 +80,14 @@
 }
 
 - (RACSignal *)requestPosterImageForCollection:(TBVCollection *)collection
-                            mediaType:(TBVAssetsPickerMediaType)mediaType {
+                            mediaType:(TBVAssetsMediaType)mediaType {
     return [[self.realManager requestPosterImageForCollection:collection
                                                    mediaType:mediaType]
             deliverOnMainThread];
 }
 
 - (RACSignal *)requestAssetsForCollection:(TBVCollection *)collection
-                                mediaType:(TBVAssetsPickerMediaType)mediaType {
+                                mediaType:(TBVAssetsMediaType)mediaType {
     return [self.realManager requestAssetsForCollection:collection
                                               mediaType:mediaType];
 }

@@ -52,7 +52,7 @@
     return 0;
 }
 
-- (NSInteger)collectionAccurateAssetCountWithMediaType:(TBVAssetsPickerMediaType)mediaType {
+- (NSInteger)collectionAccurateAssetCountWithMediaType:(TBVAssetsMediaType)mediaType {
     NSObject *filterOptions = nil;
     if ([self.collection class] != [ALAssetsGroup class]) {
         filterOptions = [PHFetchOptions tbv_fetchOptionsWithCustomMediaType:mediaType];

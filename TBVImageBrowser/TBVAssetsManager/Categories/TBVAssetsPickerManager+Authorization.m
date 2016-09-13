@@ -11,7 +11,7 @@
 #import "PHPhotoLibrary+TBVAssetsManager.h"
 
 @implementation TBVAssetsPickerManager (Authorization)
-- (BQAuthorizationStatus)authorizationStatus {
+- (TBVAssetsAuthorizationStatus)authorizationStatus {
     if (self.photoKitAvailable) {
         return [PHPhotoLibrary tbv_authorizationStatus];
     } else {
@@ -23,7 +23,7 @@
 }
 
 - (BOOL)isAuthorized {
-    return [self authorizationStatus] == BQAuthorizationStatusAuthorized;
+    return [self authorizationStatus] == TBVAssetsAuthorizationStatusAuthorized;
 }
 
 - (RACSignal *)requestAuthorization {

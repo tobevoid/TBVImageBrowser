@@ -12,7 +12,7 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
-#import "TBVAssetsPickerTypes.h"
+#import "TBVAssetsManagerTypes.h"
 
 @class TBVAsset;
 @class TBVCollection;
@@ -26,10 +26,10 @@
 
 - (RACSignal *)requestImageForAsset:(TBVAsset *)asset
                          targetSize:(CGSize)targetSize
-                        contentMode:(TBVAssetsPickerContentMode)contentMode;
+                        contentMode:(TBVAssetsContentMode)contentMode;
 
 - (RACSignal *)requestPosterImageForCollection:(TBVCollection *)collection
-                                     mediaType:(TBVAssetsPickerMediaType)mediaType;
+                                     mediaType:(TBVAssetsMediaType)mediaType;
 
 - (RACSignal *)requestPosterImageForAsset:(TBVAsset *)asset;
 
@@ -44,7 +44,7 @@
 - (RACSignal *)requestAllCollections;
 
 - (RACSignal *)requestAssetsForCollection:(TBVCollection *)collection
-                                mediaType:(TBVAssetsPickerMediaType)mediaType;
+                                mediaType:(TBVAssetsMediaType)mediaType;
 
 - (RACSignal *)requestCameraRollCollection;
 

@@ -34,17 +34,17 @@
             CGFloat scale = 0.5;
             CGSize size = [UIScreen mainScreen].bounds.size;
             CGSize targetSize = CGSizeMake(size.width * scale, size.height * scale);
-            return [self.pickManager requestImageForAsset:asset targetSize:targetSize contentMode:TBVAssetsPickerContentModeFill];
+            return [self.pickManager requestImageForAsset:asset targetSize:targetSize contentMode:TBVAssetsContentModeFill];
         }
         case TBVAssetsReformerModeMedium: {
             CGFloat scale = [UIScreen mainScreen].scale;
             CGSize size = [UIScreen mainScreen].bounds.size;
             CGSize targetSize = CGSizeMake(size.width * scale, size.height * scale);
-            return [self.pickManager requestImageForAsset:asset targetSize:targetSize contentMode:TBVAssetsPickerContentModeFill];
+            return [self.pickManager requestImageForAsset:asset targetSize:targetSize contentMode:TBVAssetsContentModeFill];
         }
         case TBVAssetsReformerModeLarge: {
             CGSize targetSize = CGSizeMake(1500, 1500);
-            return [self.pickManager requestImageForAsset:asset targetSize:targetSize contentMode:TBVAssetsPickerContentModeFill];
+            return [self.pickManager requestImageForAsset:asset targetSize:targetSize contentMode:TBVAssetsContentModeFill];
         }
         case TBVAssetsReformerModeRaw: {
             return [self.pickManager requestFullResolutionImageForAsset:asset];

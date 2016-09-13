@@ -7,8 +7,8 @@
 //
 
 #import <AssetsLibrary/AssetsLibrary.h>
-#import "TBVAssetsPickerTypes.h"
+#import "TBVAssetsManagerTypes.h"
 
 @interface ALAssetsFilter (TBVAssetsManager)
-+ (instancetype)tbv_assetsFilterWithCustomMediaType:(TBVAssetsPickerMediaType)mediaType;
++ (instancetype)tbv_assetsFilterWithCustomMediaType:(TBVAssetsMediaType)mediaType;
 @end

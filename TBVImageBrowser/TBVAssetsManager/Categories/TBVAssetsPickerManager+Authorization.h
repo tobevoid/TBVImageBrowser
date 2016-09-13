@@ -7,9 +7,8 @@
 //
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "TBVAssetsPickerManager.h"
-#import "TBVAssetsPickerTypes.h"
 @interface TBVAssetsPickerManager (Authorization)
 - (BOOL)isAuthorized;
 - (RACSignal *)requestAuthorization;
-- (BQAuthorizationStatus)authorizationStatus;
+- (TBVAssetsAuthorizationStatus)authorizationStatus;
 @end

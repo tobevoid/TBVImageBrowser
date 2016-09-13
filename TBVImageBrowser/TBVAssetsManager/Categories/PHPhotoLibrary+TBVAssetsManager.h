@@ -8,8 +8,8 @@
 
 #import <Photos/Photos.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
-#import "TBVAssetsPickerTypes.h"
+#import "TBVAssetsManagerTypes.h"
 @interface PHPhotoLibrary (TBVAssetsManager)
-+ (BQAuthorizationStatus)tbv_authorizationStatus;
++ (TBVAssetsAuthorizationStatus)tbv_authorizationStatus;
 + (RACSignal *)tbv_requestAuthorization;
 @end

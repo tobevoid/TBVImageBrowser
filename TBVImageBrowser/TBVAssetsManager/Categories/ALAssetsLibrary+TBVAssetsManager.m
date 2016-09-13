@@ -11,16 +11,16 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored"-Wdeprecated"
 @implementation ALAssetsLibrary (TBVAssetsManager)
-+ (BQAuthorizationStatus)tbv_authorizationStatus {
++ (TBVAssetsAuthorizationStatus)tbv_authorizationStatus {
     switch ([self authorizationStatus]) {
         case ALAuthorizationStatusNotDetermined:
-            return BQAuthorizationStatusNotDetermined;
+            return TBVAssetsAuthorizationStatusNotDetermined;
         case ALAuthorizationStatusRestricted:
-            return BQAuthorizationStatusRestricted;
+            return TBVAssetsAuthorizationStatusRestricted;
         case ALAuthorizationStatusDenied:
-            return BQAuthorizationStatusDenied;
+            return TBVAssetsAuthorizationStatusDenied;
         case ALAuthorizationStatusAuthorized:
-            return BQAuthorizationStatusAuthorized;
+            return TBVAssetsAuthorizationStatusAuthorized;
     }
 }
 
@@ -31,7 +31,7 @@
             [subscriber sendCompleted];
         };
         
-        if ([self tbv_authorizationStatus] != BQAuthorizationStatusNotDetermined) {
+        if ([self tbv_authorizationStatus] != TBVAssetsAuthorizationStatusNotDetermined) {
             sendStatus();
             return nil;
         }

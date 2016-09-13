@@ -7,9 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "TBVImageBrowser.h"
 
 @interface ViewController ()
-
+@property (strong, nonatomic) TBVImageBrowserView *imageBrowserView;
 @end
 
 @implementation ViewController

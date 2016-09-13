@@ -41,30 +41,32 @@
 		D65A7E491D87F89900276B55 /* TBVImageBrowserConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E471D87F89900276B55 /* TBVImageBrowserConfiguration.m */; };
 		D65A7E4C1D87FF7900276B55 /* NSError+TBVImageProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E4B1D87FF7900276B55 /* NSError+TBVImageProvider.m */; };
 		D65A7E4D1D87FF7900276B55 /* NSError+TBVImageProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E4B1D87FF7900276B55 /* NSError+TBVImageProvider.m */; };
-		D65A7E6C1D880B0D00276B55 /* ALAssetsFilter+TBVAssetsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E511D880B0D00276B55 /* ALAssetsFilter+TBVAssetsManager.m */; };
-		D65A7E6D1D880B0D00276B55 /* ALAssetsFilter+TBVAssetsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E511D880B0D00276B55 /* ALAssetsFilter+TBVAssetsManager.m */; };
-		D65A7E6E1D880B0D00276B55 /* ALAssetsLibrary+TBVAssetsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E531D880B0D00276B55 /* ALAssetsLibrary+TBVAssetsManager.m */; };
-		D65A7E6F1D880B0D00276B55 /* ALAssetsLibrary+TBVAssetsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E531D880B0D00276B55 /* ALAssetsLibrary+TBVAssetsManager.m */; };
-		D65A7E701D880B0D00276B55 /* PHAssetCollection+TBVAssetsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E551D880B0D00276B55 /* PHAssetCollection+TBVAssetsManager.m */; };
-		D65A7E711D880B0D00276B55 /* PHAssetCollection+TBVAssetsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E551D880B0D00276B55 /* PHAssetCollection+TBVAssetsManager.m */; };
-		D65A7E721D880B0D00276B55 /* PHFetchOptions+TBVAssetsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E571D880B0D00276B55 /* PHFetchOptions+TBVAssetsManager.m */; };
-		D65A7E731D880B0D00276B55 /* PHFetchOptions+TBVAssetsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E571D880B0D00276B55 /* PHFetchOptions+TBVAssetsManager.m */; };
-		D65A7E741D880B0D00276B55 /* PHPhotoLibrary+TBVAssetsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E591D880B0D00276B55 /* PHPhotoLibrary+TBVAssetsManager.m */; };
-		D65A7E751D880B0D00276B55 /* PHPhotoLibrary+TBVAssetsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E591D880B0D00276B55 /* PHPhotoLibrary+TBVAssetsManager.m */; };
-		D65A7E761D880B0D00276B55 /* TBVAssetsPickerManager+Authorization.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E5B1D880B0D00276B55 /* TBVAssetsPickerManager+Authorization.m */; };
-		D65A7E771D880B0D00276B55 /* TBVAssetsPickerManager+Authorization.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E5B1D880B0D00276B55 /* TBVAssetsPickerManager+Authorization.m */; };
-		D65A7E781D880B0D00276B55 /* TBVAssetsLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E5E1D880B0D00276B55 /* TBVAssetsLibrary.m */; };
-		D65A7E791D880B0D00276B55 /* TBVAssetsLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E5E1D880B0D00276B55 /* TBVAssetsLibrary.m */; };
-		D65A7E7A1D880B0D00276B55 /* TBVAssetsPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E611D880B0D00276B55 /* TBVAssetsPickerManager.m */; };
-		D65A7E7B1D880B0D00276B55 /* TBVAssetsPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E611D880B0D00276B55 /* TBVAssetsPickerManager.m */; };
-		D65A7E7C1D880B0D00276B55 /* TBVCachingImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E631D880B0D00276B55 /* TBVCachingImageManager.m */; };
-		D65A7E7D1D880B0D00276B55 /* TBVCachingImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E631D880B0D00276B55 /* TBVCachingImageManager.m */; };
-		D65A7E7E1D880B0D00276B55 /* TBVAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E661D880B0D00276B55 /* TBVAsset.m */; };
-		D65A7E7F1D880B0D00276B55 /* TBVAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E661D880B0D00276B55 /* TBVAsset.m */; };
-		D65A7E801D880B0D00276B55 /* TBVCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E681D880B0D00276B55 /* TBVCollection.m */; };
-		D65A7E811D880B0D00276B55 /* TBVCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E681D880B0D00276B55 /* TBVCollection.m */; };
-		D65A7E821D880B0D00276B55 /* TBVAssetsReformer.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E6B1D880B0D00276B55 /* TBVAssetsReformer.m */; };
-		D65A7E831D880B0D00276B55 /* TBVAssetsReformer.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E6B1D880B0D00276B55 /* TBVAssetsReformer.m */; };
+		D65A7EAB1D88122E00276B55 /* ALAssetsFilter+TBVAssetsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E8E1D88122E00276B55 /* ALAssetsFilter+TBVAssetsManager.m */; };
+		D65A7EAC1D88122E00276B55 /* ALAssetsFilter+TBVAssetsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E8E1D88122E00276B55 /* ALAssetsFilter+TBVAssetsManager.m */; };
+		D65A7EAD1D88122E00276B55 /* ALAssetsLibrary+TBVAssetsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E901D88122E00276B55 /* ALAssetsLibrary+TBVAssetsManager.m */; };
+		D65A7EAE1D88122E00276B55 /* ALAssetsLibrary+TBVAssetsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E901D88122E00276B55 /* ALAssetsLibrary+TBVAssetsManager.m */; };
+		D65A7EAF1D88122E00276B55 /* PHAssetCollection+TBVAssetsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E921D88122E00276B55 /* PHAssetCollection+TBVAssetsManager.m */; };
+		D65A7EB01D88122E00276B55 /* PHAssetCollection+TBVAssetsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E921D88122E00276B55 /* PHAssetCollection+TBVAssetsManager.m */; };
+		D65A7EB11D88122E00276B55 /* PHFetchOptions+TBVAssetsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E941D88122E00276B55 /* PHFetchOptions+TBVAssetsManager.m */; };
+		D65A7EB21D88122E00276B55 /* PHFetchOptions+TBVAssetsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E941D88122E00276B55 /* PHFetchOptions+TBVAssetsManager.m */; };
+		D65A7EB31D88122E00276B55 /* PHPhotoLibrary+TBVAssetsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E961D88122E00276B55 /* PHPhotoLibrary+TBVAssetsManager.m */; };
+		D65A7EB41D88122E00276B55 /* PHPhotoLibrary+TBVAssetsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E961D88122E00276B55 /* PHPhotoLibrary+TBVAssetsManager.m */; };
+		D65A7EB51D88122E00276B55 /* TBVAssetsPickerManager+Authorization.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E981D88122E00276B55 /* TBVAssetsPickerManager+Authorization.m */; };
+		D65A7EB61D88122E00276B55 /* TBVAssetsPickerManager+Authorization.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E981D88122E00276B55 /* TBVAssetsPickerManager+Authorization.m */; };
+		D65A7EB71D88122E00276B55 /* TBVAssetsLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E9B1D88122E00276B55 /* TBVAssetsLibrary.m */; };
+		D65A7EB81D88122E00276B55 /* TBVAssetsLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E9B1D88122E00276B55 /* TBVAssetsLibrary.m */; };
+		D65A7EB91D88122E00276B55 /* TBVAssetsPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E9E1D88122E00276B55 /* TBVAssetsPickerManager.m */; };
+		D65A7EBA1D88122E00276B55 /* TBVAssetsPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E9E1D88122E00276B55 /* TBVAssetsPickerManager.m */; };
+		D65A7EBB1D88122E00276B55 /* TBVCachingImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7EA01D88122E00276B55 /* TBVCachingImageManager.m */; };
+		D65A7EBC1D88122E00276B55 /* TBVCachingImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7EA01D88122E00276B55 /* TBVCachingImageManager.m */; };
+		D65A7EBD1D88122E00276B55 /* TBVAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7EA31D88122E00276B55 /* TBVAsset.m */; };
+		D65A7EBE1D88122E00276B55 /* TBVAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7EA31D88122E00276B55 /* TBVAsset.m */; };
+		D65A7EBF1D88122E00276B55 /* TBVCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7EA51D88122E00276B55 /* TBVCollection.m */; };
+		D65A7EC01D88122E00276B55 /* TBVCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7EA51D88122E00276B55 /* TBVCollection.m */; };
+		D65A7EC11D88122E00276B55 /* TBVAssetsManagerTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7EA71D88122E00276B55 /* TBVAssetsManagerTypes.m */; };
+		D65A7EC21D88122E00276B55 /* TBVAssetsManagerTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7EA71D88122E00276B55 /* TBVAssetsManagerTypes.m */; };
+		D65A7EC31D88122E00276B55 /* TBVAssetsReformer.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7EAA1D88122E00276B55 /* TBVAssetsReformer.m */; };
+		D65A7EC41D88122E00276B55 /* TBVAssetsReformer.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7EAA1D88122E00276B55 /* TBVAssetsReformer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,31 +125,34 @@
 		D65A7E471D87F89900276B55 /* TBVImageBrowserConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVImageBrowserConfiguration.m; sourceTree = "<group>"; };
 		D65A7E4A1D87FF7900276B55 /* NSError+TBVImageProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+TBVImageProvider.h"; sourceTree = "<group>"; };
 		D65A7E4B1D87FF7900276B55 /* NSError+TBVImageProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+TBVImageProvider.m"; sourceTree = "<group>"; };
-		D65A7E501D880B0D00276B55 /* ALAssetsFilter+TBVAssetsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsFilter+TBVAssetsManager.h"; sourceTree = "<group>"; };
-		D65A7E511D880B0D00276B55 /* ALAssetsFilter+TBVAssetsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsFilter+TBVAssetsManager.m"; sourceTree = "<group>"; };
-		D65A7E521D880B0D00276B55 /* ALAssetsLibrary+TBVAssetsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsLibrary+TBVAssetsManager.h"; sourceTree = "<group>"; };
-		D65A7E531D880B0D00276B55 /* ALAssetsLibrary+TBVAssetsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsLibrary+TBVAssetsManager.m"; sourceTree = "<group>"; };
-		D65A7E541D880B0D00276B55 /* PHAssetCollection+TBVAssetsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHAssetCollection+TBVAssetsManager.h"; sourceTree = "<group>"; };
-		D65A7E551D880B0D00276B55 /* PHAssetCollection+TBVAssetsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHAssetCollection+TBVAssetsManager.m"; sourceTree = "<group>"; };
-		D65A7E561D880B0D00276B55 /* PHFetchOptions+TBVAssetsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHFetchOptions+TBVAssetsManager.h"; sourceTree = "<group>"; };
-		D65A7E571D880B0D00276B55 /* PHFetchOptions+TBVAssetsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHFetchOptions+TBVAssetsManager.m"; sourceTree = "<group>"; };
-		D65A7E581D880B0D00276B55 /* PHPhotoLibrary+TBVAssetsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHPhotoLibrary+TBVAssetsManager.h"; sourceTree = "<group>"; };
-		D65A7E591D880B0D00276B55 /* PHPhotoLibrary+TBVAssetsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHPhotoLibrary+TBVAssetsManager.m"; sourceTree = "<group>"; };
-		D65A7E5A1D880B0D00276B55 /* TBVAssetsPickerManager+Authorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TBVAssetsPickerManager+Authorization.h"; sourceTree = "<group>"; };
-		D65A7E5B1D880B0D00276B55 /* TBVAssetsPickerManager+Authorization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TBVAssetsPickerManager+Authorization.m"; sourceTree = "<group>"; };
-		D65A7E5D1D880B0D00276B55 /* TBVAssetsLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVAssetsLibrary.h; sourceTree = "<group>"; };
-		D65A7E5E1D880B0D00276B55 /* TBVAssetsLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVAssetsLibrary.m; sourceTree = "<group>"; };
-		D65A7E5F1D880B0D00276B55 /* TBVAssetsManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVAssetsManagerProtocol.h; sourceTree = "<group>"; };
-		D65A7E601D880B0D00276B55 /* TBVAssetsPickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVAssetsPickerManager.h; sourceTree = "<group>"; };
-		D65A7E611D880B0D00276B55 /* TBVAssetsPickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVAssetsPickerManager.m; sourceTree = "<group>"; };
-		D65A7E621D880B0D00276B55 /* TBVCachingImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVCachingImageManager.h; sourceTree = "<group>"; };
-		D65A7E631D880B0D00276B55 /* TBVCachingImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVCachingImageManager.m; sourceTree = "<group>"; };
-		D65A7E651D880B0D00276B55 /* TBVAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVAsset.h; sourceTree = "<group>"; };
-		D65A7E661D880B0D00276B55 /* TBVAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVAsset.m; sourceTree = "<group>"; };
-		D65A7E671D880B0D00276B55 /* TBVCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVCollection.h; sourceTree = "<group>"; };
-		D65A7E681D880B0D00276B55 /* TBVCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVCollection.m; sourceTree = "<group>"; };
-		D65A7E6A1D880B0D00276B55 /* TBVAssetsReformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVAssetsReformer.h; sourceTree = "<group>"; };
-		D65A7E6B1D880B0D00276B55 /* TBVAssetsReformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVAssetsReformer.m; sourceTree = "<group>"; };
+		D65A7E841D880D2E00276B55 /* TBVImageBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVImageBrowser.h; sourceTree = "<group>"; };
+		D65A7E8D1D88122E00276B55 /* ALAssetsFilter+TBVAssetsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsFilter+TBVAssetsManager.h"; sourceTree = "<group>"; };
+		D65A7E8E1D88122E00276B55 /* ALAssetsFilter+TBVAssetsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsFilter+TBVAssetsManager.m"; sourceTree = "<group>"; };
+		D65A7E8F1D88122E00276B55 /* ALAssetsLibrary+TBVAssetsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsLibrary+TBVAssetsManager.h"; sourceTree = "<group>"; };
+		D65A7E901D88122E00276B55 /* ALAssetsLibrary+TBVAssetsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsLibrary+TBVAssetsManager.m"; sourceTree = "<group>"; };
+		D65A7E911D88122E00276B55 /* PHAssetCollection+TBVAssetsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHAssetCollection+TBVAssetsManager.h"; sourceTree = "<group>"; };
+		D65A7E921D88122E00276B55 /* PHAssetCollection+TBVAssetsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHAssetCollection+TBVAssetsManager.m"; sourceTree = "<group>"; };
+		D65A7E931D88122E00276B55 /* PHFetchOptions+TBVAssetsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHFetchOptions+TBVAssetsManager.h"; sourceTree = "<group>"; };
+		D65A7E941D88122E00276B55 /* PHFetchOptions+TBVAssetsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHFetchOptions+TBVAssetsManager.m"; sourceTree = "<group>"; };
+		D65A7E951D88122E00276B55 /* PHPhotoLibrary+TBVAssetsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHPhotoLibrary+TBVAssetsManager.h"; sourceTree = "<group>"; };
+		D65A7E961D88122E00276B55 /* PHPhotoLibrary+TBVAssetsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHPhotoLibrary+TBVAssetsManager.m"; sourceTree = "<group>"; };
+		D65A7E971D88122E00276B55 /* TBVAssetsPickerManager+Authorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TBVAssetsPickerManager+Authorization.h"; sourceTree = "<group>"; };
+		D65A7E981D88122E00276B55 /* TBVAssetsPickerManager+Authorization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TBVAssetsPickerManager+Authorization.m"; sourceTree = "<group>"; };
+		D65A7E9A1D88122E00276B55 /* TBVAssetsLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVAssetsLibrary.h; sourceTree = "<group>"; };
+		D65A7E9B1D88122E00276B55 /* TBVAssetsLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVAssetsLibrary.m; sourceTree = "<group>"; };
+		D65A7E9C1D88122E00276B55 /* TBVAssetsManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVAssetsManagerProtocol.h; sourceTree = "<group>"; };
+		D65A7E9D1D88122E00276B55 /* TBVAssetsPickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVAssetsPickerManager.h; sourceTree = "<group>"; };
+		D65A7E9E1D88122E00276B55 /* TBVAssetsPickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVAssetsPickerManager.m; sourceTree = "<group>"; };
+		D65A7E9F1D88122E00276B55 /* TBVCachingImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVCachingImageManager.h; sourceTree = "<group>"; };
+		D65A7EA01D88122E00276B55 /* TBVCachingImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVCachingImageManager.m; sourceTree = "<group>"; };
+		D65A7EA21D88122E00276B55 /* TBVAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVAsset.h; sourceTree = "<group>"; };
+		D65A7EA31D88122E00276B55 /* TBVAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVAsset.m; sourceTree = "<group>"; };
+		D65A7EA41D88122E00276B55 /* TBVCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVCollection.h; sourceTree = "<group>"; };
+		D65A7EA51D88122E00276B55 /* TBVCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVCollection.m; sourceTree = "<group>"; };
+		D65A7EA61D88122E00276B55 /* TBVAssetsManagerTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVAssetsManagerTypes.h; sourceTree = "<group>"; };
+		D65A7EA71D88122E00276B55 /* TBVAssetsManagerTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVAssetsManagerTypes.m; sourceTree = "<group>"; };
+		D65A7EA91D88122E00276B55 /* TBVAssetsReformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVAssetsReformer.h; sourceTree = "<group>"; };
+		D65A7EAA1D88122E00276B55 /* TBVAssetsReformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVAssetsReformer.m; sourceTree = "<group>"; };
 		E7DAA40C384FD910CBF20E45 /* libPods-TBVImageBrowser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TBVImageBrowser.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -202,8 +207,8 @@
 		D641C5B21D87D0E800F85C78 /* TBVImageBrowser */ = {
 			isa = PBXGroup;
 			children = (
-				D65A7E4E1D880B0D00276B55 /* TBVAssetsManager */,
-				D65A7E691D880B0D00276B55 /* TBVAssetsReformer */,
+				D65A7E8B1D88122E00276B55 /* TBVAssetsManager */,
+				D65A7EA81D88122E00276B55 /* TBVAssetsReformer */,
 				D65A7E331D87DE5900276B55 /* TBVLayoutHelper */,
 				D65A7E221D87DA7500276B55 /* TBVLogger */,
 				D641C5D81D87D1AA00F85C78 /* TBVImageBrowser */,
@@ -241,6 +246,7 @@
 		D641C5D81D87D1AA00F85C78 /* TBVImageBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				D65A7E841D880D2E00276B55 /* TBVImageBrowser.h */,
 				D65A7E451D87F89900276B55 /* Configuration */,
 				D641C5D91D87D1AA00F85C78 /* Browser */,
 				D641C5DA1D87D1AA00F85C78 /* ProviderManager */,
@@ -320,65 +326,67 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
-		D65A7E4E1D880B0D00276B55 /* TBVAssetsManager */ = {
+		D65A7E8B1D88122E00276B55 /* TBVAssetsManager */ = {
 			isa = PBXGroup;
 			children = (
-				D65A7E4F1D880B0D00276B55 /* Categories */,
-				D65A7E5C1D880B0D00276B55 /* Managers */,
-				D65A7E641D880B0D00276B55 /* Models */,
+				D65A7E8C1D88122E00276B55 /* Categories */,
+				D65A7E991D88122E00276B55 /* Managers */,
+				D65A7EA11D88122E00276B55 /* Models */,
+				D65A7EA61D88122E00276B55 /* TBVAssetsManagerTypes.h */,
+				D65A7EA71D88122E00276B55 /* TBVAssetsManagerTypes.m */,
 			);
 			path = TBVAssetsManager;
 			sourceTree = "<group>";
 		};
-		D65A7E4F1D880B0D00276B55 /* Categories */ = {
+		D65A7E8C1D88122E00276B55 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				D65A7E501D880B0D00276B55 /* ALAssetsFilter+TBVAssetsManager.h */,
-				D65A7E511D880B0D00276B55 /* ALAssetsFilter+TBVAssetsManager.m */,
-				D65A7E521D880B0D00276B55 /* ALAssetsLibrary+TBVAssetsManager.h */,
-				D65A7E531D880B0D00276B55 /* ALAssetsLibrary+TBVAssetsManager.m */,
-				D65A7E541D880B0D00276B55 /* PHAssetCollection+TBVAssetsManager.h */,
-				D65A7E551D880B0D00276B55 /* PHAssetCollection+TBVAssetsManager.m */,
-				D65A7E561D880B0D00276B55 /* PHFetchOptions+TBVAssetsManager.h */,
-				D65A7E571D880B0D00276B55 /* PHFetchOptions+TBVAssetsManager.m */,
-				D65A7E581D880B0D00276B55 /* PHPhotoLibrary+TBVAssetsManager.h */,
-				D65A7E591D880B0D00276B55 /* PHPhotoLibrary+TBVAssetsManager.m */,
-				D65A7E5A1D880B0D00276B55 /* TBVAssetsPickerManager+Authorization.h */,
-				D65A7E5B1D880B0D00276B55 /* TBVAssetsPickerManager+Authorization.m */,
+				D65A7E8D1D88122E00276B55 /* ALAssetsFilter+TBVAssetsManager.h */,
+				D65A7E8E1D88122E00276B55 /* ALAssetsFilter+TBVAssetsManager.m */,
+				D65A7E8F1D88122E00276B55 /* ALAssetsLibrary+TBVAssetsManager.h */,
+				D65A7E901D88122E00276B55 /* ALAssetsLibrary+TBVAssetsManager.m */,
+				D65A7E911D88122E00276B55 /* PHAssetCollection+TBVAssetsManager.h */,
+				D65A7E921D88122E00276B55 /* PHAssetCollection+TBVAssetsManager.m */,
+				D65A7E931D88122E00276B55 /* PHFetchOptions+TBVAssetsManager.h */,
+				D65A7E941D88122E00276B55 /* PHFetchOptions+TBVAssetsManager.m */,
+				D65A7E951D88122E00276B55 /* PHPhotoLibrary+TBVAssetsManager.h */,
+				D65A7E961D88122E00276B55 /* PHPhotoLibrary+TBVAssetsManager.m */,
+				D65A7E971D88122E00276B55 /* TBVAssetsPickerManager+Authorization.h */,
+				D65A7E981D88122E00276B55 /* TBVAssetsPickerManager+Authorization.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
 		};
-		D65A7E5C1D880B0D00276B55 /* Managers */ = {
+		D65A7E991D88122E00276B55 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				D65A7E5D1D880B0D00276B55 /* TBVAssetsLibrary.h */,
-				D65A7E5E1D880B0D00276B55 /* TBVAssetsLibrary.m */,
-				D65A7E5F1D880B0D00276B55 /* TBVAssetsManagerProtocol.h */,
-				D65A7E601D880B0D00276B55 /* TBVAssetsPickerManager.h */,
-				D65A7E611D880B0D00276B55 /* TBVAssetsPickerManager.m */,
-				D65A7E621D880B0D00276B55 /* TBVCachingImageManager.h */,
-				D65A7E631D880B0D00276B55 /* TBVCachingImageManager.m */,
+				D65A7E9A1D88122E00276B55 /* TBVAssetsLibrary.h */,
+				D65A7E9B1D88122E00276B55 /* TBVAssetsLibrary.m */,
+				D65A7E9C1D88122E00276B55 /* TBVAssetsManagerProtocol.h */,
+				D65A7E9D1D88122E00276B55 /* TBVAssetsPickerManager.h */,
+				D65A7E9E1D88122E00276B55 /* TBVAssetsPickerManager.m */,
+				D65A7E9F1D88122E00276B55 /* TBVCachingImageManager.h */,
+				D65A7EA01D88122E00276B55 /* TBVCachingImageManager.m */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		D65A7E641D880B0D00276B55 /* Models */ = {
+		D65A7EA11D88122E00276B55 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D65A7E651D880B0D00276B55 /* TBVAsset.h */,
-				D65A7E661D880B0D00276B55 /* TBVAsset.m */,
-				D65A7E671D880B0D00276B55 /* TBVCollection.h */,
-				D65A7E681D880B0D00276B55 /* TBVCollection.m */,
+				D65A7EA21D88122E00276B55 /* TBVAsset.h */,
+				D65A7EA31D88122E00276B55 /* TBVAsset.m */,
+				D65A7EA41D88122E00276B55 /* TBVCollection.h */,
+				D65A7EA51D88122E00276B55 /* TBVCollection.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		D65A7E691D880B0D00276B55 /* TBVAssetsReformer */ = {
+		D65A7EA81D88122E00276B55 /* TBVAssetsReformer */ = {
 			isa = PBXGroup;
 			children = (
-				D65A7E6A1D880B0D00276B55 /* TBVAssetsReformer.h */,
-				D65A7E6B1D880B0D00276B55 /* TBVAssetsReformer.m */,
+				D65A7EA91D88122E00276B55 /* TBVAssetsReformer.h */,
+				D65A7EAA1D88122E00276B55 /* TBVAssetsReformer.m */,
 			);
 			path = TBVAssetsReformer;
 			sourceTree = "<group>";
@@ -542,34 +550,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D65A7E781D880B0D00276B55 /* TBVAssetsLibrary.m in Sources */,
+				D65A7EB71D88122E00276B55 /* TBVAssetsLibrary.m in Sources */,
 				D65A7E361D87DE5900276B55 /* UIView+HandleFrameLayout.m in Sources */,
-				D65A7E721D880B0D00276B55 /* PHFetchOptions+TBVAssetsManager.m in Sources */,
-				D65A7E6E1D880B0D00276B55 /* ALAssetsLibrary+TBVAssetsManager.m in Sources */,
+				D65A7EB11D88122E00276B55 /* PHFetchOptions+TBVAssetsManager.m in Sources */,
+				D65A7EAD1D88122E00276B55 /* ALAssetsLibrary+TBVAssetsManager.m in Sources */,
 				D65A7E3E1D87F2EE00276B55 /* TBVImageBrowserViewModel.m in Sources */,
-				D65A7E6C1D880B0D00276B55 /* ALAssetsFilter+TBVAssetsManager.m in Sources */,
+				D65A7EAB1D88122E00276B55 /* ALAssetsFilter+TBVAssetsManager.m in Sources */,
 				D65A7E2D1D87DC2F00276B55 /* TBVImageBrowserItemViewModel.m in Sources */,
-				D65A7E821D880B0D00276B55 /* TBVAssetsReformer.m in Sources */,
 				D641C5EC1D87D27E00F85C78 /* TBVWebImageProvider.m in Sources */,
 				D65A7E481D87F89900276B55 /* TBVImageBrowserConfiguration.m in Sources */,
-				D65A7E701D880B0D00276B55 /* PHAssetCollection+TBVAssetsManager.m in Sources */,
+				D65A7EAF1D88122E00276B55 /* PHAssetCollection+TBVAssetsManager.m in Sources */,
 				D65A7E4C1D87FF7900276B55 /* NSError+TBVImageProvider.m in Sources */,
-				D65A7E7E1D880B0D00276B55 /* TBVAsset.m in Sources */,
+				D65A7EBD1D88122E00276B55 /* TBVAsset.m in Sources */,
 				D641C5BB1D87D0E800F85C78 /* ViewController.m in Sources */,
 				D641C5E11D87D22F00F85C78 /* TBVImageProviderManager.m in Sources */,
-				D65A7E801D880B0D00276B55 /* TBVCollection.m in Sources */,
+				D65A7EBF1D88122E00276B55 /* TBVCollection.m in Sources */,
 				D641C5F01D87D28A00F85C78 /* TBVLocalImageProvider.m in Sources */,
 				D65A7E291D87DB4D00276B55 /* TBVImageBrowserViewCell.m in Sources */,
+				D65A7EC11D88122E00276B55 /* TBVAssetsManagerTypes.m in Sources */,
 				D641C5F41D87D29700F85C78 /* TBVAssetImageProvider.m in Sources */,
+				D65A7EC31D88122E00276B55 /* TBVAssetsReformer.m in Sources */,
 				D641C5B81D87D0E800F85C78 /* AppDelegate.m in Sources */,
 				D641C5E81D87D26800F85C78 /* TBVImageBrowserView.m in Sources */,
-				D65A7E761D880B0D00276B55 /* TBVAssetsPickerManager+Authorization.m in Sources */,
-				D65A7E7A1D880B0D00276B55 /* TBVAssetsPickerManager.m in Sources */,
+				D65A7EB51D88122E00276B55 /* TBVAssetsPickerManager+Authorization.m in Sources */,
+				D65A7EB91D88122E00276B55 /* TBVAssetsPickerManager.m in Sources */,
 				D65A7E251D87DA7500276B55 /* TBVLogger.m in Sources */,
-				D65A7E741D880B0D00276B55 /* PHPhotoLibrary+TBVAssetsManager.m in Sources */,
+				D65A7EB31D88122E00276B55 /* PHPhotoLibrary+TBVAssetsManager.m in Sources */,
 				D65A7E311D87DCE400276B55 /* TBVImageBrowserViewFlowLayout.m in Sources */,
 				D641C5B51D87D0E800F85C78 /* main.m in Sources */,
-				D65A7E7C1D880B0D00276B55 /* TBVCachingImageManager.m in Sources */,
+				D65A7EBB1D88122E00276B55 /* TBVCachingImageManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,29 +588,30 @@
 			files = (
 				D65A7E321D87DCE400276B55 /* TBVImageBrowserViewFlowLayout.m in Sources */,
 				D641C5F51D87D29700F85C78 /* TBVAssetImageProvider.m in Sources */,
-				D65A7E751D880B0D00276B55 /* PHPhotoLibrary+TBVAssetsManager.m in Sources */,
-				D65A7E831D880B0D00276B55 /* TBVAssetsReformer.m in Sources */,
-				D65A7E7B1D880B0D00276B55 /* TBVAssetsPickerManager.m in Sources */,
-				D65A7E6D1D880B0D00276B55 /* ALAssetsFilter+TBVAssetsManager.m in Sources */,
-				D65A7E6F1D880B0D00276B55 /* ALAssetsLibrary+TBVAssetsManager.m in Sources */,
-				D65A7E771D880B0D00276B55 /* TBVAssetsPickerManager+Authorization.m in Sources */,
-				D65A7E711D880B0D00276B55 /* PHAssetCollection+TBVAssetsManager.m in Sources */,
+				D65A7EB41D88122E00276B55 /* PHPhotoLibrary+TBVAssetsManager.m in Sources */,
+				D65A7EBA1D88122E00276B55 /* TBVAssetsPickerManager.m in Sources */,
+				D65A7EAC1D88122E00276B55 /* ALAssetsFilter+TBVAssetsManager.m in Sources */,
+				D65A7EAE1D88122E00276B55 /* ALAssetsLibrary+TBVAssetsManager.m in Sources */,
+				D65A7EB61D88122E00276B55 /* TBVAssetsPickerManager+Authorization.m in Sources */,
+				D65A7EB01D88122E00276B55 /* PHAssetCollection+TBVAssetsManager.m in Sources */,
 				D641C5ED1D87D27E00F85C78 /* TBVWebImageProvider.m in Sources */,
-				D65A7E7F1D880B0D00276B55 /* TBVAsset.m in Sources */,
+				D65A7EBE1D88122E00276B55 /* TBVAsset.m in Sources */,
 				D65A7E371D87DE5900276B55 /* UIView+HandleFrameLayout.m in Sources */,
-				D65A7E811D880B0D00276B55 /* TBVCollection.m in Sources */,
+				D65A7EC21D88122E00276B55 /* TBVAssetsManagerTypes.m in Sources */,
+				D65A7EC01D88122E00276B55 /* TBVCollection.m in Sources */,
 				D65A7E2A1D87DB4D00276B55 /* TBVImageBrowserViewCell.m in Sources */,
-				D65A7E7D1D880B0D00276B55 /* TBVCachingImageManager.m in Sources */,
+				D65A7EBC1D88122E00276B55 /* TBVCachingImageManager.m in Sources */,
 				D65A7E261D87DA7500276B55 /* TBVLogger.m in Sources */,
 				D65A7E491D87F89900276B55 /* TBVImageBrowserConfiguration.m in Sources */,
 				D65A7E3F1D87F2EE00276B55 /* TBVImageBrowserViewModel.m in Sources */,
 				D65A7E2E1D87DC3000276B55 /* TBVImageBrowserItemViewModel.m in Sources */,
 				D641C5CE1D87D0E800F85C78 /* TBVImageBrowserTests.m in Sources */,
-				D65A7E791D880B0D00276B55 /* TBVAssetsLibrary.m in Sources */,
+				D65A7EB81D88122E00276B55 /* TBVAssetsLibrary.m in Sources */,
 				D641C5E91D87D26800F85C78 /* TBVImageBrowserView.m in Sources */,
 				D65A7E4D1D87FF7900276B55 /* NSError+TBVImageProvider.m in Sources */,
-				D65A7E731D880B0D00276B55 /* PHFetchOptions+TBVAssetsManager.m in Sources */,
+				D65A7EB21D88122E00276B55 /* PHFetchOptions+TBVAssetsManager.m in Sources */,
 				D641C5F11D87D28A00F85C78 /* TBVLocalImageProvider.m in Sources */,
+				D65A7EC41D88122E00276B55 /* TBVAssetsReformer.m in Sources */,
 				D641C5E21D87D22F00F85C78 /* TBVImageProviderManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -726,6 +736,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TBVImageBrowser/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.triplec.TBVImageBrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -738,6 +749,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TBVImageBrowser/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.triplec.TBVImageBrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";

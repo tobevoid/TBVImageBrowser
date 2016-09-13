@@ -9,16 +9,16 @@
 #import "PHPhotoLibrary+TBVAssetsManager.h"
 
 @implementation PHPhotoLibrary (TBVAssetsManager)
-+ (BQAuthorizationStatus)tbv_authorizationStatus {
++ (TBVAssetsAuthorizationStatus)tbv_authorizationStatus {
     switch ([self authorizationStatus]) {
         case PHAuthorizationStatusNotDetermined:
-            return BQAuthorizationStatusNotDetermined;
+            return TBVAssetsAuthorizationStatusNotDetermined;
         case PHAuthorizationStatusRestricted:
-            return BQAuthorizationStatusRestricted;
+            return TBVAssetsAuthorizationStatusRestricted;
         case PHAuthorizationStatusDenied:
-            return BQAuthorizationStatusDenied;
+            return TBVAssetsAuthorizationStatusDenied;
         case PHAuthorizationStatusAuthorized:
-            return BQAuthorizationStatusAuthorized;
+            return TBVAssetsAuthorizationStatusAuthorized;
     }
 }
 

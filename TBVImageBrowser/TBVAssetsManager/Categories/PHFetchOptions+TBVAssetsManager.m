@@ -9,7 +9,7 @@
 #import "PHFetchOptions+TBVAssetsManager.h"
 
 @implementation PHFetchOptions (TBVAssetsManager)
-+ (instancetype)tbv_fetchOptionsWithCustomMediaType:(TBVAssetsPickerMediaType)mediaType {
++ (instancetype)tbv_fetchOptionsWithCustomMediaType:(TBVAssetsMediaType)mediaType {
     NSArray *mediaTypes = [self tbv_mediaTypesWithCustonMediaType:mediaType];
     if (!mediaTypes.count) return nil;
     
@@ -23,15 +23,15 @@
     return options;
 }
 
-+ (NSArray <NSNumber *> *)tbv_mediaTypesWithCustonMediaType:(TBVAssetsPickerMediaType)mediaType {
++ (NSArray <NSNumber *> *)tbv_mediaTypesWithCustonMediaType:(TBVAssetsMediaType)mediaType {
     NSMutableArray *mediaTypes = [NSMutableArray array];
-    if (mediaType == TBVAssetsPickerMediaTypeImage) {
+    if (mediaType == TBVAssetsMediaTypeImage) {
         [mediaTypes addObject:@(PHAssetMediaTypeImage)];
     }
-    if (mediaType == TBVAssetsPickerMediaTypeVideo) {
+    if (mediaType == TBVAssetsMediaTypeVideo) {
         [mediaTypes addObject:@(PHAssetMediaTypeVideo)];
     }
-    if (mediaType == TBVAssetsPickerMediaTypeAll) {
+    if (mediaType == TBVAssetsMediaTypeAll) {
         [mediaTypes addObject:@(PHAssetMediaTypeImage)];
         [mediaTypes addObject:@(PHAssetMediaTypeVideo)];
     }

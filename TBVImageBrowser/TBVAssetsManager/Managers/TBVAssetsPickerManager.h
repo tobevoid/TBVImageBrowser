@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TBVAssetsPickerTypes.h"
 #import "TBVAssetsManagerProtocol.h"
 
 @interface TBVAssetsPickerManager : NSObject <TBVAssetsManagerProtocol>

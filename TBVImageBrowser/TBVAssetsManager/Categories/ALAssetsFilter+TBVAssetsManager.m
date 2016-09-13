@@ -11,14 +11,14 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored"-Wdeprecated"
 @implementation ALAssetsFilter (TBVAssetsManager)
-+ (instancetype)tbv_assetsFilterWithCustomMediaType:(TBVAssetsPickerMediaType)mediaType {
-    if (mediaType == TBVAssetsPickerMediaTypeImage) {
++ (instancetype)tbv_assetsFilterWithCustomMediaType:(TBVAssetsMediaType)mediaType {
+    if (mediaType == TBVAssetsMediaTypeImage) {
         return [self allPhotos];
     }
-    if (mediaType == TBVAssetsPickerMediaTypeVideo) {
+    if (mediaType == TBVAssetsMediaTypeVideo) {
         return [self allVideos];
     }
-    if (mediaType == TBVAssetsPickerMediaTypeAll) {
+    if (mediaType == TBVAssetsMediaTypeAll) {
         return [self allAssets];
     }
     return nil;

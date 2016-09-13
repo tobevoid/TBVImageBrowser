@@ -9,7 +9,6 @@
 #import <Photos/Photos.h>
 #import "PHFetchOptions+TBVAssetsManager.h"
 #import "TBVCachingImageManager.h"
-#import "TBVAssetsPickerTypes.h"
 #import "TBVAsset.h"
 #import "TBVCollection.h"
 
@@ -36,14 +35,14 @@
     /*  这里可以对change进行一些处理，让iOS8 + - 两个版本输出一致 */
     
     [[NSNotificationCenter defaultCenter]
-     postNotificationName:TBVAssetsPickerAssetsDidChangeNotification
+     postNotificationName:TBVAssetsAssetsDidChangeNotification
      object:change];
 }
 
 #pragma mark TBVAssetsManagerProtocol
 - (RACSignal *)requestImageForAsset:(TBVAsset *)asset
                          targetSize:(CGSize)targetSize
-                        contentMode:(TBVAssetsPickerContentMode)contentMode {
+                        contentMode:(TBVAssetsContentMode)contentMode {
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         PHImageRequestID requestId = [self.imageManager
                                       requestImageForAsset:(PHAsset *)asset.asset
@@ -164,7 +163,7 @@
 }
 
 - (RACSignal *)requestPosterImageForCollection:(TBVCollection *)collection
-                              mediaType:(TBVAssetsPickerMediaType)mediaType {
+                              mediaType:(TBVAssetsMediaType)mediaType {
     return [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         PHFetchOptions *fetchOptions = [PHFetchOptions tbv_fetchOptionsWithCustomMediaType:mediaType];
         fetchOptions.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate"
@@ -187,7 +186,7 @@
 }
 
 - (RACSignal *)requestAssetsForCollection:(TBVCollection *)collection
-                                mediaType:(TBVAssetsPickerMediaType)mediaType {
+                                mediaType:(TBVAssetsMediaType)mediaType {
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         PHFetchOptions *options = [PHFetchOptions tbv_fetchOptionsWithCustomMediaType:mediaType];
         PHFetchResult *fetchResult = [PHAsset fetchAssetsInAssetCollection:(PHAssetCollection *)collection.collection
@@ -214,11 +213,11 @@
     }];
 }
 
-- (PHImageContentMode)contentModeForCustomContentMode:(TBVAssetsPickerContentMode)contentMode {
+- (PHImageContentMode)contentModeForCustomContentMode:(TBVAssetsContentMode)contentMode {
     switch (contentMode) {
-        case TBVAssetsPickerContentModeFit:
+        case TBVAssetsContentModeFit:
             return PHImageContentModeAspectFit;
-        case TBVAssetsPickerContentModeFill:
+        case TBVAssetsContentModeFill:
             return PHImageContentModeAspectFill;
     }
 }

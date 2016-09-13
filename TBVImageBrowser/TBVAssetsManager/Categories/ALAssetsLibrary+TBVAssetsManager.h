@@ -7,12 +7,12 @@
 //
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
-#import "TBVAssetsPickerTypes.h"
+#import "TBVAssetsManagerTypes.h"
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored"-Wdeprecated"
 @interface ALAssetsLibrary (TBVAssetsManager)
-+ (BQAuthorizationStatus)tbv_authorizationStatus;
++ (TBVAssetsAuthorizationStatus)tbv_authorizationStatus;
 + (RACSignal *)tbv_forceTriggerPermissionAsking;
 @end
 #pragma clang diagnostic pop
