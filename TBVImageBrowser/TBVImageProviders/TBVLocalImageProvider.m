@@ -15,7 +15,7 @@ NSString *const kTBVLocalImageProviderIdentifier = @"kTBVLocalImageProviderIdent
 }
 
 - (RACSignal *)imageSignalForElement:(id<TBVImageElementProtocol>)element progress:(TBVImageProviderProgressBlock)progress {
-    return [[[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+    return [[[[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         if ([element.resource isKindOfClass:[NSURL class]] && [(NSURL *)element.resource isFileURL]) {
             [subscriber sendNext:[(NSURL *)element.resource path]];
             [subscriber sendCompleted];
@@ -28,6 +28,9 @@ NSString *const kTBVLocalImageProviderIdentifier = @"kTBVLocalImageProviderIdent
         deliverOn:[RACScheduler scheduler]]
         map:^id(id value) {
             return [UIImage imageWithContentsOfFile:value];
+        }]
+        doNext:^(id x) {
+            progress(1);
         }]
         deliverOnMainThread];
 }

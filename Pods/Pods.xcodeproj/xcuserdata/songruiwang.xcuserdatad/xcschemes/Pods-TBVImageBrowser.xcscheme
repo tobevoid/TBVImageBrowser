@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '033F1B1813E97466BD982D3AF5C3A496'
+               BlueprintIdentifier = '8ADBF90E77D0CC267BFF2CC6C27B95F9'
                BlueprintName = 'Pods-TBVImageBrowser'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-TBVImageBrowser.a'>

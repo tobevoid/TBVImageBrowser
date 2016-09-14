@@ -32,6 +32,8 @@
 		D63E7B331D8934DD005F0B00 /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D63E7B201D8934DD005F0B00 /* 8.jpg */; };
 		D63E7B341D8934DD005F0B00 /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D63E7B211D8934DD005F0B00 /* 9.jpg */; };
 		D63E7B351D8934DD005F0B00 /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D63E7B211D8934DD005F0B00 /* 9.jpg */; };
+		D63E7B3D1D896BC9005F0B00 /* DALabeledCircularProgressView+TBVImageProgressPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D63E7B3C1D896BC8005F0B00 /* DALabeledCircularProgressView+TBVImageProgressPresenter.m */; };
+		D63E7B3E1D896BC9005F0B00 /* DALabeledCircularProgressView+TBVImageProgressPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D63E7B3C1D896BC8005F0B00 /* DALabeledCircularProgressView+TBVImageProgressPresenter.m */; };
 		D641C5B51D87D0E800F85C78 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D641C5B41D87D0E800F85C78 /* main.m */; };
 		D641C5B81D87D0E800F85C78 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D641C5B71D87D0E800F85C78 /* AppDelegate.m */; };
 		D641C5BB1D87D0E800F85C78 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D641C5BA1D87D0E800F85C78 /* ViewController.m */; };
@@ -125,6 +127,8 @@
 		D63E7B201D8934DD005F0B00 /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
 		D63E7B211D8934DD005F0B00 /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
 		D63E7B391D895593005F0B00 /* TBVImageProgressPresenterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVImageProgressPresenterProtocol.h; sourceTree = "<group>"; };
+		D63E7B3B1D896BC8005F0B00 /* DALabeledCircularProgressView+TBVImageProgressPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DALabeledCircularProgressView+TBVImageProgressPresenter.h"; sourceTree = "<group>"; };
+		D63E7B3C1D896BC8005F0B00 /* DALabeledCircularProgressView+TBVImageProgressPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DALabeledCircularProgressView+TBVImageProgressPresenter.m"; sourceTree = "<group>"; };
 		D641C5B01D87D0E800F85C78 /* TBVImageBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBVImageBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D641C5B41D87D0E800F85C78 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D641C5B61D87D0E800F85C78 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -261,6 +265,15 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		D63E7B3A1D896BA1005F0B00 /* TBVImageProgressPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				D63E7B3B1D896BC8005F0B00 /* DALabeledCircularProgressView+TBVImageProgressPresenter.h */,
+				D63E7B3C1D896BC8005F0B00 /* DALabeledCircularProgressView+TBVImageProgressPresenter.m */,
+			);
+			path = TBVImageProgressPresenter;
+			sourceTree = "<group>";
+		};
 		D641C5A71D87D0E800F85C78 = {
 			isa = PBXGroup;
 			children = (
@@ -290,6 +303,7 @@
 				D65A7E221D87DA7500276B55 /* TBVLogger */,
 				D641C5D81D87D1AA00F85C78 /* TBVImageBrowser */,
 				D641C5DB1D87D1AA00F85C78 /* TBVImageProviders */,
+				D63E7B3A1D896BA1005F0B00 /* TBVImageProgressPresenter */,
 				D641C5B61D87D0E800F85C78 /* AppDelegate.h */,
 				D641C5B71D87D0E800F85C78 /* AppDelegate.m */,
 				D641C5B91D87D0E800F85C78 /* ViewController.h */,
@@ -662,6 +676,7 @@
 				D65A7E4C1D87FF7900276B55 /* NSError+TBVImageProvider.m in Sources */,
 				D65A7EBD1D88122E00276B55 /* TBVAsset.m in Sources */,
 				D641C5BB1D87D0E800F85C78 /* ViewController.m in Sources */,
+				D63E7B3D1D896BC9005F0B00 /* DALabeledCircularProgressView+TBVImageProgressPresenter.m in Sources */,
 				D641C5E11D87D22F00F85C78 /* TBVImageProviderManager.m in Sources */,
 				D65A7EBF1D88122E00276B55 /* TBVCollection.m in Sources */,
 				D641C5F01D87D28A00F85C78 /* TBVLocalImageProvider.m in Sources */,
@@ -686,6 +701,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D63E7B3E1D896BC9005F0B00 /* DALabeledCircularProgressView+TBVImageProgressPresenter.m in Sources */,
 				D65A7E321D87DCE400276B55 /* TBVImageBrowserViewFlowLayout.m in Sources */,
 				D641C5F51D87D29700F85C78 /* TBVAssetImageProvider.m in Sources */,
 				D62EDEDC1D881B990070F673 /* TBVImageElement.m in Sources */,

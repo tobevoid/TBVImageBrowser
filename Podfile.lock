@@ -7,7 +7,8 @@ PODS:
     - CocoaLumberjack/Core
   - CocoaLumberjack/Extensions (2.3.0):
     - CocoaLumberjack/Default
-  - Masonry (1.0.1)
+  - DACircularProgress (2.3.1)
+  - Masonry (1.0.2)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
   - ReactiveCocoa/Core (2.5):
@@ -21,16 +22,18 @@ PODS:
 
 DEPENDENCIES:
   - CocoaLumberjack
+  - DACircularProgress
   - Masonry
   - ReactiveCocoa
   - SDWebImage
 
 SPEC CHECKSUMS:
   CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
-  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: 56ffd585f8a54c8b457c9a71e5ced89822a84ab2
+PODFILE CHECKSUM: 512dfae54d3b9ad911fa921e50f905660a5eddb1
 
 COCOAPODS: 1.0.0

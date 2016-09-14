@@ -45,7 +45,6 @@ static NSString *const kTBVImageBrowserViewCellReuseIdentifier = @"kTBVImageBrow
                 TBVImageBrowserItemViewModel *viewModel = [[TBVImageBrowserItemViewModel alloc] init];
                 viewModel.clickImageCommand = configuration.clickedImageCommand;
                 viewModel.progressPresenterClass = configuration.progressPresenterClass;
-                viewModel.progressPresenterSize = configuration.progressPresenterSize;
                 viewModel.progressSignal = [RACObserve(element, progress) distinctUntilChanged];
                 viewModel.contentImageSignal = [imageProvider imageSignalForElement:element];
                 return viewModel;

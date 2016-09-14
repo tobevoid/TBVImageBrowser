@@ -8,6 +8,8 @@
 
 #import "TBVImageBrowserConfiguration.h"
 
+NSString *const kTBVImageBrowserProgressPresenterSizeKey = @"kTBVImageBrowserProgressPresenterSize";
+
 @implementation TBVImageBrowserConfiguration
 + (instancetype)defaultConfiguration {
     TBVImageBrowserConfiguration *configuration = [[TBVImageBrowserConfiguration alloc] init];

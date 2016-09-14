@@ -4,6 +4,7 @@ def shared_pods
   pod 'CocoaLumberjack'
   pod 'Masonry'
   pod 'SDWebImage'
+  pod 'DACircularProgress'
 end
 
 target 'TBVImageBrowser' do

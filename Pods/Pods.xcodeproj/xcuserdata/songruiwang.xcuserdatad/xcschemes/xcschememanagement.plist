@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>DACircularProgress.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Masonry.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,12 +37,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0329A93FA4D462BD825DB31C3F26F9A0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>033F1B1813E97466BD982D3AF5C3A496</key>
+		<key>041955D9CD1B58288C80B7CB3C1FE156</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,7 +52,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5F17C91CABCA57197DE9BC94FF8CBE4B</key>
+		<key>8ADBF90E77D0CC267BFF2CC6C27B95F9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9775596B3CA16905FC8F66DA8E2A3C67</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A6EBED19E77F4E553185B663BD4855B2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

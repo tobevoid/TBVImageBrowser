@@ -25,9 +25,14 @@ NSString *const kTBVAssetImageProviderIdentifier = @"kTBVAssetImageProviderIdent
     return [[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         @strongify(self)
         if ([element.resource isKindOfClass:[TBVAsset class]]) {
-            [subscriber sendNext:[[self.assetsReformer imageWithAsset:(TBVAsset *)element.resource mode:TBVAssetsReformerModeLarge] map:^id(RACTuple *tuple) {
-                return tuple.first;
-            }]];
+            [subscriber sendNext:[[[self.assetsReformer
+                imageWithAsset:(TBVAsset *)element.resource mode:TBVAssetsReformerModeLarge]
+                map:^id(RACTuple *tuple) {
+                    return tuple.first;
+                }]
+                doNext:^(id x) {
+                    progress(1);
+                }]];
         } else {
             NSString *message = [NSString stringWithFormat:@"the resource of elememt(%@) is not a asset.", element.resource];
             [subscriber sendError:[NSError errorWithDomain:@"TBVAssetImageProvider" message:message]];

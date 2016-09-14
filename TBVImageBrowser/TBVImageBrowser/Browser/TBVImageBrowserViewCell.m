@@ -8,11 +8,12 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <Masonry/Masonry.h>
 #import "UIView+HandleFrameLayout.h"
+#import "TBVImageProgressPresenterProtocol.h"
+#import "TBVImageBrowserConfiguration.h"
+#import "TBVImageBrowserViewFlowLayout.h"
 #import "TBVLogger.h"
 #import "TBVImageBrowserViewCell.h"
 #import "TBVImageBrowserItemViewModel.h"
-#import "TBVImageBrowserViewFlowLayout.h"
-#import "TBVImageProgressPresenterProtocol.h"
 
 @interface TBVImageBrowserViewCell() <UIScrollViewDelegate>
 @property (strong, nonatomic) UIScrollView *contentScrollView;
@@ -48,6 +49,7 @@
     /* 复用时，取消放大效果 */
     [self.contentScrollView setZoomScale:1.0 animated:NO];
     self.contentImageView.image = nil;
+    [self.progressView setPresenterProgress:0 animated:NO];
 }
 
 #pragma mark event response
@@ -74,22 +76,22 @@
 - (void)bindViewModel:(TBVImageBrowserItemViewModel *)viewModel {
     self.viewModel = viewModel;
     
+    [self setupProgressPresenter:viewModel.progressPresenterClass];
     [self bindContentImageSignal:viewModel.contentImageSignal];
     [self bingProgressSignal:viewModel.progressSignal];
-    [self setupProgressPresenter:viewModel.progressPresenterClass
-                            size:viewModel.progressPresenterSize];
 }
 
-- (void)setupProgressPresenter:(Class)progressPresenter size:(CGSize)size {
-    if (!self.progressView && progressPresenter) return;
+#pragma mark private method
+- (void)setupProgressPresenter:(Class)progressPresenter{
+    if (self.progressView || !progressPresenter) return;
     
     if ([progressPresenter conformsToProtocol:@protocol(TBVImageProgressPresenterProtocol)]) {
         id presenter = [progressPresenter presenter];
         if ([presenter isKindOfClass:[UIView class]]) {
             self.progressView = presenter;
             [self.contentView addSubview:self.progressView];
-            
-            if (CGSizeEqualToSize(CGSizeZero, size)) size = CGSizeMake(40.0f, 40.0f);
+            CGSize size = CGSizeEqualToSize(CGSizeZero, self.progressView.frame.size) ?
+                CGSizeMake(40.0f, 40.0f) : self.progressView.frame.size ;
             [self.progressView mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.width.equalTo(@(size.width));
                 make.height.equalTo(@(size.height));
@@ -104,8 +106,14 @@
 }
 
 - (void)bingProgressSignal:(RACSignal *)progressSignal {
-    [[progressSignal takeUntil:self.rac_prepareForReuseSignal] subscribeNext:^(id x) {
-        TBVLogDebug(@"%@, %p", x, self);
+    if (!self.progressView) return;
+    
+    @weakify(self)
+    [[progressSignal takeUntil:self.rac_prepareForReuseSignal] subscribeNext:^(id value) {
+        @strongify(self)
+        CGFloat progress = [value floatValue];
+        [self.progressView setPresenterProgress:progress animated:YES];
+        self.progressView.hidden = progress > 0.999;
     }];
 }
 

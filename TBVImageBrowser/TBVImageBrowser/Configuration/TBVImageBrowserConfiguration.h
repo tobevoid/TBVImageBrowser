@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
+CF_EXPORT NSString *const kTBVImageBrowserProgressPresenterSizeKey;
 @interface TBVImageBrowserConfiguration : NSObject
 @property (assign, nonatomic) CGSize itemSize;
 @property (strong, nonatomic) RACCommand *clickedImageCommand;
+
 /** subclass of UIView, comfirm TBVImageProgressPresenterProtocol */
 @property (assign, nonatomic) Class progressPresenterClass;
-@property (assign, nonatomic) CGSize progressPresenterSize;
+
 + (instancetype)defaultConfiguration;
 @end

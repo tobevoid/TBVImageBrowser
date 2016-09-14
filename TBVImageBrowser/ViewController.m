@@ -6,6 +6,7 @@
 //  Copyright © 2016 tripleCC. All rights reserved.
 //
 #import <Masonry/Masonry.h>
+#import <DACircularProgress/DALabeledCircularProgressView.h>
 #import "TBVLogger.h"
 #import "ViewController.h"
 #import "TBVImageBrowser.h"
@@ -40,18 +41,18 @@
         @strongify(self)
         return [self.pickerManager requestAssetsForCollection:value mediaType:TBVAssetsMediaTypeImage];
     }] switchToLatest] subscribeNext:^(NSArray *assets) {
-        [assets enumerateObjectsUsingBlock:^(id  _Nonnull asset, NSUInteger idx, BOOL * _Nonnull stop) {
-            TBVImageElement *element = [TBVImageElement elementWithIdentifier:kTBVAssetImageProviderIdentifier resource:asset];
-            [self.elements addObject:element];
-            if (idx > 5) *stop = YES;
-        }];
-        
-        for (NSInteger i = 0; i < 5; i++) {
-            NSString *fileName = [NSString stringWithFormat:@"%@", @(i)];
-            NSURL *URL = [[NSBundle mainBundle] URLForResource:fileName withExtension:@"jpg"];
-            TBVImageElement *element = [TBVImageElement elementWithIdentifier:kTBVLocalImageProviderIdentifier resource:URL];
-            [self.elements addObject:element];
-        }
+//        [assets enumerateObjectsUsingBlock:^(id  _Nonnull asset, NSUInteger idx, BOOL * _Nonnull stop) {
+//            TBVImageElement *element = [TBVImageElement elementWithIdentifier:kTBVAssetImageProviderIdentifier resource:asset];
+//            [self.elements addObject:element];
+//            if (idx > 5) *stop = YES;
+//        }];
+//        
+//        for (NSInteger i = 0; i < 5; i++) {
+//            NSString *fileName = [NSString stringWithFormat:@"%@", @(i)];
+//            NSURL *URL = [[NSBundle mainBundle] URLForResource:fileName withExtension:@"jpg"];
+//            TBVImageElement *element = [TBVImageElement elementWithIdentifier:kTBVLocalImageProviderIdentifier resource:URL];
+//            [self.elements addObject:element];
+//        }
         NSArray *URLStrings = @[
         @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/2047158/beerhenge.jpg",
         @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/2016158/avalanche.jpg",
@@ -108,6 +109,7 @@
     if (_configuration == nil) {
         _configuration = [TBVImageBrowserConfiguration defaultConfiguration];
         @weakify(self)
+        _configuration.progressPresenterClass = [DALabeledCircularProgressView class];
         _configuration.clickedImageCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
             @strongify(self)
             self.navigationController.navigationBarHidden = !self.navigationController.navigationBarHidden;

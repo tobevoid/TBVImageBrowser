@@ -36,6 +36,7 @@ NSString *const kTBVWebImageProviderIdentifier = @"kTBVWebImageProviderIdentifie
                 if (error) {
                     [subscriber sendError:error];
                 } else {
+                    progress(1);
                     [subscriber sendNext:image];
                     [subscriber sendCompleted];
                 }

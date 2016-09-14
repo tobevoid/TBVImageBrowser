@@ -13,5 +13,4 @@
 @property (strong, nonatomic) RACCommand *clickImageCommand;
 @property (strong, nonatomic) RACSignal *progressSignal;
 @property (assign, nonatomic) Class progressPresenterClass;
-@property (assign, nonatomic) CGSize progressPresenterSize;
 @end

@@ -12,7 +12,7 @@
 #import <UIKit/UIKit.h>
 @protocol TBVImageProgressPresenterProtocol <NSObject>
 + (instancetype)presenter;
-- (void)setProgress:(CGFloat)progress animated:(BOOL)animated;
+- (void)setPresenterProgress:(CGFloat)progress animated:(BOOL)animated;
 @end
 
 #endif /* TBVImageProgressPresenterProtocol_h */
