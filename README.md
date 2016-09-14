@@ -98,3 +98,38 @@ for (NSString *URLString in URLStrings) {
 ```
 TBVImageElement *element = [TBVImageElement elementWithIdentifier:kTBVWebImageProviderIdentifier resource:URL];
 ```
+###自定义Progress
+由于实际项目中可以已经有一款progress控件了，所以TBVImageBrowser并没有强制要求依赖已有的progress控件，比如DACircularProgress。<br>
+开发者可以自定义progress控件。以DACircularProgress为例：
+
+- 创建TBVImageBrowserConfiguration，并设置progressPresenterClass为progress控件对应的类
+
+```objc
+_configuration = [TBVImageBrowserConfiguration defaultConfiguration];
+_configuration.progressPresenterClass = [DALabeledCircularProgressView class];
+```
+- 创建DACircularProgress分类，并遵守TBVImageProgressPresenterProtocol协议
+
+```objc
+@implementation DALabeledCircularProgressView (TBVImageProgressPresenter)
++ (instancetype)presenter {
+    DALabeledCircularProgressView *progressView = [[DALabeledCircularProgressView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
+    progressView.thicknessRatio = 0.1;
+    progressView.progressLabel.textColor = [UIColor whiteColor];
+    progressView.progressLabel.font = [UIFont systemFontOfSize:12];
+    progressView.userInteractionEnabled = NO;
+    return progressView;
+}
+
+- (void)setPresenterProgress:(CGFloat)progress animated:(BOOL)animated {
+    [self setProgress:progress animated:animated];
+    TBVLogDebug(@"progress %f", progress);
+    self.progressLabel.text = [NSString stringWithFormat:@"%.02f", progress];
+}
+@end
+```
+以上两步就可以给图片浏览器引入自己的progress控件了。<br>
+对progress控件的要求：
+
+- 是UIView及其子类
+- 遵守TBVImageProgressPresenterProtocol协议
