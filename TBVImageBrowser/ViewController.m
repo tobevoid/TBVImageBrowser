@@ -6,12 +6,14 @@
 //  Copyright © 2016 tripleCC. All rights reserved.
 //
 #import <Masonry/Masonry.h>
+#import "TBVLogger.h"
 #import "ViewController.h"
 #import "TBVImageBrowser.h"
 #import "TBVImageElement.h"
 #import "TBVImageProviderManager+Register.h"
 #import "TBVAssetsPickerManager.h"
 #import "TBVImageBrowserConfiguration.h"
+
 
 @interface ViewController ()
 @property (strong, nonatomic) TBVImageBrowserView *imageBrowserView;
@@ -25,6 +27,7 @@
 #pragma mark life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.automaticallyAdjustsScrollViewInsets = NO;
     
     self.imageBrowserView = [[TBVImageBrowserView alloc]
                              initWithImageProvider:self.providerManager
@@ -69,6 +72,9 @@
 
 - (void)layoutPageSubviews {
     [self.imageBrowserView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.height.equalTo(@200);
+//        make.width.equalTo(@200);
+//        make.center.equalTo(self.view);
         make.edges.equalTo(self.view);
     }];
 }
@@ -101,6 +107,13 @@
 - (TBVImageBrowserConfiguration *)configuration {
     if (_configuration == nil) {
         _configuration = [TBVImageBrowserConfiguration defaultConfiguration];
+        @weakify(self)
+        _configuration.clickedImageCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+            @strongify(self)
+            self.navigationController.navigationBarHidden = !self.navigationController.navigationBarHidden;
+            TBVLogDebug(@"clicked image action");
+            return [RACSignal empty];
+        }];
     }
     
     return _configuration;

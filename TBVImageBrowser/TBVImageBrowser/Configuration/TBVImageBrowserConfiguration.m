@@ -11,7 +11,7 @@
 @implementation TBVImageBrowserConfiguration
 + (instancetype)defaultConfiguration {
     TBVImageBrowserConfiguration *configuration = [[TBVImageBrowserConfiguration alloc] init];
-    configuration.itemSize = [UIScreen mainScreen].bounds.size;
+    configuration.itemSize = CGSizeZero;
     return configuration;
 }
 @end

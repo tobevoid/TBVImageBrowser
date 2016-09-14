@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
+
 @interface TBVImageBrowserConfiguration : NSObject
 @property (assign, nonatomic) CGSize itemSize;
 @property (strong, nonatomic) RACCommand *clickedImageCommand;

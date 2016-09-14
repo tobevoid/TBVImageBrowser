@@ -7,6 +7,7 @@
 //
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <Masonry/Masonry.h>
+#import "TBVLogger.h"
 #import "TBVImageBrowserViewFlowLayout.h"
 #import "TBVImageBrowserConfiguration.h"
 #import "TBVImageBrowserView.h"
@@ -36,8 +37,6 @@ static NSString *const kTBVImageBrowserViewCellReuseIdentifier = @"kTBVImageBrow
     if (self) {
         self.clipsToBounds = YES;
         self.configuration = configuration;
-        self.flowLayout = [[TBVImageBrowserViewFlowLayout alloc]
-                           initWithItemSize:configuration.itemSize];
         [self addSubview:self.collectionView];
         [self layoutPageSubviews];
         @weakify(self)
@@ -59,12 +58,33 @@ static NSString *const kTBVImageBrowserViewCellReuseIdentifier = @"kTBVImageBrow
     return self;
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    [self setupBrowserFlowLayout];
+}
+
 - (void)layoutPageSubviews {
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.bottom.equalTo(self);
         /* for image's spacing in browser */
         make.right.equalTo(self).offset(2 * kTBVImageBrowserViewFlowLayoutMargin);
     }];
+}
+
+- (void)setupBrowserFlowLayout {
+    if (self.flowLayout != self.collectionView.collectionViewLayout) {
+        if (self.frame.size.height != 0 && self.frame.size.width != 0) {
+            CGSize itemSize = CGSizeZero;
+            if (CGSizeEqualToSize(CGSizeZero, self.configuration.itemSize)) {
+                itemSize = self.frame.size;
+                TBVLogInfo(@"layout browser with default item size.");
+            } else {
+                itemSize = self.configuration.itemSize;
+            }
+            self.flowLayout = [[TBVImageBrowserViewFlowLayout alloc] initWithItemSize:itemSize];
+            [self.collectionView setCollectionViewLayout:self.flowLayout animated:NO];
+        }
+    }
 }
 
 #pragma mark UICollectionViewDataSource
@@ -93,7 +113,7 @@ static NSString *const kTBVImageBrowserViewCellReuseIdentifier = @"kTBVImageBrow
 - (UICollectionView *)collectionView {
     if (_collectionView == nil) {
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero
-                                             collectionViewLayout:_flowLayout];
+                                             collectionViewLayout:[[UICollectionViewLayout alloc] init]];
         _collectionView.pagingEnabled = YES;
         _collectionView.scrollsToTop = YES;
         _collectionView.showsHorizontalScrollIndicator = NO;
