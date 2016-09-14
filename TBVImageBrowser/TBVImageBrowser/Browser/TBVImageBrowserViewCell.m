@@ -6,16 +6,19 @@
 //  Copyright © 2016 tripleCC. All rights reserved.
 //
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import <Masonry/Masonry.h>
 #import "UIView+HandleFrameLayout.h"
 #import "TBVLogger.h"
 #import "TBVImageBrowserViewCell.h"
 #import "TBVImageBrowserItemViewModel.h"
 #import "TBVImageBrowserViewFlowLayout.h"
+#import "TBVImageProgressPresenterProtocol.h"
 
 @interface TBVImageBrowserViewCell() <UIScrollViewDelegate>
 @property (strong, nonatomic) UIScrollView *contentScrollView;
 @property (strong, nonatomic) UIImageView *contentImageView;
 @property (strong, nonatomic) TBVImageBrowserItemViewModel *viewModel;
+@property (strong, nonatomic) UIView <TBVImageProgressPresenterProtocol> *progressView;
 @end
 
 @implementation TBVImageBrowserViewCell
@@ -73,10 +76,37 @@
     
     [self bindContentImageSignal:viewModel.contentImageSignal];
     [self bingProgressSignal:viewModel.progressSignal];
+    [self setupProgressPresenter:viewModel.progressPresenterClass
+                            size:viewModel.progressPresenterSize];
+}
+
+- (void)setupProgressPresenter:(Class)progressPresenter size:(CGSize)size {
+    if (!self.progressView && progressPresenter) return;
+    
+    if ([progressPresenter conformsToProtocol:@protocol(TBVImageProgressPresenterProtocol)]) {
+        id presenter = [progressPresenter presenter];
+        if ([presenter isKindOfClass:[UIView class]]) {
+            self.progressView = presenter;
+            [self.contentView addSubview:self.progressView];
+            
+            if (CGSizeEqualToSize(CGSizeZero, size)) size = CGSizeMake(40.0f, 40.0f);
+            [self.progressView mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.width.equalTo(@(size.width));
+                make.height.equalTo(@(size.height));
+                make.center.equalTo(self.contentView);
+            }];
+        } else {
+            TBVLogError(@"progressPresenter should be subclass of UIView.");
+        }
+    } else {
+        TBVLogError(@"progressPresenter should comfirm TBVImageProgressPresenterProtocol.");
+    }
 }
 
 - (void)bingProgressSignal:(RACSignal *)progressSignal {
-    //TODO: bind progress
+    [[progressSignal takeUntil:self.rac_prepareForReuseSignal] subscribeNext:^(id x) {
+        TBVLogDebug(@"%@, %p", x, self);
+    }];
 }
 
 - (void)bindContentImageSignal:(RACSignal *)contentImageSignal {

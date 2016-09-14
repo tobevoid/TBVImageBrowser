@@ -15,7 +15,6 @@
 - (void)addImageProvider:(id <TBVImageProviderProtocol>)provider;
 - (BOOL)removeImageProvider:(id <TBVImageProviderProtocol>)provider;
 - (RACSignal *)imageSignalForElement:(id <TBVImageElementProtocol>)element;
-- (RACSignal *)progressSignal;
 @end
 
 #endif /* TBVImageProviderManagerProtocol_h */

@@ -17,10 +17,6 @@ NSString *const kTBVImageProviderManagerNotFoundKey = @"kTBVImageProviderManager
 @end
 
 @implementation TBVImageProviderManager
-- (RACSignal *)progressSignal {
-    return [RACObserve(self, progress) distinctUntilChanged];
-}
-
 - (RACSignal *)imageSignalForElement:(id<TBVImageElementProtocol>)element {
     NSAssert(element.identifier, @"identifier of %@ can not be nil.", element);
     
@@ -33,7 +29,7 @@ NSString *const kTBVImageProviderManagerNotFoundKey = @"kTBVImageProviderManager
             [subscriber sendNext:[self.providerMap[element.identifier]
                     imageSignalForElement:element
                     progress:^(CGFloat progress) {
-                        self.progress = progress;
+                        element.progress = progress;
                     }]];
             [subscriber sendCompleted];
         } else {

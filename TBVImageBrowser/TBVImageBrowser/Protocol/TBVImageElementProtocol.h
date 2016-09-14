@@ -13,6 +13,7 @@
 @protocol TBVImageElementProtocol <TBVImageProviderIdentifierProtocol>
 @required
 @property (strong, nonatomic) NSObject *resource;
+@property (assign, nonatomic) CGFloat progress;
 @optional
 @property (strong, nonatomic) NSDictionary *options;
 @end

@@ -12,6 +12,7 @@
 @property (strong, nonatomic) NSString *identifier;
 @property (strong, nonatomic) NSObject *resource;
 @property (strong, nonatomic) NSDictionary *options;
+@property (assign, nonatomic) CGFloat progress;
 
 + (instancetype)elementWithIdentifier:(NSString *)identifier
                              resource:(NSObject *)resource;
