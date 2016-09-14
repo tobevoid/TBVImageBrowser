@@ -45,7 +45,7 @@
         
         for (NSInteger i = 0; i < 5; i++) {
             NSString *fileName = [NSString stringWithFormat:@"%@", @(i)];
-            NSURL *URL = [[NSBundle mainBundle] URLForResource:fileName withExtension:@"png"];
+            NSURL *URL = [[NSBundle mainBundle] URLForResource:fileName withExtension:@"jpg"];
             TBVImageElement *element = [TBVImageElement elementWithIdentifier:kTBVLocalImageProviderIdentifier resource:URL];
             [self.elements addObject:element];
         }

@@ -98,6 +98,7 @@
                  frame->size.height = contentScrollViewSize.width /
                  imageSize.width * imageSize.height;
              }];
+             bounds.size.height = self.contentImageView.frame.size.height;
          }
          self.contentScrollView.contentSize = CGSizeMake(contentScrollViewSize.width,
                                                          MAX(contentScrollViewSize.height,
