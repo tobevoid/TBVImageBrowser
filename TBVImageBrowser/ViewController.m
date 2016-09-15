@@ -29,13 +29,51 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
+                                              initWithTitle:@"加载"
+                                              style:UIBarButtonItemStyleDone
+                                              target:self
+                                              action:@selector(loadImageBroswer)];
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]
+                                             initWithTitle:@"取消"
+                                             style:UIBarButtonItemStyleDone
+                                             target:self
+                                             action:@selector(removeImageBroswer)];
+}
+
+#pragma mark layout
+- (void)layoutPageSubviews {
+    [self.imageBrowserView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.height.equalTo(@200);
+//        make.width.equalTo(@200);
+//        make.center.equalTo(self.view);
+        make.edges.equalTo(self.view);
+    }];
+}
+
+#pragma mark event response 
+- (void)removeImageBroswer {
+    [self resetAll];
+}
+
+- (void)loadImageBroswer {
+    if (self.imageBrowserView.superview) return;
     
     self.imageBrowserView = [[TBVImageBrowserView alloc]
                              initWithImageProvider:self.providerManager
                              configuration:self.configuration];
     [self.view addSubview:self.imageBrowserView];
     [self layoutPageSubviews];
+    [UIView animateWithDuration:0.5 animations:^{
+        [self.imageBrowserView layoutIfNeeded];
+    }];
     
+    [self setupElements];
+}
+
+#pragma mark private method 
+- (void)setupElements {
     @weakify(self)
     [[[[self.pickerManager requestCameraRollCollection] map:^id(id value) {
         @strongify(self)
@@ -54,12 +92,12 @@
             [self.elements addObject:element];
         }
         NSArray *URLStrings = @[
-        @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/2047158/beerhenge.jpg",
-        @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/2016158/avalanche.jpg",
-        @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/1839353/pilsner.jpg",
-        @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/1833469/porter.jpg",
-        @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/1521183/farmers.jpg"
-        ];
+                                @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/2047158/beerhenge.jpg",
+                                @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/2016158/avalanche.jpg",
+                                @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/1839353/pilsner.jpg",
+                                @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/1833469/porter.jpg",
+                                @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/1521183/farmers.jpg"
+                                ];
         
         for (NSString *URLString in URLStrings) {
             NSURL *URL = [NSURL URLWithString:URLString];
@@ -71,13 +109,13 @@
     }];
 }
 
-- (void)layoutPageSubviews {
-    [self.imageBrowserView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.height.equalTo(@200);
-//        make.width.equalTo(@200);
-//        make.center.equalTo(self.view);
-        make.edges.equalTo(self.view);
-    }];
+- (void)resetAll {
+    [self.imageBrowserView removeFromSuperview];
+    self.imageBrowserView = nil;
+    self.pickerManager = nil;
+    self.configuration = nil;
+    self.elements = nil;
+    self.providerManager = nil;
 }
 
 #pragma mark getter setter

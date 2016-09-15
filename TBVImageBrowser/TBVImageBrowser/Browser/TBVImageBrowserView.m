@@ -40,12 +40,14 @@ static NSString *const kTBVImageBrowserViewCellReuseIdentifier = @"kTBVImageBrow
         [self addSubview:self.collectionView];
         [self layoutPageSubviews];
         @weakify(self)
+        @weakify(configuration)
         [[[RACObserve(self, elements) ignore:nil] map:^id(NSArray *elements) {
+            @strongify(configuration)
             return [elements.rac_sequence map:^id(id <TBVImageElementProtocol> element) {
-                TBVImageBrowserItemViewModel *viewModel = [[TBVImageBrowserItemViewModel alloc] init];
+                TBVImageBrowserItemViewModel *viewModel = [[TBVImageBrowserItemViewModel alloc]
+                                                           initWithElement:element];
                 viewModel.clickImageCommand = configuration.clickedImageCommand;
                 viewModel.progressPresenterClass = configuration.progressPresenterClass;
-                viewModel.progressSignal = [RACObserve(element, progress) distinctUntilChanged];
                 viewModel.contentImageSignal = [imageProvider imageSignalForElement:element];
                 return viewModel;
             }].array;
@@ -59,6 +61,11 @@ static NSString *const kTBVImageBrowserViewCellReuseIdentifier = @"kTBVImageBrow
     return self;
 }
 
+- (void)dealloc {
+    TBVLogInfo(@"<%@: %p> is being released", [self class], self);
+}
+
+#pragma mark layout
 - (void)layoutSubviews {
     [super layoutSubviews];
     [self setupBrowserFlowLayout];

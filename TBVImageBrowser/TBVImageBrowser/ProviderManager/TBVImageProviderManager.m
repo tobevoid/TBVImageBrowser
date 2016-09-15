@@ -12,10 +12,15 @@
 
 @interface TBVImageProviderManager() 
 @property (strong, nonatomic) NSMutableDictionary *providerMap;
-@property (assign, nonatomic) CGFloat progress;
 @end
 
 @implementation TBVImageProviderManager
+#pragma mark life cycle
+- (void)dealloc {
+    TBVLogInfo(@"%@ is being released", self);
+}
+
+#pragma mark TBVImageProviderManagerProtocol
 - (RACSignal *)imageSignalForElement:(id<TBVImageElementProtocol>)element {
     NSAssert(element.identifier, @"identifier of %@ can not be nil.", element);
     
@@ -23,7 +28,6 @@
     return [[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         @strongify(self)
         TBVLogInfo(@"\nimage resource:\n\t%@;\nidentifier:\n\t%@;\n", element.resource, element.identifier);
-        self.progress = 0;
         if ([self.providerMap.allKeys containsObject:element.identifier]) {
             [subscriber sendNext:[self.providerMap[element.identifier]
                     imageSignalForElement:element
@@ -65,6 +69,7 @@
     return [self.providerMap.allKeys containsObject:provider.identifier];
 }
 
+#pragma mark getter setter
 - (NSMutableDictionary *)providerMap {
     if (_providerMap == nil) {
         _providerMap = [NSMutableDictionary dictionary];

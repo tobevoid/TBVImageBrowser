@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import "TBVImageElementProtocol.h"
 @interface TBVImageBrowserItemViewModel : NSObject
 @property (strong, nonatomic) RACSignal *contentImageSignal;
 @property (strong, nonatomic) RACCommand *clickImageCommand;
 @property (strong, nonatomic) RACSignal *progressSignal;
 @property (assign, nonatomic) Class progressPresenterClass;
+- (instancetype)initWithElement:(id <TBVImageElementProtocol>)element;
 @end

@@ -9,5 +9,11 @@
 #import "TBVImageBrowserItemViewModel.h"
 
 @implementation TBVImageBrowserItemViewModel
-
+- (instancetype)initWithElement:(id<TBVImageElementProtocol>)element {
+    if (self = [super init]) {
+        self.progressSignal = [RACObserve(element, progress) distinctUntilChanged];
+    }
+    
+    return self;
+}
 @end
