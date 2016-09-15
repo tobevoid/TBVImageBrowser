@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "TBVImageProviderManagerProtocol.h"
 
-CF_EXPORT NSString *const kTBVImageProviderManagerNotFoundKey;
 @interface TBVImageProviderManager : NSObject <TBVImageProviderManagerProtocol>
 
 @end

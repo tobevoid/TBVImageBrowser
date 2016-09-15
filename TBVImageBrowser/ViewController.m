@@ -41,18 +41,18 @@
         @strongify(self)
         return [self.pickerManager requestAssetsForCollection:value mediaType:TBVAssetsMediaTypeImage];
     }] switchToLatest] subscribeNext:^(NSArray *assets) {
-//        [assets enumerateObjectsUsingBlock:^(id  _Nonnull asset, NSUInteger idx, BOOL * _Nonnull stop) {
-//            TBVImageElement *element = [TBVImageElement elementWithIdentifier:kTBVAssetImageProviderIdentifier resource:asset];
-//            [self.elements addObject:element];
-//            if (idx > 5) *stop = YES;
-//        }];
-//        
-//        for (NSInteger i = 0; i < 5; i++) {
-//            NSString *fileName = [NSString stringWithFormat:@"%@", @(i)];
-//            NSURL *URL = [[NSBundle mainBundle] URLForResource:fileName withExtension:@"jpg"];
-//            TBVImageElement *element = [TBVImageElement elementWithIdentifier:kTBVLocalImageProviderIdentifier resource:URL];
-//            [self.elements addObject:element];
-//        }
+        [assets enumerateObjectsUsingBlock:^(id  _Nonnull asset, NSUInteger idx, BOOL * _Nonnull stop) {
+            TBVImageElement *element = [TBVImageElement elementWithIdentifier:kTBVAssetImageProviderIdentifier resource:asset];
+            [self.elements addObject:element];
+            if (idx > 5) *stop = YES;
+        }];
+        
+        for (NSInteger i = 0; i < 5; i++) {
+            NSString *fileName = [NSString stringWithFormat:@"%@", @(i)];
+            NSURL *URL = [[NSBundle mainBundle] URLForResource:fileName withExtension:@"jpg"];
+            TBVImageElement *element = [TBVImageElement elementWithIdentifier:kTBVLocalImageProviderIdentifier resource:URL];
+            [self.elements addObject:element];
+        }
         NSArray *URLStrings = @[
         @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/2047158/beerhenge.jpg",
         @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/2016158/avalanche.jpg",

@@ -93,6 +93,8 @@
 		D65A7EC21D88122E00276B55 /* TBVAssetsManagerTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7EA71D88122E00276B55 /* TBVAssetsManagerTypes.m */; };
 		D65A7EC31D88122E00276B55 /* TBVAssetsReformer.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7EAA1D88122E00276B55 /* TBVAssetsReformer.m */; };
 		D65A7EC41D88122E00276B55 /* TBVAssetsReformer.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7EAA1D88122E00276B55 /* TBVAssetsReformer.m */; };
+		D6A99F071D8A5D7500FDE44A /* TBVImageBrowserTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A99F061D8A5D6C00FDE44A /* TBVImageBrowserTypes.m */; };
+		D6A99F081D8A5D7600FDE44A /* TBVImageBrowserTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A99F061D8A5D6C00FDE44A /* TBVImageBrowserTypes.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -196,6 +198,8 @@
 		D65A7EA71D88122E00276B55 /* TBVAssetsManagerTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVAssetsManagerTypes.m; sourceTree = "<group>"; };
 		D65A7EA91D88122E00276B55 /* TBVAssetsReformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVAssetsReformer.h; sourceTree = "<group>"; };
 		D65A7EAA1D88122E00276B55 /* TBVAssetsReformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVAssetsReformer.m; sourceTree = "<group>"; };
+		D6A99F051D8A5D6C00FDE44A /* TBVImageBrowserTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBVImageBrowserTypes.h; sourceTree = "<group>"; };
+		D6A99F061D8A5D6C00FDE44A /* TBVImageBrowserTypes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBVImageBrowserTypes.m; sourceTree = "<group>"; };
 		E7DAA40C384FD910CBF20E45 /* libPods-TBVImageBrowser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TBVImageBrowser.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -339,6 +343,8 @@
 			isa = PBXGroup;
 			children = (
 				D65A7E841D880D2E00276B55 /* TBVImageBrowser.h */,
+				D6A99F051D8A5D6C00FDE44A /* TBVImageBrowserTypes.h */,
+				D6A99F061D8A5D6C00FDE44A /* TBVImageBrowserTypes.m */,
 				D62EDED41D881B4D0070F673 /* Protocol */,
 				D62EDED21D881B0B0070F673 /* Element */,
 				D65A7E451D87F89900276B55 /* Configuration */,
@@ -689,6 +695,7 @@
 				D65A7EB51D88122E00276B55 /* TBVAssetsPickerManager+Authorization.m in Sources */,
 				D62EDEDB1D881B990070F673 /* TBVImageElement.m in Sources */,
 				D65A7EB91D88122E00276B55 /* TBVAssetsPickerManager.m in Sources */,
+				D6A99F071D8A5D7500FDE44A /* TBVImageBrowserTypes.m in Sources */,
 				D65A7E251D87DA7500276B55 /* TBVLogger.m in Sources */,
 				D65A7EB31D88122E00276B55 /* PHPhotoLibrary+TBVAssetsManager.m in Sources */,
 				D65A7E311D87DCE400276B55 /* TBVImageBrowserViewFlowLayout.m in Sources */,
@@ -711,6 +718,7 @@
 				D65A7EAC1D88122E00276B55 /* ALAssetsFilter+TBVAssetsManager.m in Sources */,
 				D65A7EAE1D88122E00276B55 /* ALAssetsLibrary+TBVAssetsManager.m in Sources */,
 				D65A7EB61D88122E00276B55 /* TBVAssetsPickerManager+Authorization.m in Sources */,
+				D6A99F081D8A5D7600FDE44A /* TBVImageBrowserTypes.m in Sources */,
 				D65A7EB01D88122E00276B55 /* PHAssetCollection+TBVAssetsManager.m in Sources */,
 				D641C5ED1D87D27E00F85C78 /* TBVWebImageProvider.m in Sources */,
 				D65A7EBE1D88122E00276B55 /* TBVAsset.m in Sources */,

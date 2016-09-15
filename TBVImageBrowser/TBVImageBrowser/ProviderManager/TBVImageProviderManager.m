@@ -7,9 +7,8 @@
 //
 
 #import "TBVImageProviderManager.h"
+#import "TBVImageBrowserTypes.h"
 #import "TBVLogger.h"
-
-NSString *const kTBVImageProviderManagerNotFoundKey = @"kTBVImageProviderManagerNotFound";
 
 @interface TBVImageProviderManager() 
 @property (strong, nonatomic) NSMutableDictionary *providerMap;
@@ -34,7 +33,7 @@ NSString *const kTBVImageProviderManagerNotFoundKey = @"kTBVImageProviderManager
             [subscriber sendCompleted];
         } else {
             NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
-            userInfo[kTBVImageProviderManagerNotFoundKey] =
+            userInfo[kTBVImageBrowserErrorKey] =
             [NSString stringWithFormat:@"image provider with identifier %@ was not found", element.identifier];
             [subscriber sendError:[NSError errorWithDomain:@"TBVImageProviderManager"
                                                         code:-1
