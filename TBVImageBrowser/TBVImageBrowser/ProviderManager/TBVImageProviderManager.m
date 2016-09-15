@@ -58,15 +58,19 @@
     NSAssert(provider.identifier, @"identifier of %@ can not be nil.", provider);
     TBVLogInfo(@"add provider %@", provider);
     
-    self.providerMap[provider.identifier] = provider;
+    @synchronized (self) {
+        self.providerMap[provider.identifier] = provider;
+    }
 }
 
 - (BOOL)removeImageProvider:(id<TBVImageProviderProtocol>)provider {
     NSAssert(provider.identifier, @"identifier of %@ can not be nil.", provider);
     TBVLogInfo(@"remove provider %@", provider);
     
-    [self.providerMap removeObjectForKey:provider.identifier];
-    return [self.providerMap.allKeys containsObject:provider.identifier];
+    @synchronized (self) {
+        [self.providerMap removeObjectForKey:provider.identifier];
+        return [self.providerMap.allKeys containsObject:provider.identifier];
+    }
 }
 
 #pragma mark getter setter
