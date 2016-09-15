@@ -20,7 +20,8 @@
 
 - (void)setPresenterProgress:(CGFloat)progress animated:(BOOL)animated {
     [self setProgress:progress animated:animated];
-    TBVLogDebug(@"progress %f", progress);
+    if (progress != 0 && progress != 1) TBVLogDebug(@"load progress %f", progress);
+    
     self.progressLabel.text = [NSString stringWithFormat:@"%.02f", progress];
 }
 @end

@@ -14,6 +14,8 @@ CF_EXPORT NSString *const kTBVImageBrowserProgressPresenterSizeKey;
 @property (assign, nonatomic) CGSize itemSize;
 @property (strong, nonatomic) RACCommand *clickedImageCommand;
 
+@property (assign, nonatomic) NSInteger currentElementIndex;
+
 /** subclass of UIView, comfirm TBVImageProgressPresenterProtocol */
 @property (assign, nonatomic) Class progressPresenterClass;
 

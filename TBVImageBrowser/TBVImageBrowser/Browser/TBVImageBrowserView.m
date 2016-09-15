@@ -39,24 +39,40 @@ static NSString *const kTBVImageBrowserViewCellReuseIdentifier = @"kTBVImageBrow
         self.configuration = configuration;
         [self addSubview:self.collectionView];
         [self layoutPageSubviews];
+        
         @weakify(self)
-        @weakify(configuration)
-        [[[RACObserve(self, elements) ignore:nil] map:^id(NSArray *elements) {
-            @strongify(configuration)
-            return [elements.rac_sequence map:^id(id <TBVImageElementProtocol> element) {
-                TBVImageBrowserItemViewModel *viewModel = [[TBVImageBrowserItemViewModel alloc]
-                                                           initWithElement:element];
-                viewModel.clickImageCommand = configuration.clickedImageCommand;
-                viewModel.progressPresenterClass = configuration.progressPresenterClass;
-                viewModel.contentImageSignal = [imageProvider imageSignalForElement:element];
-                return viewModel;
-            }].array;
-        }] subscribeNext:^(id value) {
-            @strongify(self)
-            self.viewModel.dataSource = value;
-            [self.collectionView reloadData];
-            
-        }];
+        RACSignal *elementsChangeSignal = [[RACObserve(self, elements)
+            map:^id(NSArray *elements) {
+                return [elements.rac_sequence map:^id(id <TBVImageElementProtocol> element) {
+                    TBVImageBrowserItemViewModel *viewModel = [[TBVImageBrowserItemViewModel alloc]
+                                                               initWithElement:element];
+                    viewModel.clickImageCommand = configuration.clickedImageCommand;
+                    viewModel.progressPresenterClass = configuration.progressPresenterClass;
+                    viewModel.contentImageSignal = [imageProvider imageSignalForElement:element];
+                    return viewModel;
+                }].array;
+            }] doNext:^(id value) {
+                @strongify(self)
+                self.viewModel.dataSource = value;
+                [self.collectionView reloadData];
+            }];
+        
+        [[[[RACObserve(configuration, currentElementIndex)
+            combineLatestWith:elementsChangeSignal]
+            filter:^BOOL(RACTuple *value) {
+                return [value.first integerValue] < [value.second count] &&
+                    [value.first integerValue] >= 0;
+            }]
+            reduceEach:^id (NSNumber *currentIndex, NSArray *elements){
+                return currentIndex;
+            }]
+            subscribeNext:^(id value) {
+                @strongify(self)
+                NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[value integerValue] inSection:0];
+                [self.collectionView scrollToItemAtIndexPath:indexPath
+                                            atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally
+                                                    animated:NO];
+            }];
     }
     return self;
 }

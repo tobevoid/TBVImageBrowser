@@ -58,8 +58,6 @@
 }
 
 - (void)loadImageBroswer {
-    if (self.imageBrowserView.superview) return;
-    
     self.imageBrowserView = [[TBVImageBrowserView alloc]
                              initWithImageProvider:self.providerManager
                              configuration:self.configuration];
@@ -148,6 +146,7 @@
         _configuration = [TBVImageBrowserConfiguration defaultConfiguration];
         @weakify(self)
         _configuration.progressPresenterClass = [DALabeledCircularProgressView class];
+        _configuration.currentElementIndex = 3;
         _configuration.clickedImageCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
             @strongify(self)
             self.navigationController.navigationBarHidden = !self.navigationController.navigationBarHidden;
