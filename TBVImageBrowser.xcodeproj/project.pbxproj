@@ -113,7 +113,7 @@
 		D62EDECE1D881A520070F673 /* TBVImageProviderManager+Register.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TBVImageProviderManager+Register.h"; sourceTree = "<group>"; };
 		D62EDECF1D881A520070F673 /* TBVImageProviderManager+Register.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TBVImageProviderManager+Register.m"; sourceTree = "<group>"; };
 		D62EDED51D881B4D0070F673 /* TBVImageElementProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVImageElementProtocol.h; sourceTree = "<group>"; };
-		D62EDED61D881B4D0070F673 /* TBVImageProviderIdentifierProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVImageProviderIdentifierProtocol.h; sourceTree = "<group>"; };
+		D62EDED61D881B4D0070F673 /* TBVImageIdentifierProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVImageIdentifierProtocol.h; sourceTree = "<group>"; };
 		D62EDED71D881B4D0070F673 /* TBVImageProviderManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVImageProviderManagerProtocol.h; sourceTree = "<group>"; };
 		D62EDED81D881B4D0070F673 /* TBVImageProviderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVImageProviderProtocol.h; sourceTree = "<group>"; };
 		D62EDED91D881B990070F673 /* TBVImageElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVImageElement.h; sourceTree = "<group>"; };
@@ -244,7 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				D62EDED51D881B4D0070F673 /* TBVImageElementProtocol.h */,
-				D62EDED61D881B4D0070F673 /* TBVImageProviderIdentifierProtocol.h */,
+				D62EDED61D881B4D0070F673 /* TBVImageIdentifierProtocol.h */,
 				D62EDED71D881B4D0070F673 /* TBVImageProviderManagerProtocol.h */,
 				D62EDED81D881B4D0070F673 /* TBVImageProviderProtocol.h */,
 				D63E7B391D895593005F0B00 /* TBVImageProgressPresenterProtocol.h */,

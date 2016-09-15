@@ -50,7 +50,6 @@
             TBVLogError(@"\nerror domain: \n\t%@; \nerror code: \n\t%ld; \nerror info: \n\t%@;\n", error.domain, error.code, error.userInfo);
             return [RACSignal empty];
     }];
-    
 }
 
 - (void)addImageProvider:(id<TBVImageProviderProtocol>)provider {

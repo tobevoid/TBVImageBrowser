@@ -8,9 +8,9 @@
 
 #ifndef TBVImageElementProtocol_h
 #define TBVImageElementProtocol_h
-#import "TBVImageProviderIdentifierProtocol.h"
+#import "TBVImageIdentifierProtocol.h"
 
-@protocol TBVImageElementProtocol <TBVImageProviderIdentifierProtocol>
+@protocol TBVImageElementProtocol <TBVImageIdentifierProtocol>
 @required
 @property (strong, nonatomic) NSObject *resource;
 @property (assign, nonatomic) CGFloat progress;

@@ -10,10 +10,10 @@
 #define TBVImageProviderProtocol_h
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "TBVImageElementProtocol.h"
-#import "TBVImageProviderIdentifierProtocol.h"
+#import "TBVImageIdentifierProtocol.h"
 
 typedef void (^TBVImageProviderProgressBlock) (CGFloat);
-@protocol TBVImageProviderProtocol <TBVImageProviderIdentifierProtocol>
+@protocol TBVImageProviderProtocol <TBVImageIdentifierProtocol>
 @required
 - (RACSignal *)imageSignalForElement:(id <TBVImageElementProtocol>)element
                             progress:(TBVImageProviderProgressBlock)progress;
