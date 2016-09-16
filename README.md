@@ -1,10 +1,10 @@
 # TBVImageBrowser
 兼容本地资源、相册资源、网络资源的图片浏览器
 
-##使用
+##如何使用
 ###使用默认Provider
 #####本地资源
-```
+```objc
 NSString *fileName = [NSString stringWithFormat:@"%@", @(i)];
 NSURL *URL = [[NSBundle mainBundle] URLForResource:fileName withExtension:@"png"];
 TBVImageElement *element = [TBVImageElement elementWithIdentifier:kTBVLocalImageProviderIdentifier resource:URL];
@@ -12,7 +12,7 @@ TBVImageElement *element = [TBVImageElement elementWithIdentifier:kTBVLocalImage
 ```
 
 #####相册资源
-```
+```objc
 @weakify(self)
     [[[[self.pickerManager requestCameraRollCollection] map:^id(id value) {
         @strongify(self)
@@ -27,7 +27,7 @@ TBVImageElement *element = [TBVImageElement elementWithIdentifier:kTBVLocalImage
 ```
 ######网络资源(SDWebImage)
 
-```
+```objc
 NSArray *URLStrings = @[
 @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/2047158/beerhenge.jpg",
 @"https://d13yacurqjgara.cloudfront.net/users/26059/screenshots/2016158/avalanche.jpg",
@@ -50,14 +50,14 @@ for (NSString *URLString in URLStrings) {
 - 声明Provider类，并遵守TBVImageProviderProtocol
 - 设置Provider的唯一标志符，如
 
-```
+```objc
 - (NSString *)identifier {
     return kTBVWebImageProviderIdentifier;
 }
 ```
 - 设置获取照片回调，如：
 
-```
+```objc
 - (RACSignal *)imageSignalForElement:(id<TBVImageElementProtocol>)element progress:(TBVImageProviderProgressBlock)progress {
     @weakify(self)
     return [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
@@ -95,7 +95,7 @@ for (NSString *URLString in URLStrings) {
 ```
 - 创建Element时设置此元素对应的Provider唯一标志符，如
 
-```
+```objc
 TBVImageElement *element = [TBVImageElement elementWithIdentifier:kTBVWebImageProviderIdentifier resource:URL];
 ```
 ###自定义Progress
