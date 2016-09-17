@@ -39,12 +39,20 @@ static NSString *const kTBVImageBrowserViewCellReuseIdentifier = @"kTBVImageBrow
         [self addSubview:self.collectionView];
         
         @weakify(self)
+        RACCommand *clickedImageCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+            @strongify(self)
+            if ([self.delegate respondsToSelector:@selector(imageBrowserView:didClickImageAtIndex:)]) {
+                [self.delegate imageBrowserView:self didClickImageAtIndex:[self.elements indexOfObject:input]];
+            }
+            return [RACSignal empty];
+        }];
+        
         RACSignal *elementsChangeSignal = [[RACObserve(self, elements)
             map:^id(NSArray *elements) {
                 return [elements.rac_sequence map:^id(id <TBVImageElementProtocol> element) {
                     TBVImageBrowserItemViewModel *viewModel = [[TBVImageBrowserItemViewModel alloc]
                                                                initWithElement:element];
-                    viewModel.clickImageCommand = configuration.clickedImageCommand;
+                    viewModel.clickImageCommand = clickedImageCommand;
                     viewModel.progressPresenterClass = configuration.progressPresenterClass;
                     viewModel.contentImageSignal = [imageProvider imageSignalForElement:element];
                     return viewModel;
@@ -71,6 +79,9 @@ static NSString *const kTBVImageBrowserViewCellReuseIdentifier = @"kTBVImageBrow
                 [self.collectionView scrollToItemAtIndexPath:indexPath
                                             atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally
                                                     animated:NO];
+                if ([self.delegate respondsToSelector:@selector(imageBrowserView:didDisplayImageAtIndex:)]) {
+                    [self.delegate imageBrowserView:self didDisplayImageAtIndex:indexPath.item];
+                }
             }];
     }
     return self;
@@ -132,7 +143,9 @@ static NSString *const kTBVImageBrowserViewCellReuseIdentifier = @"kTBVImageBrow
   didEndDisplayingCell:(nonnull UICollectionViewCell *)cell
     forItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     indexPath = [collectionView indexPathsForVisibleItems].firstObject;
-    //TODO: set index
+    if ([self.delegate respondsToSelector:@selector(imageBrowserView:didDisplayImageAtIndex:)]) {
+        [self.delegate imageBrowserView:self didDisplayImageAtIndex:indexPath.item];
+    }
 }
 #pragma mark getter setter
 - (UICollectionView *)collectionView {

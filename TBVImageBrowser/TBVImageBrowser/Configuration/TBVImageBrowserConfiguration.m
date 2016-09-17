@@ -14,6 +14,8 @@ NSString *const kTBVImageBrowserProgressPresenterSizeKey = @"kTBVImageBrowserPro
 + (instancetype)defaultConfiguration {
     TBVImageBrowserConfiguration *configuration = [[TBVImageBrowserConfiguration alloc] init];
     configuration.itemSize = CGSizeZero;
+    configuration.currentElementIndex = 0;
+    configuration.progressPresenterClass = nil;
     return configuration;
 }
 @end
