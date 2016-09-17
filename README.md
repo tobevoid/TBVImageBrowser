@@ -19,6 +19,7 @@ TBVImageElement *element = [TBVImageElement elementWithIdentifier:kTBVLocalImage
         return [self.pickerManager requestAssetsForCollection:value mediaType:TBVAssetsMediaTypeImage];
     }] switchToLatest] subscribeNext:^(NSArray *assets) {
         [assets enumerateObjectsUsingBlock:^(id  _Nonnull asset, NSUInteger idx, BOOL * _Nonnull stop) {
+        	@strongify(self)
             TBVImageElement *element = [TBVImageElement elementWithIdentifier:kTBVAssetImageProviderIdentifier resource:asset];
             [self.elements addObject:element];
             if (idx > 5) *stop = YES;
@@ -43,7 +44,7 @@ for (NSString *URLString in URLStrings) {
 }
 ```
 
-###自定义Provider
+###自定义图片获取策略(Provider)
 比如不使用SDWebImage，改用YYWebImage或者Kingfisher；不使用TBVAssetsReformer，使用自定义相册refomer。
 #####步骤
 
@@ -131,5 +132,5 @@ _configuration.progressPresenterClass = [DALabeledCircularProgressView class];
 以上两步就可以给图片浏览器引入自己的progress控件了。<br>
 对progress控件的要求：
 
-- 是UIView及其子类
+- 是UIView或其子类
 - 遵守TBVImageProgressPresenterProtocol协议

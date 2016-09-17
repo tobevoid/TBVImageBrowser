@@ -6,7 +6,6 @@
 //  Copyright © 2016 tripleCC. All rights reserved.
 //
 #import <ReactiveCocoa/ReactiveCocoa.h>
-#import <Masonry/Masonry.h>
 #import "TBVLogger.h"
 #import "TBVImageBrowserViewFlowLayout.h"
 #import "TBVImageBrowserConfiguration.h"
@@ -38,7 +37,6 @@ static NSString *const kTBVImageBrowserViewCellReuseIdentifier = @"kTBVImageBrow
         self.clipsToBounds = YES;
         self.configuration = configuration;
         [self addSubview:self.collectionView];
-        [self layoutPageSubviews];
         
         @weakify(self)
         RACSignal *elementsChangeSignal = [[RACObserve(self, elements)
@@ -51,7 +49,8 @@ static NSString *const kTBVImageBrowserViewCellReuseIdentifier = @"kTBVImageBrow
                     viewModel.contentImageSignal = [imageProvider imageSignalForElement:element];
                     return viewModel;
                 }].array;
-            }] doNext:^(id value) {
+            }]
+            doNext:^(id value) {
                 @strongify(self)
                 self.viewModel.dataSource = value;
                 [self.collectionView reloadData];
@@ -84,15 +83,17 @@ static NSString *const kTBVImageBrowserViewCellReuseIdentifier = @"kTBVImageBrow
 #pragma mark layout
 - (void)layoutSubviews {
     [super layoutSubviews];
+    [self layoutPageSubviews];
     [self setupBrowserFlowLayout];
 }
 
 - (void)layoutPageSubviews {
-    [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.bottom.equalTo(self);
+    self.collectionView.frame = (CGRect) {
+        .origin = CGPointZero,
         /* for image's spacing in browser */
-        make.right.equalTo(self).offset(2 * kTBVImageBrowserViewFlowLayoutMargin);
-    }];
+        .size = CGSizeMake(self.frame.size.width + 2 * kTBVImageBrowserViewFlowLayoutMargin,
+                           self.frame.size.height)
+    };
 }
 
 - (void)setupBrowserFlowLayout {

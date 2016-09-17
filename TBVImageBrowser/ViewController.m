@@ -77,6 +77,7 @@
         @strongify(self)
         return [self.pickerManager requestAssetsForCollection:value mediaType:TBVAssetsMediaTypeImage];
     }] switchToLatest] subscribeNext:^(NSArray *assets) {
+        @strongify(self)
         [assets enumerateObjectsUsingBlock:^(id  _Nonnull asset, NSUInteger idx, BOOL * _Nonnull stop) {
             TBVImageElement *element = [TBVImageElement elementWithIdentifier:kTBVAssetImageProviderIdentifier resource:asset];
             [self.elements addObject:element];

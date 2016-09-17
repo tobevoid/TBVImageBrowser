@@ -6,8 +6,6 @@
 //  Copyright © 2016 tripleCC. All rights reserved.
 //
 #import <ReactiveCocoa/ReactiveCocoa.h>
-#import <Masonry/Masonry.h>
-#import "UIView+HandleFrameLayout.h"
 #import "TBVImageProgressPresenterProtocol.h"
 #import "TBVImageBrowserConfiguration.h"
 #import "TBVImageBrowserViewFlowLayout.h"
@@ -28,20 +26,10 @@
     if (self = [super initWithFrame:frame]) {
         [self.contentScrollView addSubview:self.contentImageView];
         [self.contentView addSubview:self.contentScrollView];
-        [self layoutPageSubviews];
         [self addTapGestures];
     }
     
     return self;
-}
-
-- (void)layoutPageSubviews {
-    [self.contentScrollView handleFrame:^(CGRect *frame) {
-        frame->size.width = self.bounds.size.width - 2 * kTBVImageBrowserViewFlowLayoutMargin;
-        frame->size.height = self.bounds.size.height;
-    }];
-    
-    self.contentImageView.frame = self.contentScrollView.bounds;
 }
 
 - (void)prepareForReuse {
@@ -52,6 +40,22 @@
     [self.progressView setPresenterProgress:0 animated:NO];
 }
 
+#pragma mark layout
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    [self layoutPageSubviews];
+}
+
+- (void)layoutPageSubviews {
+    self.contentScrollView.frame = (CGRect) {
+        .origin = CGPointZero,
+        .size = CGSizeMake(self.bounds.size.width - 2 * kTBVImageBrowserViewFlowLayoutMargin,
+                           self.bounds.size.height)
+    };
+    self.contentImageView.frame = self.contentScrollView.bounds;
+    self.progressView.center = CGPointMake(self.frame.size.width * 0.5,
+                                           self.frame.size.height * 0.5);
+}
 #pragma mark event response
 - (void)singalTapTriggered:(UITapGestureRecognizer *)tap {
     [self.viewModel.clickImageCommand execute:nil];
@@ -92,11 +96,12 @@
             [self.contentView addSubview:self.progressView];
             CGSize size = CGSizeEqualToSize(CGSizeZero, self.progressView.frame.size) ?
                 CGSizeMake(40.0f, 40.0f) : self.progressView.frame.size ;
-            [self.progressView mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.width.equalTo(@(size.width));
-                make.height.equalTo(@(size.height));
-                make.center.equalTo(self.contentView);
-            }];
+            self.progressView.frame = (CGRect) {
+                .origin = CGPointZero,
+                .size = size
+            };
+            self.progressView.center = CGPointMake(self.frame.size.width * 0.5,
+                                                   self.frame.size.height * 0.5);
         } else {
             TBVLogError(@"progressPresenter should be subclass of UIView.");
         }
@@ -128,19 +133,17 @@
          
          CGSize imageSize = image.size;
          CGSize contentScrollViewSize = self.contentScrollView.frame.size;
-         CGRect bounds = self.contentScrollView.bounds;
+         CGRect contentImageViewFrame = self.contentImageView.frame;
          
          /* 宽度始终是屏幕宽度 */
          if (imageSize.width != 0 && imageSize.height != 0) {
-             [self.contentImageView handleFrame:^(CGRect *frame) {
-                 frame->size.height = contentScrollViewSize.width /
-                 imageSize.width * imageSize.height;
-             }];
-             bounds.size.height = self.contentImageView.frame.size.height;
+             contentImageViewFrame.size.height = contentScrollViewSize.width /
+             imageSize.width * imageSize.height;
+             self.contentImageView.frame = contentImageViewFrame;
          }
          self.contentScrollView.contentSize = CGSizeMake(contentScrollViewSize.width,
                                                          MAX(contentScrollViewSize.height,
-                                                             bounds.size.height));
+                                                             contentImageViewFrame.size.height));
          [self adjustImageViewToCenter];
          
      }];
