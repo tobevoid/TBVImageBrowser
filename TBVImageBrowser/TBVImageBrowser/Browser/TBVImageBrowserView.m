@@ -151,7 +151,7 @@ static NSString *const kTBVImageBrowserViewCellReuseIdentifier = @"kTBVImageBrow
 - (UICollectionView *)collectionView {
     if (_collectionView == nil) {
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero
-                                             collectionViewLayout:[[UICollectionViewLayout alloc] init]];
+                                             collectionViewLayout:[[UICollectionViewFlowLayout alloc] init]];
         _collectionView.pagingEnabled = YES;
         _collectionView.scrollsToTop = YES;
         _collectionView.showsHorizontalScrollIndicator = NO;

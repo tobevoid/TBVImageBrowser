@@ -93,6 +93,7 @@
 		D65A7EC21D88122E00276B55 /* TBVAssetsManagerTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7EA71D88122E00276B55 /* TBVAssetsManagerTypes.m */; };
 		D65A7EC31D88122E00276B55 /* TBVAssetsReformer.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7EAA1D88122E00276B55 /* TBVAssetsReformer.m */; };
 		D65A7EC41D88122E00276B55 /* TBVAssetsReformer.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7EAA1D88122E00276B55 /* TBVAssetsReformer.m */; };
+		D6879C581E05637700F6DF4D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = D6879C571E05637700F6DF4D /* README.md */; };
 		D6A99F071D8A5D7500FDE44A /* TBVImageBrowserTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A99F061D8A5D6C00FDE44A /* TBVImageBrowserTypes.m */; };
 		D6A99F081D8A5D7600FDE44A /* TBVImageBrowserTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A99F061D8A5D6C00FDE44A /* TBVImageBrowserTypes.m */; };
 /* End PBXBuildFile section */
@@ -198,6 +199,7 @@
 		D65A7EA71D88122E00276B55 /* TBVAssetsManagerTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVAssetsManagerTypes.m; sourceTree = "<group>"; };
 		D65A7EA91D88122E00276B55 /* TBVAssetsReformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVAssetsReformer.h; sourceTree = "<group>"; };
 		D65A7EAA1D88122E00276B55 /* TBVAssetsReformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVAssetsReformer.m; sourceTree = "<group>"; };
+		D6879C571E05637700F6DF4D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D6A99F051D8A5D6C00FDE44A /* TBVImageBrowserTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBVImageBrowserTypes.h; sourceTree = "<group>"; };
 		D6A99F061D8A5D6C00FDE44A /* TBVImageBrowserTypes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBVImageBrowserTypes.m; sourceTree = "<group>"; };
 		E7DAA40C384FD910CBF20E45 /* libPods-TBVImageBrowser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TBVImageBrowser.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -312,6 +314,7 @@
 				D641C5B71D87D0E800F85C78 /* AppDelegate.m */,
 				D641C5B91D87D0E800F85C78 /* ViewController.h */,
 				D641C5BA1D87D0E800F85C78 /* ViewController.m */,
+				D6879C571E05637700F6DF4D /* README.md */,
 				D641C5BC1D87D0E800F85C78 /* Main.storyboard */,
 				D641C5BF1D87D0E800F85C78 /* Assets.xcassets */,
 				D641C5C11D87D0E800F85C78 /* LaunchScreen.storyboard */,
@@ -549,6 +552,7 @@
 				TargetAttributes = {
 					D641C5AF1D87D0E800F85C78 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 8BU8NMY9TY;
 					};
 					D641C5C81D87D0E800F85C78 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -696,6 +700,7 @@
 				D62EDEDB1D881B990070F673 /* TBVImageElement.m in Sources */,
 				D65A7EB91D88122E00276B55 /* TBVAssetsPickerManager.m in Sources */,
 				D6A99F071D8A5D7500FDE44A /* TBVImageBrowserTypes.m in Sources */,
+				D6879C581E05637700F6DF4D /* README.md in Sources */,
 				D65A7E251D87DA7500276B55 /* TBVLogger.m in Sources */,
 				D65A7EB31D88122E00276B55 /* PHPhotoLibrary+TBVAssetsManager.m in Sources */,
 				D65A7E311D87DCE400276B55 /* TBVImageBrowserViewFlowLayout.m in Sources */,
@@ -861,6 +866,7 @@
 			baseConfigurationReference = A29D57E9ACA94EDFDD32CAAC /* Pods-TBVImageBrowser.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8BU8NMY9TY;
 				INFOPLIST_FILE = TBVImageBrowser/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -874,6 +880,7 @@
 			baseConfigurationReference = 2F5B872DC244070CC0135583 /* Pods-TBVImageBrowser.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8BU8NMY9TY;
 				INFOPLIST_FILE = TBVImageBrowser/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

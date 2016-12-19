@@ -129,6 +129,9 @@
       ignore:nil]
      subscribeNext:^(UIImage *image) {
          @strongify(self)
+         [self setNeedsLayout];
+         [self layoutIfNeeded];
+         
          self.contentImageView.image = image;
          
          CGSize imageSize = image.size;

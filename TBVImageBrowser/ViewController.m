@@ -119,6 +119,7 @@
             
             self.imageBrowserView.elements = self.elements.allObjects;
         }];
+    
 }
 
 - (void)resetAll {
