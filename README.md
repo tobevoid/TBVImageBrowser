@@ -1,9 +1,14 @@
 # TBVImageBrowser
 兼容本地资源、相册资源、网络资源的图片浏览器。<br>
 [详情博客](http://t.cn/RcXVFb6)
-##如何使用
-###使用默认Provider
-#####本地资源
+## 如何使用
+
+```
+pod 'TBVImageBrowser'
+```
+
+### 使用默认Provider
+##### 本地资源
 ```objc
 NSString *fileName = [NSString stringWithFormat:@"%@", @(i)];
 NSURL *URL = [[NSBundle mainBundle] URLForResource:fileName withExtension:@"png"];
@@ -11,7 +16,7 @@ TBVImageElement *element = [TBVImageElement elementWithIdentifier:kTBVLocalImage
 [self.elements addObject:element];
 ```
 
-#####相册资源
+##### 相册资源
 ```objc
 @weakify(self)
     [[[[self.pickerManager requestCameraRollCollection] map:^id(id value) {
@@ -26,7 +31,7 @@ TBVImageElement *element = [TBVImageElement elementWithIdentifier:kTBVLocalImage
         }];
     }];
 ```
-######网络资源(SDWebImage)
+###### 网络资源(SDWebImage)
 
 ```objc
 NSArray *URLStrings = @[
@@ -44,9 +49,9 @@ for (NSString *URLString in URLStrings) {
 }
 ```
 
-###自定义图片获取策略(Provider)
+### 自定义图片获取策略(Provider)
 比如不使用SDWebImage，改用YYWebImage或者Kingfisher；不使用TBVAssetsReformer，使用自定义相册refomer。
-#####步骤
+##### 步骤
 
 - 声明Provider类，并遵守TBVImageProviderProtocol
 - 设置Provider的唯一标志符，如
@@ -99,7 +104,7 @@ for (NSString *URLString in URLStrings) {
 ```objc
 TBVImageElement *element = [TBVImageElement elementWithIdentifier:kTBVWebImageProviderIdentifier resource:URL];
 ```
-###自定义Progress
+### 自定义Progress
 由于实际项目中可以已经有一款progress控件了，所以TBVImageBrowser并没有强制要求依赖已有的progress控件，比如DACircularProgress。<br>
 开发者可以自定义progress控件。以DACircularProgress为例：
 
