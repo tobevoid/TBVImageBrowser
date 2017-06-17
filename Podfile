@@ -1,10 +1,11 @@
-platform :ios, '7.0'
+platform :ios, '8.0'
 def shared_pods
-  pod 'ReactiveCocoa'
-  pod 'CocoaLumberjack'
   pod 'Masonry'
   pod 'SDWebImage'
   pod 'DACircularProgress'
+  pod 'TBVLogger'
+  pod 'TBVAssetsManager'
+  pod 'TBVImageProvider'
 end
 
 target 'TBVImageBrowser' do

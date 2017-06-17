@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 #import "TBVImageElementProtocol.h"
 @interface TBVImageBrowserItemViewModel : NSObject
 @property (strong, nonatomic) RACSignal *contentImageSignal;

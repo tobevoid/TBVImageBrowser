@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 @interface TBVImageBrowserViewModel : NSObject
 @property (strong, nonatomic) NSArray *dataSource;
 @end

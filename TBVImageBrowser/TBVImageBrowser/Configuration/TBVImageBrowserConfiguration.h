@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 
 CF_EXPORT NSString *const kTBVImageBrowserProgressPresenterSizeKey;
 @interface TBVImageBrowserConfiguration : NSObject

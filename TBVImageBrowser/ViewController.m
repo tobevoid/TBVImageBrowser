@@ -7,11 +7,10 @@
 //
 #import <Masonry/Masonry.h>
 #import <DACircularProgress/DALabeledCircularProgressView.h>
-#import "TBVLogger.h"
+#import <TBVLogger/TBVLogger.h>
 #import "ViewController.h"
 #import "TBVImageBrowser.h"
 #import "TBVImageElement.h"
-#import "TBVImageProviderManager+Register.h"
 #import "TBVAssetsPickerManager.h"
 #import "TBVImageBrowserConfiguration.h"
 

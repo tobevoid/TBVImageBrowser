@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "TBVLogger.h"
+#import <TBVLogger/TBVLogger.h>
 
 @interface AppDelegate ()
 

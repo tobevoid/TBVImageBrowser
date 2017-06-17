@@ -1,39 +1,37 @@
 PODS:
-  - CocoaLumberjack (2.3.0):
-    - CocoaLumberjack/Default (= 2.3.0)
-    - CocoaLumberjack/Extensions (= 2.3.0)
-  - CocoaLumberjack/Core (2.3.0)
-  - CocoaLumberjack/Default (2.3.0):
-    - CocoaLumberjack/Core
-  - CocoaLumberjack/Extensions (2.3.0):
+  - CocoaLumberjack (3.2.0):
+    - CocoaLumberjack/Default (= 3.2.0)
+    - CocoaLumberjack/Extensions (= 3.2.0)
+  - CocoaLumberjack/Default (3.2.0)
+  - CocoaLumberjack/Extensions (3.2.0):
     - CocoaLumberjack/Default
   - DACircularProgress (2.3.1)
   - Masonry (1.0.2)
-  - ReactiveCocoa (2.5):
-    - ReactiveCocoa/UI (= 2.5)
-  - ReactiveCocoa/Core (2.5):
-    - ReactiveCocoa/no-arc
-  - ReactiveCocoa/no-arc (2.5)
-  - ReactiveCocoa/UI (2.5):
-    - ReactiveCocoa/Core
-  - SDWebImage (3.8.2):
-    - SDWebImage/Core (= 3.8.2)
-  - SDWebImage/Core (3.8.2)
+  - ReactiveObjC (3.0.0)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
+  - TBVAssetsManager (0.1.0):
+    - ReactiveObjC (~> 3.0)
+  - TBVLogger (1.0.0):
+    - CocoaLumberjack (~> 3.0)
 
 DEPENDENCIES:
-  - CocoaLumberjack
   - DACircularProgress
   - Masonry
-  - ReactiveCocoa
   - SDWebImage
+  - TBVAssetsManager
+  - TBVLogger
 
 SPEC CHECKSUMS:
-  CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
+  CocoaLumberjack: 9b4aed7073d242f29cc2f62068d995faf67f703a
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
-  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
-  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  TBVAssetsManager: 1c3322b25def5a60a1126f5113bd06c44d8a277c
+  TBVLogger: 95532524d05c5353def79d07d21ffe20fd51e99f
 
-PODFILE CHECKSUM: 512dfae54d3b9ad911fa921e50f905660a5eddb1
+PODFILE CHECKSUM: 7fe1435e41fdd6b78d3d7989606d025b6d0eadbc
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.2.0

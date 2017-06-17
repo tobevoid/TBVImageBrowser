@@ -24,7 +24,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>ReactiveCocoa.xcscheme</key>
+		<key>ReactiveObjC.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -34,35 +34,55 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>TBVAssetsManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>TBVLogger.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>041955D9CD1B58288C80B7CB3C1FE156</key>
+		<key>225F5E81C6AFE9907CDFD59E095387BA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>12E2BC28C62976C425F4B71C2723F0B1</key>
+		<key>562B0B5533DEE9B1E0A3986D58AFA40B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>53480ED0BE09FF49E34B1702D485CAAB</key>
+		<key>59934B16BF44F5BC534DA03A2E7CB693</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8ADBF90E77D0CC267BFF2CC6C27B95F9</key>
+		<key>9DC8D9E02903E93BD0B2FEC9D846EA20</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9775596B3CA16905FC8F66DA8E2A3C67</key>
+		<key>A8A5D23F5BBE48BB64BDF6935F663F7B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A6EBED19E77F4E553185B663BD4855B2</key>
+		<key>A9D9DCCE5442795D0AD9E99D86389328</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B7ADD5EC4B1F0336DE95B49779963E2B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C791F0A928C1A8FE97074DFC9ACF4E75</key>
 		<dict>
 			<key>primary</key>
 			<true/>

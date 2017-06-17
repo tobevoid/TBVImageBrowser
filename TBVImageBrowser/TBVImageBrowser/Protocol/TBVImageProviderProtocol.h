@@ -8,7 +8,7 @@
 
 #ifndef TBVImageProviderProtocol_h
 #define TBVImageProviderProtocol_h
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 #import "TBVImageElementProtocol.h"
 #import "TBVImageIdentifierProtocol.h"
 

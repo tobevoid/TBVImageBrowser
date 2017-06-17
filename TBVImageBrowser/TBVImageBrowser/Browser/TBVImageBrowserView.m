@@ -5,8 +5,8 @@
 //  Created by tripleCC on 9/13/16.
 //  Copyright © 2016 tripleCC. All rights reserved.
 //
-#import <ReactiveCocoa/ReactiveCocoa.h>
-#import "TBVLogger.h"
+#import <ReactiveObjC/ReactiveObjC.h>
+#import <TBVLogger/TBVLogger.h>
 #import "TBVImageBrowserViewFlowLayout.h"
 #import "TBVImageBrowserConfiguration.h"
 #import "TBVImageBrowserView.h"
@@ -20,7 +20,6 @@ static NSString *const kTBVImageBrowserViewCellReuseIdentifier = @"kTBVImageBrow
 @property (strong, nonatomic) TBVImageBrowserConfiguration *configuration;
 @property (strong, nonatomic) TBVImageBrowserViewFlowLayout *flowLayout;
 @property (strong, nonatomic) TBVImageBrowserViewModel *viewModel;
-@property (strong, nonatomic) NSArray *dataSource;
 @end
 
 @implementation TBVImageBrowserView
@@ -47,7 +46,8 @@ static NSString *const kTBVImageBrowserViewCellReuseIdentifier = @"kTBVImageBrow
             return [RACSignal empty];
         }];
         
-        RACSignal *elementsChangeSignal = [[RACObserve(self, elements)
+        RACSignal *elementsChangeSignal = [[[RACObserve(self, elements)
+            ignore:nil]
             map:^id(NSArray *elements) {
                 return [elements.rac_sequence map:^id(id <TBVImageElementProtocol> element) {
                     TBVImageBrowserItemViewModel *viewModel = [[TBVImageBrowserItemViewModel alloc]
@@ -172,4 +172,10 @@ static NSString *const kTBVImageBrowserViewCellReuseIdentifier = @"kTBVImageBrow
     
     return _viewModel;
 }
+
+- (void)setBackgroundColor:(UIColor *)backgroundColor {
+    [super setBackgroundColor:backgroundColor];
+    self.collectionView.backgroundColor = backgroundColor;
+}
+
 @end

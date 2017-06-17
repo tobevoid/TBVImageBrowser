@@ -5,11 +5,11 @@
 //  Created by tripleCC on 9/13/16.
 //  Copyright © 2016 tripleCC. All rights reserved.
 //
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveObjC/ReactiveObjC.h>
+#import <TBVLogger/TBVLogger.h>
 #import "TBVImageProgressPresenterProtocol.h"
 #import "TBVImageBrowserConfiguration.h"
 #import "TBVImageBrowserViewFlowLayout.h"
-#import "TBVLogger.h"
 #import "TBVImageBrowserViewCell.h"
 #import "TBVImageBrowserItemViewModel.h"
 
@@ -52,7 +52,10 @@
         .size = CGSizeMake(self.bounds.size.width - 2 * kTBVImageBrowserViewFlowLayoutMargin,
                            self.bounds.size.height)
     };
-    self.contentImageView.frame = self.contentScrollView.bounds;
+    
+    if (CGRectEqualToRect(self.contentImageView.frame, CGRectZero)) {
+        self.contentImageView.frame = self.contentScrollView.bounds;
+    }
     self.progressView.center = CGPointMake(self.frame.size.width * 0.5,
                                            self.frame.size.height * 0.5);
 }
@@ -114,42 +117,46 @@
     if (!self.progressView) return;
     
     @weakify(self)
-    [[progressSignal takeUntil:self.rac_prepareForReuseSignal] subscribeNext:^(id value) {
-        @strongify(self)
-        CGFloat progress = [value floatValue];
-        [self.progressView setPresenterProgress:progress animated:YES];
-        self.progressView.hidden = progress > 0.999;
-    }];
+    [[[progressSignal
+        takeUntil:self.rac_prepareForReuseSignal]
+        deliverOnMainThread]
+        subscribeNext:^(id value) {
+            @strongify(self)
+            CGFloat progress = [value floatValue];
+            [self.progressView setPresenterProgress:progress animated:YES];
+            self.progressView.hidden = progress > 0.999;
+        }];
 }
 
 - (void)bindContentImageSignal:(RACSignal *)contentImageSignal {
     @weakify(self)
-    [[[contentImageSignal
-       takeUntil:self.rac_prepareForReuseSignal]
-      ignore:nil]
-     subscribeNext:^(UIImage *image) {
-         @strongify(self)
-         [self setNeedsLayout];
-         [self layoutIfNeeded];
-         
-         self.contentImageView.image = image;
-         
-         CGSize imageSize = image.size;
-         CGSize contentScrollViewSize = self.contentScrollView.frame.size;
-         CGRect contentImageViewFrame = self.contentImageView.frame;
-         
-         /* 宽度始终是屏幕宽度 */
-         if (imageSize.width != 0 && imageSize.height != 0) {
-             contentImageViewFrame.size.height = contentScrollViewSize.width /
-             imageSize.width * imageSize.height;
-             self.contentImageView.frame = contentImageViewFrame;
-         }
-         self.contentScrollView.contentSize = CGSizeMake(contentScrollViewSize.width,
-                                                         MAX(contentScrollViewSize.height,
-                                                             contentImageViewFrame.size.height));
-         [self adjustImageViewToCenter];
-         
-     }];
+    [[[[contentImageSignal
+        takeUntil:self.rac_prepareForReuseSignal]
+        ignore:nil]
+        deliverOnMainThread]
+        subscribeNext:^(UIImage *image) {
+            @strongify(self)
+            [self setNeedsLayout];
+            [self layoutIfNeeded];
+            
+            self.contentImageView.image = image;
+            
+            CGSize imageSize = image.size;
+            CGSize contentScrollViewSize = self.contentScrollView.frame.size;
+            CGRect contentImageViewFrame = self.contentImageView.frame;
+            
+            /* 宽度始终是屏幕宽度 */
+            if (imageSize.width != 0 && imageSize.height != 0) {
+                contentImageViewFrame.size.height = contentScrollViewSize.width /
+                imageSize.width * imageSize.height;
+                self.contentImageView.frame = contentImageViewFrame;
+            }
+            self.contentScrollView.contentSize = CGSizeMake(contentScrollViewSize.width,
+                                                            MAX(contentScrollViewSize.height,
+                                                                contentImageViewFrame.size.height));
+            [self adjustImageViewToCenter];
+            
+        }];
 }
 
 #pragma mark private method

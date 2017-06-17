@@ -5,10 +5,9 @@
 //  Created by tripleCC on 9/13/16.
 //  Copyright © 2016 tripleCC. All rights reserved.
 //
-
+#import <TBVLogger/TBVLogger.h>
 #import "TBVImageProviderManager.h"
 #import "TBVImageBrowserTypes.h"
-#import "TBVLogger.h"
 
 @interface TBVImageProviderManager() 
 @property (strong, nonatomic) NSMutableDictionary *providerMap;
@@ -40,14 +39,14 @@
             userInfo[kTBVImageBrowserErrorKey] =
             [NSString stringWithFormat:@"image provider with identifier %@ was not found", element.identifier];
             [subscriber sendError:[NSError errorWithDomain:@"TBVImageProviderManager"
-                                                        code:-1
-                                                    userInfo:userInfo]];
+                                                      code:-1
+                                                  userInfo:userInfo]];
         }
         return nil;
     }]
         switchToLatest]
         catch:^RACSignal *(NSError *error) {
-            TBVLogError(@"\nerror domain: \n\t%@; \nerror code: \n\t%ld; \nerror info: \n\t%@;\n", error.domain, error.code, error.userInfo);
+            TBVLogError(@"\nerror domain: \n\t%@; \nerror code: \n\t%ld; \nerror info: \n\t%@;\n", error.domain, (long)error.code, error.userInfo);
             return [RACSignal empty];
     }];
 }
