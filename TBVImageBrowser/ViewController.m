@@ -8,6 +8,7 @@
 #import <Masonry/Masonry.h>
 #import <DACircularProgress/DALabeledCircularProgressView.h>
 #import <TBVLogger/TBVLogger.h>
+#import <TBVImageProvider/TBVImageProvider.h>
 #import "ViewController.h"
 #import "TBVImageBrowser.h"
 #import "TBVImageElement.h"

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8415B20685FB64313A42DDB4 /* libPods-TBVImageBrowser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7DAA40C384FD910CBF20E45 /* libPods-TBVImageBrowser.a */; };
-		D62EDEDB1D881B990070F673 /* TBVImageElement.m in Sources */ = {isa = PBXBuildFile; fileRef = D62EDEDA1D881B990070F673 /* TBVImageElement.m */; };
 		D62EDEDC1D881B990070F673 /* TBVImageElement.m in Sources */ = {isa = PBXBuildFile; fileRef = D62EDEDA1D881B990070F673 /* TBVImageElement.m */; };
 		D63E7B221D8934DD005F0B00 /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D63E7B181D8934DD005F0B00 /* 0.jpg */; };
 		D63E7B231D8934DD005F0B00 /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D63E7B181D8934DD005F0B00 /* 0.jpg */; };
@@ -37,22 +36,14 @@
 		D641C5C01D87D0E800F85C78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D641C5BF1D87D0E800F85C78 /* Assets.xcassets */; };
 		D641C5C31D87D0E800F85C78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D641C5C11D87D0E800F85C78 /* LaunchScreen.storyboard */; };
 		D641C5CE1D87D0E800F85C78 /* TBVImageBrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D641C5CD1D87D0E800F85C78 /* TBVImageBrowserTests.m */; };
-		D641C5E11D87D22F00F85C78 /* TBVImageProviderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D641C5E01D87D22F00F85C78 /* TBVImageProviderManager.m */; };
 		D641C5E21D87D22F00F85C78 /* TBVImageProviderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D641C5E01D87D22F00F85C78 /* TBVImageProviderManager.m */; };
-		D641C5E81D87D26800F85C78 /* TBVImageBrowserView.m in Sources */ = {isa = PBXBuildFile; fileRef = D641C5E71D87D26800F85C78 /* TBVImageBrowserView.m */; };
 		D641C5E91D87D26800F85C78 /* TBVImageBrowserView.m in Sources */ = {isa = PBXBuildFile; fileRef = D641C5E71D87D26800F85C78 /* TBVImageBrowserView.m */; };
-		D65A7E291D87DB4D00276B55 /* TBVImageBrowserViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E281D87DB4D00276B55 /* TBVImageBrowserViewCell.m */; };
 		D65A7E2A1D87DB4D00276B55 /* TBVImageBrowserViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E281D87DB4D00276B55 /* TBVImageBrowserViewCell.m */; };
-		D65A7E2D1D87DC2F00276B55 /* TBVImageBrowserItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E2C1D87DC2700276B55 /* TBVImageBrowserItemViewModel.m */; };
 		D65A7E2E1D87DC3000276B55 /* TBVImageBrowserItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E2C1D87DC2700276B55 /* TBVImageBrowserItemViewModel.m */; };
-		D65A7E311D87DCE400276B55 /* TBVImageBrowserViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E301D87DCE100276B55 /* TBVImageBrowserViewFlowLayout.m */; };
 		D65A7E321D87DCE400276B55 /* TBVImageBrowserViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E301D87DCE100276B55 /* TBVImageBrowserViewFlowLayout.m */; };
-		D65A7E3E1D87F2EE00276B55 /* TBVImageBrowserViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E3D1D87F2EE00276B55 /* TBVImageBrowserViewModel.m */; };
 		D65A7E3F1D87F2EE00276B55 /* TBVImageBrowserViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E3D1D87F2EE00276B55 /* TBVImageBrowserViewModel.m */; };
-		D65A7E481D87F89900276B55 /* TBVImageBrowserConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E471D87F89900276B55 /* TBVImageBrowserConfiguration.m */; };
 		D65A7E491D87F89900276B55 /* TBVImageBrowserConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = D65A7E471D87F89900276B55 /* TBVImageBrowserConfiguration.m */; };
 		D6879C581E05637700F6DF4D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = D6879C571E05637700F6DF4D /* README.md */; };
-		D6A99F071D8A5D7500FDE44A /* TBVImageBrowserTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A99F061D8A5D6C00FDE44A /* TBVImageBrowserTypes.m */; };
 		D6A99F081D8A5D7600FDE44A /* TBVImageBrowserTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A99F061D8A5D6C00FDE44A /* TBVImageBrowserTypes.m */; };
 /* End PBXBuildFile section */
 
@@ -347,7 +338,7 @@
 		D641C5A81D87D0E800F85C78 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = tripleCC;
 				TargetAttributes = {
 					D641C5AF1D87D0E800F85C78 = {
@@ -472,18 +463,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D65A7E3E1D87F2EE00276B55 /* TBVImageBrowserViewModel.m in Sources */,
-				D65A7E2D1D87DC2F00276B55 /* TBVImageBrowserItemViewModel.m in Sources */,
-				D65A7E481D87F89900276B55 /* TBVImageBrowserConfiguration.m in Sources */,
 				D641C5BB1D87D0E800F85C78 /* ViewController.m in Sources */,
-				D641C5E11D87D22F00F85C78 /* TBVImageProviderManager.m in Sources */,
-				D65A7E291D87DB4D00276B55 /* TBVImageBrowserViewCell.m in Sources */,
 				D641C5B81D87D0E800F85C78 /* AppDelegate.m in Sources */,
-				D641C5E81D87D26800F85C78 /* TBVImageBrowserView.m in Sources */,
-				D62EDEDB1D881B990070F673 /* TBVImageElement.m in Sources */,
-				D6A99F071D8A5D7500FDE44A /* TBVImageBrowserTypes.m in Sources */,
 				D6879C581E05637700F6DF4D /* README.md in Sources */,
-				D65A7E311D87DCE400276B55 /* TBVImageBrowserViewFlowLayout.m in Sources */,
 				D641C5B51D87D0E800F85C78 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,8 +531,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -594,8 +578,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -626,7 +612,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8BU8NMY9TY;
 				INFOPLIST_FILE = TBVImageBrowser/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.triplec.TBVImageBrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -640,7 +626,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8BU8NMY9TY;
 				INFOPLIST_FILE = TBVImageBrowser/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.triplec.TBVImageBrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";

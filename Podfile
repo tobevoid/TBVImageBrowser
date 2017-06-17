@@ -6,6 +6,7 @@ def shared_pods
   pod 'TBVLogger'
   pod 'TBVAssetsManager'
   pod 'TBVImageProvider'
+  pod 'TBVImageBrowser', :path => '../TBVImageBrowser'
 end
 
 target 'TBVImageBrowser' do
